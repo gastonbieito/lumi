@@ -27,6 +27,7 @@ html = html
 // dist/ es la copia para usar desde la compu o un pendrive; docs/ es lo que publica GitHub Pages.
 for (const dir of ['dist', 'docs']) {
   fs.mkdirSync(path.join(root, dir), { recursive: true });
-  fs.writeFileSync(path.join(root, dir, 'index.html'), html);
+  // El botón de volver al portal solo va en la versión publicada (docs/); la copia local (dist/) no lo necesita.
+  fs.writeFileSync(path.join(root, dir, 'index.html'), dir === 'dist' ? html.replace(/<script src="\/volver\.js"[^>]*><\/script>\n?/, '') : html);
 }
 console.log(`dist/index.html y docs/index.html  ${(html.length / 1024).toFixed(0)} KB  (${jsFiles.length} módulos, ${stamp})`);
