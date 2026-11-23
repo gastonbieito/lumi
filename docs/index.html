@@ -73,6 +73,7 @@ svg text{font-family:Nunito,'Segoe UI',system-ui,sans-serif;font-weight:800}
 .kid .pr i{width:16px;height:16px;border-radius:50%;background:#e9e3f1;display:inline-block}
 .kid .pr i.ok{background:#ffc93c}
 .kid button{padding:5px 10px;font-size:13px}
+.card.locked:hover .lift{transform:none}
 
 </style>
 </head>
@@ -104,6 +105,13 @@ svg text{font-family:Nunito,'Segoe UI',system-ui,sans-serif;font-weight:800}
       <div id="pList"></div>
     </section>
     <section>
+      <h2>Tarjetas de esta compu</h2>
+      <p class="hint">Cuando un chico elige su tarjeta, queda asignada a esta compu. Al llenarse el cupo, las demás tarjetas se ven con candado.</p>
+      <div class="row"><span>Chicos que usan esta compu:</span> <select id="pSeats"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <button id="pRelease">Liberar esta compu</button></div>
+      <p class="hint" id="pClaimed"></p>
+    </section>
+    <section>
       <h2>Ir a</h2>
       <div class="row"><span>Juega:</span> <select id="pWho"></select></div>
       <div id="pJump" class="row"></div>
@@ -121,7 +129,7 @@ svg text{font-family:Nunito,'Segoe UI',system-ui,sans-serif;font-weight:800}
 </div>
 <script>
 (()=>{
-const BUILD='2026-11-23 00:23';
+const BUILD='2026-11-23 00:40';
 // ---- 00-util.js
 'use strict';
 const NS = 'http://www.w3.org/2000/svg';
@@ -185,7 +193,7 @@ class Ctx {
 // Guardado local. Clave estable 'lumiIsla' (la lee también el capítulo 2).
 // Estructura:
 // { schema:1, profiles:[{id,name,creature,color}], progress:{ [id]:{ who:{creature,color}, cap1:{ [escena]:{done,plays,last,ms,misses,hints} } } },
-//   settings:{muted,fullscreen}, last:id }
+//   settings:{muted,fullscreen,seats}, claimed:[id] (tarjetas asignadas a esta compu), last:id }
 const STORE_KEY = 'lumiIsla';
 const COLORS = [
   { id: 'coral', c: '#ff8b7b' }, { id: 'naranja', c: '#ffb25b' }, { id: 'amarillo', c: '#ffd84a' },
@@ -204,7 +212,8 @@ const Store = {
     if (!d || d.schema !== 1) d = { schema: 1 };
     d.profiles = Array.isArray(d.profiles) ? d.profiles : [];
     d.progress = d.progress && typeof d.progress === 'object' ? d.progress : {};
-    d.settings = Object.assign({ muted: false, fullscreen: true }, d.settings || {});
+    d.settings = Object.assign({ muted: false, fullscreen: true, seats: 1 }, d.settings || {});
+    d.claimed = Array.isArray(d.claimed) ? d.claimed : [];
     this.data = d;
   },
   save() { try { localStorage.setItem(STORE_KEY, JSON.stringify(this.data)); } catch (e) { } },
@@ -251,11 +260,14 @@ const Store = {
     p[field] = list[(list.indexOf(p[field]) + 1) % list.length];
     this.save();
   },
+  // Tarjetas asignadas a esta compu: cuando se llena el cupo, las demás se bloquean.
+  claim(id) { if (!this.data.claimed.includes(id)) { this.data.claimed.push(id); this.save(); } },
+  release() { this.data.claimed = []; this.save(); },
   resetOne(id) { delete this.data.progress[id]; this.save(); },
   resetAll() { this.data.progress = {}; this.save(); },
   clearNames() {
     for (const p of this.data.profiles) delete this.data.progress[p.id];
-    this.data.profiles = []; this.data.last = null; this.save();
+    this.data.profiles = []; this.data.last = null; this.data.claimed = []; this.save();
   },
 };
 
@@ -912,12 +924,18 @@ Screens.start = ctx => {
   if (h * rows + gap * (rows - 1) > AH) { h = (AH - gap * (rows - 1)) / rows; w = h / ratio; }
   const cardsL = grp({}, L.world);
   let chosen = false;
+  // Cupo de esta compu: cuando ya se eligieron tantas tarjetas como chicos, las demás se bloquean.
+  const ids = new Set(list.map(p => p.id));
+  const mine = Store.data.claimed.filter(id => ids.has(id));
+  const full = mine.length >= (Store.data.settings.seats || 1);
+  const cards = [];
   list.forEach((p, i) => {
     const r = Math.floor(i / cols), inRow = Math.min(cols, n - r * cols), c = i - r * cols;
     const x = 800 + (c - (inRow - 1) / 2) * (w + gap);
     const y = top + h / 2 + r * (h + gap) + (AH - (rows * h + (rows - 1) * gap)) / 2;
     const col = colorOf(p.color);
-    const card = grp({ transform: tr(x, y), class: 'card' }, cardsL);
+    const locked = full && !mine.includes(p.id);
+    const card = grp({ transform: tr(x, y), class: 'card' + (locked ? ' locked' : '') }, cardsL);
     const pop = grp({}, card), lift = grp({ class: 'lift' }, pop);
     const ar = named ? w * .34 : w * .38, ay = named ? -h * .14 : 0;
     let html = `<rect x="${-w / 2}" y="${-h / 2 + 8}" width="${w}" height="${h}" rx="${w * .14}" fill="${shade(col, -.25)}" opacity=".35"/>
@@ -927,11 +945,21 @@ Screens.start = ctx => {
       const fs = Math.min(w * .19, (w * .86) / (Math.max(3, p.name.length) * .56));
       html += `<text x="0" y="${h * .36}" text-anchor="middle" dominant-baseline="middle" font-size="${fs.toFixed(1)}" fill="${INK}">${escapeXml(p.name)}</text>`;
     }
+    if (locked) html += `<rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" rx="${w * .14}" fill="#8d86a3" opacity=".55"/>
+<g transform="translate(0 ${ay}) scale(${(w / 300).toFixed(3)})"><path d="M-24 -8 L-24 -26 A24 24 0 0 1 24 -26 L24 -8" fill="none" stroke="#fff" stroke-width="11"/><rect x="-38" y="-10" width="76" height="60" rx="12" fill="#fff"/><circle cy="16" r="8" fill="#8d86a3"/></g>`;
     lift.innerHTML = html;
+    cards.push({ p, x, y, pop, locked });
     anim(pop, [{ transform: 'scale(0)' }, { transform: 'scale(1)' }], { duration: 520, delay: 150 + i * 55, easing: EB });
     App.addTarget({
-      x, y, w, h, kind: 'card', hit: () => {
-        if (chosen) return; chosen = true;
+      x, y, w, h, kind: locked ? 'cardlock' : 'card', hit: () => {
+        if (chosen) return;
+        if (locked) {
+          Sound.miss();
+          anim(pop, [{ transform: 'translateX(0px)' }, { transform: 'translateX(-14px)' }, { transform: 'translateX(12px)' }, { transform: 'translateX(-6px)' }, { transform: 'translateX(0px)' }], { duration: 420, fill: 'none' });
+          const own = cards.find(c => !c.locked); if (own) Guide.tap(own.x, own.y, 2);
+          return;
+        }
+        chosen = true; Store.claim(p.id);
         App.good(); Sound.chord(); fullscreen();
         anim(pop, [{ transform: 'scale(1)' }, { transform: 'scale(1.18)' }, { transform: 'scale(1.1)' }], { duration: 450, easing: EB });
         FX.burst(x, y, [col, '#ffffff', '#ffd84a'], 18, 220, 'star');
@@ -941,7 +969,9 @@ Screens.start = ctx => {
       },
     });
   });
-  return { onMove: p => lumi.look(p.x, p.y) };
+  const own = cards.filter(c => !c.locked);
+  if (full && own.length) ctx.after(1600, () => { if (!chosen) Guide.tap(own[0].x, own[0].y, 2); });
+  return { onMove: p => lumi.look(p.x, p.y), hint: () => full && own.length && !chosen ? { x: own[0].x, y: own[0].y } : null, hintDelay: 9000 };
 };
 
 function escapeXml(s) { return String(s).replace(/[<>&"']/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&apos;' }[c])); }
@@ -1983,7 +2013,7 @@ const Panel = {
       clicks = clicks.filter(t => now - t < 1000); clicks.push(now);
       if (clicks.length >= 3) { clicks = []; this.show(); }
     });
-    $('#pClose').onclick = () => this.hide();
+    $('#pClose').onclick = () => { this.hide(); if (App.name === 'start') App.go('start'); };
     $('#pSave').onclick = () => {
       Store.setNames($('#pNames').value.split(/\r?\n/));
       this.render();
@@ -1998,6 +2028,8 @@ const Panel = {
       Store.resetAll(); this.render();
     };
     $('#pMute').onchange = e => { Sound.setMuted(e.target.checked); Store.data.settings.muted = e.target.checked; Store.save(); Hud.draw(); };
+    $('#pSeats').onchange = e => { Store.data.settings.seats = +e.target.value; Store.save(); this.render(); };
+    $('#pRelease').onclick = () => { Store.release(); this.render(); if (App.name === 'start') App.go('start'); };
     $('#pFull').onchange = e => { Store.data.settings.fullscreen = e.target.checked; Store.save(); };
     $('#pList').onclick = e => {
       const b = e.target.closest('button'); if (!b) return;
@@ -2038,6 +2070,10 @@ const Panel = {
     $('#pJump').innerHTML = jumps.map(([k, n]) => { const ok = k === 'start' || k === 'map' || sceneReady(k); return `<button data-go="${k}"${ok ? '' : ' disabled title="Todavía no está"'}>${n}</button>`; }).join('');
     $('#pMute').checked = d.settings.muted;
     $('#pFull').checked = d.settings.fullscreen;
+    $('#pSeats').value = String(d.settings.seats || 1);
+    const pool = [...d.profiles, ...Store.anonProfiles()];
+    const mine = d.claimed.map(id => pool.find(p => p.id === id)).filter(Boolean).map(p => p.name || (p.creature + ' ' + p.color));
+    $('#pClaimed').textContent = mine.length ? 'Asignadas: ' + mine.join(', ') + '.' : 'Todavía no hay tarjetas asignadas en esta compu.';
   },
 };
 

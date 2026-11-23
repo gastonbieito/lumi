@@ -10,7 +10,7 @@ const Panel = {
       clicks = clicks.filter(t => now - t < 1000); clicks.push(now);
       if (clicks.length >= 3) { clicks = []; this.show(); }
     });
-    $('#pClose').onclick = () => this.hide();
+    $('#pClose').onclick = () => { this.hide(); if (App.name === 'start') App.go('start'); };
     $('#pSave').onclick = () => {
       Store.setNames($('#pNames').value.split(/\r?\n/));
       this.render();
@@ -25,6 +25,8 @@ const Panel = {
       Store.resetAll(); this.render();
     };
     $('#pMute').onchange = e => { Sound.setMuted(e.target.checked); Store.data.settings.muted = e.target.checked; Store.save(); Hud.draw(); };
+    $('#pSeats').onchange = e => { Store.data.settings.seats = +e.target.value; Store.save(); this.render(); };
+    $('#pRelease').onclick = () => { Store.release(); this.render(); if (App.name === 'start') App.go('start'); };
     $('#pFull').onchange = e => { Store.data.settings.fullscreen = e.target.checked; Store.save(); };
     $('#pList').onclick = e => {
       const b = e.target.closest('button'); if (!b) return;
@@ -65,5 +67,9 @@ const Panel = {
     $('#pJump').innerHTML = jumps.map(([k, n]) => { const ok = k === 'start' || k === 'map' || sceneReady(k); return `<button data-go="${k}"${ok ? '' : ' disabled title="Todavía no está"'}>${n}</button>`; }).join('');
     $('#pMute').checked = d.settings.muted;
     $('#pFull').checked = d.settings.fullscreen;
+    $('#pSeats').value = String(d.settings.seats || 1);
+    const pool = [...d.profiles, ...Store.anonProfiles()];
+    const mine = d.claimed.map(id => pool.find(p => p.id === id)).filter(Boolean).map(p => p.name || (p.creature + ' ' + p.color));
+    $('#pClaimed').textContent = mine.length ? 'Asignadas: ' + mine.join(', ') + '.' : 'Todavía no hay tarjetas asignadas en esta compu.';
   },
 };

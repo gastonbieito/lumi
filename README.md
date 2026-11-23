@@ -3,7 +3,7 @@
 Juego para chicos de 4 a 7 años que todavía no leen. Capítulo 1: Semillas (clic), Hambre (arrastrar),
 Burbujas (clic sobre algo que se mueve), Noche (clic) y Fiesta final.
 
-- Un solo archivo: `dist/index.html`. Funciona sin internet, también desde un pendrive.
+- Un solo archivo autónomo. Publicado en https://gastonbieito.github.io/lumi/ (carpeta `docs/`); `dist/` es la misma copia para abrir local.
 - No hay nombres en el código ni en el repositorio: se cargan en el panel docente y quedan solo en el
   navegador de cada compu.
 
@@ -42,7 +42,8 @@ Clave de `localStorage`: **`lumiIsla`** (estable). Contenido:
       // el capítulo 2 agrega aquí: cap2: {...}
     }
   },
-  settings: { muted: false, fullscreen: true },
+  settings: { muted: false, fullscreen: true, seats: 1 },   // seats: chicos que usan esta compu
+  claimed: ['n:alfa'],                                     // tarjetas asignadas a esta compu
   last: 'n:alfa'
 }
 ```

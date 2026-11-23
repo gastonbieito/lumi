@@ -64,3 +64,4 @@ svg text{font-family:Nunito,'Segoe UI',system-ui,sans-serif;font-weight:800}
 .kid .pr i{width:16px;height:16px;border-radius:50%;background:#e9e3f1;display:inline-block}
 .kid .pr i.ok{background:#ffc93c}
 .kid button{padding:5px 10px;font-size:13px}
+.card.locked:hover .lift{transform:none}

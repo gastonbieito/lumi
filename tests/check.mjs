@@ -134,6 +134,19 @@ for (const ch of CHANNELS) {
     const missing = [...SCENES, 'fiesta'].filter(k => !(prog[k] && prog[k].done));
     if (missing.length) fail('no se guardó: ' + missing.join(', ')); else console.log('  progreso guardado para las 5 partes');
     if (saved.profiles.length !== 8) fail('no se guardaron los 8 nombres');
+    // Bloqueo: al volver a las tarjetas, solo la elegida queda libre en esta compu.
+    for (let i = 0; i < 3; i++) await page.mouse.click(12, 12);
+    await page.waitForSelector('#panel:not([hidden])', { timeout: 3000 });
+    await page.click('#pJump button[data-go="start"]');
+    await waitScreen(page, 'start');
+    const kinds = await page.evaluate(() => __lumi.targets().map(t => t.kind));
+    const free = kinds.filter(k => k === 'card').length, lockedN = kinds.filter(k => k === 'cardlock').length;
+    if (free !== 1 || lockedN !== 7) fail(`bloqueo: ${free} libres y ${lockedN} con candado`); else console.log('  bloqueo por compu: 1 libre, 7 con candado');
+    const lk = (await page.evaluate(() => __lumi.targets())).find(t => t.kind === 'cardlock');
+    await click(page, lk.x, lk.y);
+    await page.waitForTimeout(1500);
+    if (await page.evaluate(() => __lumi.screen) !== 'start') fail('una tarjeta con candado dejó entrar');
+    await shot(page, `${tag}-9-bloqueo`);
     if (errs.length) errs.forEach(e => fail('error en consola: ' + e));
     await ctx.close();
     if (ONLY) break;

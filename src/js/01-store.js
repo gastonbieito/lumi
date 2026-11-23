@@ -1,7 +1,7 @@
 // Guardado local. Clave estable 'lumiIsla' (la lee también el capítulo 2).
 // Estructura:
 // { schema:1, profiles:[{id,name,creature,color}], progress:{ [id]:{ who:{creature,color}, cap1:{ [escena]:{done,plays,last,ms,misses,hints} } } },
-//   settings:{muted,fullscreen}, last:id }
+//   settings:{muted,fullscreen,seats}, claimed:[id] (tarjetas asignadas a esta compu), last:id }
 const STORE_KEY = 'lumiIsla';
 const COLORS = [
   { id: 'coral', c: '#ff8b7b' }, { id: 'naranja', c: '#ffb25b' }, { id: 'amarillo', c: '#ffd84a' },
@@ -20,7 +20,8 @@ const Store = {
     if (!d || d.schema !== 1) d = { schema: 1 };
     d.profiles = Array.isArray(d.profiles) ? d.profiles : [];
     d.progress = d.progress && typeof d.progress === 'object' ? d.progress : {};
-    d.settings = Object.assign({ muted: false, fullscreen: true }, d.settings || {});
+    d.settings = Object.assign({ muted: false, fullscreen: true, seats: 1 }, d.settings || {});
+    d.claimed = Array.isArray(d.claimed) ? d.claimed : [];
     this.data = d;
   },
   save() { try { localStorage.setItem(STORE_KEY, JSON.stringify(this.data)); } catch (e) { } },
@@ -67,10 +68,13 @@ const Store = {
     p[field] = list[(list.indexOf(p[field]) + 1) % list.length];
     this.save();
   },
+  // Tarjetas asignadas a esta compu: cuando se llena el cupo, las demás se bloquean.
+  claim(id) { if (!this.data.claimed.includes(id)) { this.data.claimed.push(id); this.save(); } },
+  release() { this.data.claimed = []; this.save(); },
   resetOne(id) { delete this.data.progress[id]; this.save(); },
   resetAll() { this.data.progress = {}; this.save(); },
   clearNames() {
     for (const p of this.data.profiles) delete this.data.progress[p.id];
-    this.data.profiles = []; this.data.last = null; this.save();
+    this.data.profiles = []; this.data.last = null; this.data.claimed = []; this.save();
   },
 };
