@@ -1,14 +1,14 @@
 // Prueba automática: juega el capítulo 1 entero en Edge y Chrome, en 1366x768 y 1024x600.
 // Verifica que lo tocable quede dentro de la pantalla y sin nada encima, que se guarde el progreso
 // y que no haya errores. Capturas en tests/out/.
-//   CANALES=msedge  SOLO=1 (un solo tamaño)  RAPIDO=1 (no espera el final de la fiesta)
+//   URL=https://... (probar la página publicada)  CANALES=msedge  SOLO=1 (un solo tamaño)  RAPIDO=1 (no espera el final de la fiesta)
 import { chromium } from 'playwright-core';
 import path from 'node:path';
 import fs from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const url = pathToFileURL(path.join(root, 'dist', 'index.html')).href;
+const url = process.env.URL || pathToFileURL(path.join(root, 'dist', 'index.html')).href;
 const out = path.join(root, 'tests', 'out');
 fs.mkdirSync(out, { recursive: true });
 const SIZES = [[1366, 768], [1024, 600]];
