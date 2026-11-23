@@ -141,6 +141,37 @@ const Guide = {
     }
     if (tk === this.tk) { this.fade(0); this.visible = false; }
   },
+  // Doble golpe: dos toques rápidos y una pausa.
+  async dtap(x, y, reps = 3) {
+    const tk = ++this.tk; this.visible = true;
+    this.place(x + 150, y + 190); this.fade(1);
+    await this.moveTo(x, y, 650, tk);
+    for (let i = 0; i < reps && tk === this.tk; i++) {
+      for (let k = 0; k < 2 && tk === this.tk; k++) {
+        anim(this.press, [{ transform: 'scale(1)' }, { transform: 'scale(.8)', offset: .45 }, { transform: 'scale(1)' }], { duration: 230, fill: 'none' });
+        await this.sleep(105); if (tk !== this.tk) break;
+        FX.ring(x, y, '#ffffff', 52 + k * 26, 7, 420);
+        await this.sleep(140);
+      }
+      await this.sleep(950);
+    }
+    if (tk === this.tk) { this.fade(0); this.visible = false; }
+  },
+  // Arrastre siguiendo un camino (lista de puntos), sin soltar.
+  async follow(pts, reps = 1) {
+    const tk = ++this.tk; this.visible = true;
+    for (let i = 0; i < reps && tk === this.tk; i++) {
+      this.place(pts[0].x + 120, pts[0].y + 160); this.fade(1);
+      await this.moveTo(pts[0].x, pts[0].y, 550, tk); if (tk !== this.tk) break;
+      anim(this.press, [{ transform: 'scale(1)' }, { transform: 'scale(.84)' }], { duration: 200 });
+      await this.sleep(250);
+      for (let k = 1; k < pts.length && tk === this.tk; k++) await this.moveTo(pts[k].x, pts[k].y, Math.max(60, Math.hypot(pts[k].x - pts[k - 1].x, pts[k].y - pts[k - 1].y) * 2.6), tk);
+      if (tk !== this.tk) break;
+      anim(this.press, [{ transform: 'scale(.84)' }, { transform: 'scale(1)' }], { duration: 200 });
+      await this.sleep(400); this.fade(0); await this.sleep(400);
+    }
+    if (tk === this.tk) { this.fade(0); this.visible = false; }
+  },
   hide() { if (this.visible) { this.tk++; this.fade(0, 180); this.visible = false; } },
 };
 
@@ -200,6 +231,8 @@ const Screens = {};
 const App = {
   name: null, ctx: null, h: {}, targets: [], busy: true, going: false, profile: null,
   lastGood: performance.now(), pointer: { x: 800, y: 450 }, misses: 0, hints: 0,
+  // Pantalla táctil sin mouse (tablet o celular): se sabe de entrada o al primer toque.
+  touch: !!(window.matchMedia && matchMedia('(any-pointer: coarse)').matches && !matchMedia('(any-pointer: fine)').matches),
   addTarget(t) { t.prio = t.prio || 1; this.targets.push(t); return t; },
   removeTarget(t) { const i = this.targets.indexOf(t); if (i >= 0) this.targets.splice(i, 1); },
   good() { this.lastGood = performance.now(); Guide.hide(); },
@@ -245,6 +278,7 @@ function fullscreen() {
 stage.addEventListener('pointerdown', e => {
   e.preventDefault();
   Sound.init();
+  if (e.pointerType === 'touch' || e.pointerType === 'pen') App.touch = true;
   if (App.busy || Panel.open) return;
   const p = toSvg(e.clientX, e.clientY);
   App.pointer = p;
@@ -269,7 +303,8 @@ window.addEventListener('wheel', e => { if (e.ctrlKey) e.preventDefault(); }, { 
 window.addEventListener('keydown', e => {
   if (Panel.open) return;
   if ((e.ctrlKey || e.metaKey) && ['+', '-', '=', '0', 'p', 's', 'o', 'f', 'u'].includes(e.key.toLowerCase())) e.preventDefault();
-  if (['Backspace', 'Tab', ' ', 'F1', 'F3', 'F7'].includes(e.key)) e.preventDefault();
+  if (['Backspace', 'Tab', ' ', 'F1', 'F3', 'F7', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) e.preventDefault();
+  if (!App.busy && !e.repeat && App.h.onKey) { Sound.init(); App.h.onKey(e.key, e); }
 });
 document.addEventListener('mousedown', e => { if (e.button === 1) e.preventDefault(); });
 
@@ -282,21 +317,24 @@ setInterval(() => {
   App.lastGood = performance.now();
   if (!t) return;
   App.hints++;
-  if (t.x2 != null) Guide.drag(t.x, t.y, t.x2, t.y2); else Guide.tap(t.x, t.y, 2);
+  if (t.run) t.run(); else if (t.path) Guide.follow(t.path); else if (t.dbl) Guide.dtap(t.x, t.y, 2); else if (t.x2 != null) Guide.drag(t.x, t.y, t.x2, t.y2); else Guide.tap(t.x, t.y, 2);
 }, 300);
 
 // Ganchos de prueba (Playwright): posiciones de lo tocable en píxeles de pantalla.
 window.__lumi = {
   get screen() { return App.name; },
   get busy() { return App.busy; },
+  get touch() { return App.touch; },
   targets() { return App.targets.map(t => { const c = toScreen(t.x, t.y), k = stage.getScreenCTM().a; return { kind: t.kind || '', x: c.x, y: c.y, r: (t.r || Math.min(t.w, t.h) / 2) * k, w: t.w ? t.w * k : 0, h: t.h ? t.h * k : 0 }; }); },
   toScreen,
   auto() {
     const h = App.h; let a = h.auto ? h.auto() : null;
-    if (!a) { const t = App.targets.filter(t => t.prio >= 2 && t.x > 40 && t.x < 1560 && t.y > 90 && t.y < 860).sort((p, q) => q.prio - p.prio)[0]; if (t) a = { x: t.x, y: t.y }; }
+    if (!a && !h.auto) { const t = App.targets.filter(t => t.prio >= 2 && t.x > 40 && t.x < 1560 && t.y > 90 && t.y < 860).sort((p, q) => q.prio - p.prio)[0]; if (t) a = { x: t.x, y: t.y }; }
     if (!a) return null;
-    const s = toScreen(a.x, a.y), r = { x: s.x, y: s.y };
+    if (a.key) return { key: a.key };
+    const s = toScreen(a.x, a.y), r = { x: s.x, y: s.y, dbl: !!a.dbl };
     if (a.x2 != null) { const e = toScreen(a.x2, a.y2); r.x2 = e.x; r.y2 = e.y; }
+    if (a.path) r.path = a.path.map(q => toScreen(q.x, q.y));
     return r;
   },
 };

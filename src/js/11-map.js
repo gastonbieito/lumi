@@ -8,6 +8,8 @@ const SCENES = [
 ];
 const FIESTA = { key: 'fiesta', x: 800, y: 468, art: 'fiesta' };
 const sceneReady = k => !!Screens[k];
+const CH_TITLE = 'capítulo 1';
+const SCENE_NAMES = { semillas: 'Semillas', hambre: 'Hambre', burbujas: 'Burbujas', noche: 'Noche', fiesta: 'Fiesta final' };
 
 const SPOT_ART = {
   jardin: p => `<ellipse cy="48" rx="128" ry="40" ${fa('#a3dc7e', p)}/><ellipse cy="46" rx="88" ry="22" ${fa('#b98457', p)}/>

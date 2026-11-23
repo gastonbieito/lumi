@@ -1,0 +1,2368 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta name="robots" content="noindex">
+<title>Lumi y el faro dormido</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='34' r='26' fill='%23ffd34d'/%3E%3Ccircle cx='24' cy='32' r='4' fill='%232d2240'/%3E%3Ccircle cx='40' cy='32' r='4' fill='%232d2240'/%3E%3Cpath d='M25 42 Q32 48 39 42' stroke='%232d2240' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:'Nunito';font-weight:800;font-display:block;src:url(data:font/woff2;base64,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) format('woff2')}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fbf3e4}
+body{
+  -webkit-user-select:none;user-select:none;touch-action:none;overscroll-behavior:none;
+  font-family:Nunito,'Segoe UI',system-ui,sans-serif;
+  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cpath d='M5 3 L5 34 L13 27 L18.5 40 L25.5 37 L20 24.5 L31 24.5 Z' fill='%23fff' stroke='%232d2240' stroke-width='3.2' stroke-linejoin='round'/%3E%3C/svg%3E") 5 3,auto;
+}
+#stage{position:fixed;inset:0;width:100%;height:100%;display:block}
+#fx,#guide,#hud,#hudfix,#veil{pointer-events:none}
+#corner{position:fixed;left:0;top:0;width:56px;height:56px;z-index:5}
+/* Celular o tablet en vertical: dibujo de girar la pantalla (sin texto). */
+#rotate{display:none;position:fixed;inset:0;z-index:8;background:#fbf3e4;place-items:center}
+@media (orientation:portrait) and (pointer:coarse){#rotate{display:grid}}
+#rotate .rot{animation:rot 2.4s ease-in-out infinite}
+@keyframes rot{0%,30%{transform:rotate(0)}60%,100%{transform:rotate(-90deg)}}
+svg text{font-family:Nunito,'Segoe UI',system-ui,sans-serif;font-weight:800}
+
+/* Animaciones base. Todas giran o escalan sobre el (0,0) local de su grupo. */
+.bob{animation:bob 2.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+.pulse{animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(.88);opacity:.65}50%{transform:scale(1.12);opacity:1}}
+.spin{animation:spin 7s linear infinite}
+.spin-slow{animation:spin 50s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sway{animation:sway 3.4s ease-in-out infinite;animation-delay:var(--d,0s)}
+@keyframes sway{0%,100%{transform:rotate(-2.6deg)}50%{transform:rotate(2.6deg)}}
+.blink{animation:blink 5s infinite;animation-delay:var(--bd,0s)}
+@keyframes blink{0%,93%,100%{transform:scaleY(1)}96%{transform:scaleY(.08)}}
+.drift{animation:drift 38s ease-in-out infinite alternate;animation-delay:var(--d,0s)}
+@keyframes drift{from{transform:translateX(-70px)}to{transform:translateX(70px)}}
+.flap{animation:flap .2s ease-in-out infinite alternate}
+@keyframes flap{from{transform:scaleX(1)}to{transform:scaleX(.18)}}
+.ripple{animation:ripple 5s ease-in-out infinite alternate;animation-delay:var(--d,0s)}
+@keyframes ripple{from{transform:translateX(-18px)}to{transform:translateX(18px)}}
+.float{animation:float 4.5s ease-in-out infinite;animation-delay:var(--d,0s)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.glowring{animation:glowring 1.6s ease-in-out infinite}
+@keyframes glowring{0%,100%{transform:scale(.94);opacity:.45}50%{transform:scale(1.06);opacity:.95}}
+.card .lift{transition:transform .18s ease-out}
+.card:hover .lift{transform:scale(1.06)}
+.spot .lift{transition:transform .2s ease-out}
+.spot.open:hover .lift{transform:scale(1.05)}
+
+/* Panel docente (solo para la maestra/el maestro) */
+#panel{position:fixed;inset:0;z-index:10;background:rgba(36,26,58,.6);display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:16px;cursor:auto;-webkit-user-select:text;user-select:text;touch-action:auto}
+#panel[hidden]{display:none}
+.pbox{background:#fffdf8;border-radius:18px;max-width:880px;width:100%;padding:16px 22px 12px;color:#2d2240;font:15px/1.45 'Segoe UI',system-ui,sans-serif;box-shadow:0 12px 40px rgba(0,0,0,.35)}
+.pbox header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.pbox h1{font-size:22px;margin:0}
+.pbox h2{font-size:16px;margin:16px 0 6px;color:#6a4fb3}
+.pbox section{border-top:1px solid #eee3d3;padding-bottom:6px}
+.pbox .hint{margin:0 0 8px;color:#6b6478;font-size:13.5px}
+.pbox textarea{width:100%;font:16px/1.4 'Segoe UI',system-ui,sans-serif;padding:8px 10px;border:2px solid #ddd0ee;border-radius:10px;resize:vertical}
+.pbox .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
+.pbox button,.pbox select{font:600 14px 'Segoe UI',system-ui,sans-serif;padding:8px 14px;border-radius:10px;border:2px solid #d9cdee;background:#fff;color:#2d2240;cursor:pointer}
+.pbox button:hover{background:#f4effc}
+.pbox button.primary{background:#7b5cd6;border-color:#7b5cd6;color:#fff}
+.pbox button.primary:hover{background:#6847c9}
+.pbox button.warn{border-color:#f0b9b9;color:#a33a3a}
+.pbox button:disabled{opacity:.45;cursor:default}
+.pbox label{display:block;margin:6px 0}
+.pbox footer{margin-top:10px;font-size:12px;color:#9a93a6;text-align:right}
+.kid{display:flex;align-items:center;gap:10px;padding:6px 4px;border-bottom:1px dashed #eee3d3;flex-wrap:wrap}
+.kid svg{flex:none}
+.kid .nm{font-weight:700;min-width:120px}
+.kid .pr{display:flex;gap:4px;min-width:96px}
+.kid .pr i{width:16px;height:16px;border-radius:50%;background:#e9e3f1;display:inline-block}
+.kid .pr i.ok{background:#ffc93c}
+.kid button{padding:5px 10px;font-size:13px}
+.card.locked:hover .lift{transform:none}
+
+/* Capítulo 2: sin agregados de estilo por ahora (el motor y el panel son los del capítulo 1). */
+
+</style>
+</head>
+<body>
+<svg id="stage" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" aria-label="Lumi y el faro dormido">
+  <defs id="defs"></defs>
+  <g id="world"></g>
+  <g id="fx"></g>
+  <g id="hud"></g>
+  <g id="hudfix"></g>
+  <g id="guide"></g>
+  <rect id="veil" x="-3000" y="-3000" width="7600" height="6900" fill="#fff6e3" opacity="1"/>
+</svg>
+<div id="corner" aria-hidden="true"></div>
+<div id="rotate" aria-hidden="true"><svg viewBox="-120 -120 240 240" width="220" height="220"><g class="rot"><rect x="-44" y="-78" width="88" height="156" rx="16" fill="#fff" stroke="#2d2240" stroke-width="8"/><circle cy="62" r="6" fill="#2d2240"/></g><path d="M-92 -40 A100 100 0 0 1 -40 -92" fill="none" stroke="#ffc93c" stroke-width="10" stroke-linecap="round"/><path d="M-52 -106 L-36 -92 L-54 -78" fill="none" stroke="#ffc93c" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="panel" hidden>
+  <div class="pbox">
+    <header>
+      <h1>Panel docente</h1>
+      <button id="pClose" class="primary">Volver al juego</button>
+    </header>
+    <section>
+      <h2>Nombres en esta compu</h2>
+      <p class="hint">Uno por renglón. Se guardan solo en esta compu, nunca en internet. Si cargás la misma lista, en el mismo orden, en todas las compus, cada chico tiene el mismo color y la misma criatura en todas.</p>
+      <textarea id="pNames" rows="6" spellcheck="false" placeholder="Ana&#10;Bruno&#10;Carla"></textarea>
+      <div class="row">
+        <button id="pSave" class="primary">Guardar nombres</button>
+        <button id="pClearNames" class="warn">Borrar todos los nombres</button>
+      </div>
+      <div id="pList"></div>
+    </section>
+    <section>
+      <h2>Tarjetas de esta compu</h2>
+      <p class="hint">Cuando un chico elige su tarjeta, queda asignada a esta compu. Al llenarse el cupo, las demás tarjetas se ven con candado.</p>
+      <div class="row"><span>Chicos que usan esta compu:</span> <select id="pSeats"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <button id="pRelease">Liberar esta compu</button></div>
+      <p class="hint" id="pClaimed"></p>
+    </section>
+    <section>
+      <h2>Ir a</h2>
+      <div class="row"><span>Juega:</span> <select id="pWho"></select></div>
+      <div id="pJump" class="row"></div>
+    </section>
+    <section>
+      <h2>Progreso y opciones</h2>
+      <div class="row">
+        <button id="pResetAll" class="warn">Reiniciar el progreso de todos</button>
+      </div>
+      <label><input type="checkbox" id="pMute"> Sonido apagado</label>
+      <label><input type="checkbox" id="pFull"> Pantalla completa al tocar una tarjeta</label>
+    </section>
+    <footer id="pFoot"></footer>
+  </div>
+</div>
+<script>
+(()=>{
+const BUILD='2026-11-23 18:36', CAP='cap2';
+// ---- 00-util.js
+'use strict';
+const NS = 'http://www.w3.org/2000/svg';
+const $ = (s, r = document) => r.querySelector(s);
+function el(tag, attrs, parent) {
+  const e = document.createElementNS(NS, tag);
+  if (attrs) for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(e);
+  return e;
+}
+function grp(attrs, parent, html) { const e = el('g', attrs, parent); if (html) e.innerHTML = html; return e; }
+const tr = (x, y, s) => `translate(${x} ${y})` + (s != null && s !== 1 ? ` scale(${s})` : '');
+const rand = (a, b) => a + Math.random() * (b - a);
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const clamp = (v, a, b) => v < a ? a : v > b ? b : v;
+const lerp = (a, b, t) => a + (b - a) * t;
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const Ease = {
+  out: t => 1 - Math.pow(1 - t, 3),
+  inOut: t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2,
+  back: t => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2); },
+  lin: t => t,
+};
+const EB = 'cubic-bezier(.34,1.56,.64,1)';
+function hex2rgb(h) { h = h.replace('#', ''); if (h.length === 3) h = h.split('').map(c => c + c).join(''); const n = parseInt(h, 16); return [n >> 16 & 255, n >> 8 & 255, n & 255]; }
+const rgbStr = c => `rgb(${c[0] | 0},${c[1] | 0},${c[2] | 0})`;
+const mixRgb = (a, b, t) => [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t];
+function grayOf(c) { const l = .3 * c[0] + .59 * c[1] + .11 * c[2]; const v = 52 + l * .72; return mixRgb([v, v + 2, v + 9], c, .06); }
+const toHex = c => '#' + c.map(v => Math.round(clamp(v, 0, 255)).toString(16).padStart(2, '0')).join('');
+function shade(hex, k) { const c = hex2rgb(hex); return toHex(k < 0 ? mixRgb(c, [40, 25, 60], -k) : mixRgb(c, [255, 255, 255], k)); }
+// Web Animations sobre elementos SVG; devuelve la animación (o un objeto vacío si no hay soporte).
+function anim(e, kf, o) {
+  if (!e || !e.animate) return { set onfinish(f) { f && f(); }, finished: Promise.resolve() };
+  return e.animate(kf, Object.assign({ fill: 'both' }, typeof o === 'number' ? { duration: o } : o));
+}
+
+// Contexto de una pantalla: todo lo que agenda se cancela al salir.
+class Ctx {
+  constructor() { this.alive = true; this.ids = new Set(); this.fns = []; }
+  after(ms, fn) { const id = setTimeout(() => { this.ids.delete(id); if (this.alive) fn(); }, ms); this.ids.add(id); return id; }
+  every(ms, fn) { const id = setInterval(() => { if (this.alive) fn(); }, ms); this.ids.add(id); return id; }
+  wait(ms) { return new Promise(r => this.after(ms, r)); }
+  tween(dur, fn, ease = Ease.inOut) {
+    return new Promise(res => {
+      const t0 = performance.now();
+      const step = now => {
+        if (!this.alive) return;
+        const t = Math.min(1, (now - t0) / dur);
+        fn(ease(t), t);
+        if (t < 1) requestAnimationFrame(step); else res();
+      };
+      requestAnimationFrame(step);
+    });
+  }
+  loop(fn) { let last = performance.now(); const step = now => { if (!this.alive) return; const dt = Math.min(50, now - last); last = now; if (fn(dt, now) !== false) requestAnimationFrame(step); }; requestAnimationFrame(step); }
+  onEnd(fn) { this.fns.push(fn); }
+  destroy() { this.alive = false; this.ids.forEach(id => clearTimeout(id)); this.ids.clear(); this.fns.forEach(f => { try { f(); } catch (e) { } }); }
+}
+
+// ---- 01-store.js
+// Guardado local. Clave estable 'lumiIsla', compartida por los dos capítulos (CAP = 'cap1' o 'cap2', lo pone el armado).
+// Estructura:
+// { schema:1, profiles:[{id,name,creature,color}], progress:{ [id]:{ who:{creature,color}, cap1:{ [escena]:{done,plays,last,ms,misses,hints} } } },
+//   settings:{muted,fullscreen,seats}, claimed:[id] (tarjetas asignadas a esta compu), last:id }
+const STORE_KEY = 'lumiIsla';
+const COLORS = [
+  { id: 'coral', c: '#ff8b7b' }, { id: 'naranja', c: '#ffb25b' }, { id: 'amarillo', c: '#ffd84a' },
+  { id: 'verde', c: '#86d36f' }, { id: 'menta', c: '#5fd6bd' }, { id: 'celeste', c: '#6cc6ff' },
+  { id: 'azul', c: '#8a95ff' }, { id: 'violeta', c: '#b78cff' }, { id: 'rosa', c: '#ff9fd0' }, { id: 'lima', c: '#c3e05a' },
+];
+const CREATURES = ['gato', 'conejo', 'oso', 'rana', 'buho', 'pollito', 'zorro', 'pinguino', 'raton', 'pulpo'];
+const colorOf = id => (COLORS.find(c => c.id === id) || COLORS[0]).c;
+const normName = s => s.trim().replace(/\s+/g, ' ').toLocaleLowerCase('es');
+
+const Store = {
+  data: null,
+  load() {
+    let d = null;
+    try { d = JSON.parse(localStorage.getItem(STORE_KEY) || 'null'); } catch (e) { d = null; }
+    if (!d || d.schema !== 1) d = { schema: 1 };
+    d.profiles = Array.isArray(d.profiles) ? d.profiles : [];
+    d.progress = d.progress && typeof d.progress === 'object' ? d.progress : {};
+    d.settings = Object.assign({ muted: false, fullscreen: true, seats: 1 }, d.settings || {});
+    d.claimed = Array.isArray(d.claimed) ? d.claimed : [];
+    this.data = d;
+  },
+  save() { try { localStorage.setItem(STORE_KEY, JSON.stringify(this.data)); } catch (e) { } },
+  prog(p) {
+    const all = this.data.progress;
+    const e = all[p.id] || (all[p.id] = {});
+    e.who = { creature: p.creature, color: p.color };
+    return e[CAP] || (e[CAP] = {});
+  },
+  isDone(p, key) { const e = this.data.progress[p.id]; return !!(e && e[CAP] && e[CAP][key] && e[CAP][key].done); },
+  sceneDone(p, key, stats) {
+    const c = this.prog(p);
+    const s = c[key] || { plays: 0 };
+    Object.assign(s, stats, { done: true, plays: (s.plays || 0) + 1, last: Date.now() });
+    c[key] = s;
+    this.save();
+  },
+  anonProfiles() { return CREATURES.map((cr, i) => ({ id: 'a:' + cr, name: '', creature: cr, color: COLORS[(i * 3) % 10].id })); },
+  guest() { return { id: 'invitado', name: '', creature: 'pollito', color: 'amarillo' }; },
+  setNames(names) {
+    const old = new Map(this.data.profiles.map(p => [normName(p.name), p]));
+    const seen = new Set(), out = [];
+    for (const raw of names) {
+      const n = raw.trim().replace(/\s+/g, ' ');
+      const k = normName(n);
+      if (!n || seen.has(k)) continue;
+      seen.add(k);
+      let p = old.get(k);
+      if (!p) {
+        const used = new Set(out.map(q => q.creature));
+        let i = 0;
+        while (i < 10 && used.has(CREATURES[i])) i++;
+        if (i === 10) i = out.length;
+        p = { id: 'n:' + k, name: n, creature: CREATURES[i % 10], color: COLORS[(i * 3) % 10].id };
+      }
+      out.push(p);
+    }
+    this.data.profiles = out;
+    this.save();
+  },
+  cycle(id, field) {
+    const p = this.data.profiles.find(q => q.id === id); if (!p) return;
+    const list = field === 'creature' ? CREATURES : COLORS.map(c => c.id);
+    p[field] = list[(list.indexOf(p[field]) + 1) % list.length];
+    this.save();
+  },
+  // Tarjetas asignadas a esta compu: cuando se llena el cupo, las demás se bloquean.
+  claim(id) { if (!this.data.claimed.includes(id)) { this.data.claimed.push(id); this.save(); } },
+  release() { this.data.claimed = []; this.save(); },
+  // Reiniciar borra solo el capítulo que se está jugando.
+  resetOne(id) { const e = this.data.progress[id]; if (e) delete e[CAP]; this.save(); },
+  resetAll() { for (const id in this.data.progress) delete this.data.progress[id][CAP]; this.save(); },
+  clearNames() {
+    for (const p of this.data.profiles) delete this.data.progress[p.id];
+    this.data.profiles = []; this.data.last = null; this.data.claimed = []; this.save();
+  },
+};
+
+// ---- 02-audio.js
+// Sonido sintetizado con Web Audio. Todo el juego funciona igual sin sonido.
+const PENTA = [392, 440, 523.25, 587.33, 659.25, 783.99, 880, 1046.5, 1174.66, 1318.5, 1567.98];
+const Sound = {
+  ac: null, out: null, muted: false, amb: null, nb: null,
+  init() {
+    if (this.ac) { if (this.ac.state === 'suspended') this.ac.resume(); return; }
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      this.ac = new AC();
+      this.out = this.ac.createGain();
+      this.out.gain.value = this.muted ? 0 : .9;
+      const comp = this.ac.createDynamicsCompressor();
+      this.out.connect(comp); comp.connect(this.ac.destination);
+      const len = this.ac.sampleRate;
+      this.nb = this.ac.createBuffer(1, len, len);
+      const d = this.nb.getChannelData(0);
+      for (let i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
+    } catch (e) { this.ac = null; }
+  },
+  ok() { return this.ac && !this.muted && this.ac.state === 'running'; },
+  setMuted(m) { this.muted = m; if (this.out) this.out.gain.setTargetAtTime(m ? 0 : .9, this.ac.currentTime, .05); },
+  note(f, o = {}) {
+    if (!this.ok()) return;
+    const { t = 0, dur = .5, type = 'sine', vol = .2, attack = .006, slide = null } = o;
+    const a = this.ac, t0 = a.currentTime + t;
+    const osc = a.createOscillator(), g = a.createGain();
+    osc.type = type; osc.frequency.setValueAtTime(f, t0);
+    if (slide) osc.frequency.exponentialRampToValueAtTime(slide, t0 + dur * .8);
+    g.gain.setValueAtTime(.0001, t0);
+    g.gain.exponentialRampToValueAtTime(vol, t0 + attack);
+    g.gain.exponentialRampToValueAtTime(.0001, t0 + dur);
+    osc.connect(g); g.connect(this.out); osc.start(t0); osc.stop(t0 + dur + .05);
+  },
+  bell(f, t = 0, vol = .16, dur = 1.1) {
+    this.note(f, { t, dur, vol });
+    this.note(f * 2.005, { t, dur: dur * .5, vol: vol * .28 });
+    this.note(f * 3.01, { t, dur: dur * .25, vol: vol * .1, type: 'triangle' });
+  },
+  noise(dur, f0, f1, vol = .12, t = 0) {
+    if (!this.ok()) return;
+    const a = this.ac, t0 = a.currentTime + t;
+    const s = a.createBufferSource(); s.buffer = this.nb;
+    const bp = a.createBiquadFilter(); bp.type = 'bandpass'; bp.Q.value = 1.2;
+    bp.frequency.setValueAtTime(f0, t0); bp.frequency.exponentialRampToValueAtTime(f1, t0 + dur);
+    const g = a.createGain();
+    g.gain.setValueAtTime(.0001, t0); g.gain.exponentialRampToValueAtTime(vol, t0 + dur * .35); g.gain.exponentialRampToValueAtTime(.0001, t0 + dur);
+    s.connect(bp); bp.connect(g); g.connect(this.out); s.start(t0); s.stop(t0 + dur + .05);
+  },
+  pop() { this.note(rand(480, 620), { dur: .14, vol: .22, slide: 1300 }); },
+  tap() { this.note(1046, { dur: .07, vol: .05, type: 'triangle' }); },
+  miss() { this.note(260, { dur: .22, vol: .14, slide: 200 }); this.note(390, { dur: .16, vol: .05, type: 'triangle' }); },
+  whoosh() { this.noise(.7, 300, 2400, .1); },
+  bloom(i) {
+    const b = i % 6;
+    [0, 2, 4].forEach((k, j) => this.bell(PENTA[b + k], j * .085, .14));
+    this.noise(.35, 2500, 7000, .03);
+  },
+  ding(i) { this.bell(PENTA[i % PENTA.length], 0, .13, .8); },
+  grow(i) { this.note(220 + i * 70, { dur: .35, vol: .2, slide: 330 + i * 90 }); this.bell(PENTA[2 + i], .05, .1); },
+  munch() { for (let i = 0; i < 3; i++) { this.noise(.09, 900, 500, .14, i * .2); this.note(180 + i * 20, { t: i * .2, dur: .08, vol: .1, type: 'triangle' }); } },
+  blub() { this.note(rand(300, 420), { dur: .18, vol: .18, slide: rand(900, 1200) }); this.noise(.12, 1500, 4000, .04); },
+  star(i) { this.bell(PENTA[3 + i % 8], 0, .14, 1.4); this.bell(PENTA[3 + i % 8] * 1.5, .07, .06, 1); },
+  boom() { this.noise(.6, 200, 60, .2); this.bell(PENTA[rand(5, 10) | 0], .05, .08, 1.2); },
+  twinkle() { this.bell(pick(PENTA.slice(6)), 0, .06, .6); },
+  chord() { [523.25, 659.25, 783.99].forEach((f, i) => this.bell(f, i * .06, .1)); },
+  fanfare() {
+    [523.25, 659.25, 783.99, 1046.5].forEach((f, i) => this.bell(f, i * .12, .15));
+    [523.25, 659.25, 783.99, 1046.5].forEach(f => this.bell(f, .6, .09, 1.8));
+    this.noise(1.2, 3000, 9000, .03, .5);
+  },
+  ambient(on) {
+    clearTimeout(this.amb);
+    if (!on) return;
+    const go = () => { if (this.ok()) this.bell(pick(PENTA.slice(2, 8)), 0, .035, 1.6); this.amb = setTimeout(go, rand(2200, 4800)); };
+    this.amb = setTimeout(go, 1500);
+  },
+};
+
+// ---- 03-art.js
+// Dibujos en SVG. Cada pieza está centrada en su (0,0), que también es su punto de giro/escala.
+// Con p=true el color se escribe como data-p: la "pintura" lo arranca gris y lo va coloreando.
+const INK = '#2d2240';
+const fa = (c, p) => p ? `data-p="${c}"` : `fill="${c}"`;
+const sa = (c, p) => p ? `data-p="${c}" data-pa="stroke"` : `stroke="${c}"`;
+const EYE = (x, y, r = 8) => `<g transform="translate(${x} ${y})"><g class="blink"><circle r="${r}" fill="${INK}"/><circle cx="${r * .36}" cy="${-r * .38}" r="${r * .36}" fill="#fff"/></g></g>`;
+const CHEEK = (x, y, rx = 10) => `<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${rx * .6}" fill="#ff6f9c" opacity=".38"/>`;
+const SMILE = (y = 20, w = 10, sw = 4) => `<path d="M${-w} ${y} Q0 ${y + w * 1.05} ${w} ${y}" fill="none" stroke="${INK}" stroke-width="${sw}" stroke-linecap="round"/>`;
+function starPath(R, r, n = 5) {
+  let d = '';
+  for (let i = 0; i < n * 2; i++) {
+    const a = -Math.PI / 2 + i * Math.PI / n, rr = i % 2 ? r : R;
+    d += (i ? 'L' : 'M') + (Math.cos(a) * rr).toFixed(1) + ' ' + (Math.sin(a) * rr).toFixed(1);
+  }
+  return d + 'Z';
+}
+const SPARK = 'M0 -10 C1 -3 3 -1 10 0 C3 1 1 3 0 10 C-1 3 -3 1 -10 0 C-3 -1 -1 -3 0 -10Z';
+
+const ART = {
+  defs() {
+    return `
+<radialGradient id="gLumi" cx=".38" cy=".34" r=".72"><stop offset="0" stop-color="#fffdf2"/><stop offset=".42" stop-color="#ffe98a"/><stop offset="1" stop-color="#ffb43a"/></radialGradient>
+<radialGradient id="gLumiGlow"><stop offset="0" stop-color="#fff1a8" stop-opacity=".9"/><stop offset=".45" stop-color="#ffd66b" stop-opacity=".35"/><stop offset="1" stop-color="#ffc54d" stop-opacity="0"/></radialGradient>
+<radialGradient id="gGold"><stop offset="0" stop-color="#fff6b8" stop-opacity="1"/><stop offset=".5" stop-color="#ffd54d" stop-opacity=".45"/><stop offset="1" stop-color="#ffc83d" stop-opacity="0"/></radialGradient>
+<radialGradient id="gWhite"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<linearGradient id="gStar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff07a"/><stop offset="1" stop-color="#ffb627"/></linearGradient>`;
+  },
+
+  lumi() {
+    return `
+<g class="pulse" style="animation-duration:2.6s"><circle r="125" fill="url(#gLumiGlow)"/></g>
+<g class="l-arms">
+  <g transform="translate(-58 12)"><g class="arm"><ellipse rx="13" ry="10" fill="#ffc24a"/></g></g>
+  <g transform="translate(58 12)"><g class="arm"><ellipse rx="13" ry="10" fill="#ffc24a"/></g></g>
+</g>
+<g transform="translate(-21 52)"><g class="foot"><ellipse cy="9" rx="15" ry="10" fill="#ff9d3b"/><ellipse cx="-4" cy="5" rx="6" ry="3" fill="#ffd08a"/></g></g>
+<g transform="translate(21 52)"><g class="foot"><ellipse cy="9" rx="15" ry="10" fill="#ff9d3b"/><ellipse cx="-4" cy="5" rx="6" ry="3" fill="#ffd08a"/></g></g>
+<path d="M-17 -50 C-24 -72 -6 -84 7 -100 C5 -82 25 -72 17 -50 Z" fill="url(#gLumi)"/>
+<circle r="60" fill="url(#gLumi)"/>
+<ellipse cx="-22" cy="-30" rx="17" ry="10" fill="#fff" opacity=".6" transform="rotate(-32 -22 -30)"/>
+${CHEEK(-34, 16, 11)}${CHEEK(34, 16, 11)}
+<g transform="translate(-20 -4)"><g class="blink"><ellipse rx="12.5" ry="16" fill="#fff"/><g class="pupil"><circle r="8.5" fill="${INK}"/><circle cx="3" cy="-4" r="3.2" fill="#fff"/></g></g></g>
+<g transform="translate(20 -4)"><g class="blink"><ellipse rx="12.5" ry="16" fill="#fff"/><g class="pupil"><circle r="8.5" fill="${INK}"/><circle cx="3" cy="-4" r="3.2" fill="#fff"/></g></g></g>
+<path class="mouth" d="M-11 19 Q0 30 11 19" fill="none" stroke="${INK}" stroke-width="4" stroke-linecap="round"/>
+<path class="mouth-o" d="M-14 16 Q0 42 14 16 Z" fill="#8a3550" stroke="${INK}" stroke-width="3" stroke-linejoin="round" opacity="0"/>`;
+  },
+
+  hand() {
+    const s = `<rect x="-13" y="0" width="26" height="90" rx="13"/><rect x="-18" y="52" width="82" height="76" rx="28"/>
+<rect x="9" y="45" width="25" height="46" rx="12.5"/><rect x="30" y="51" width="24" height="44" rx="12"/><rect x="47" y="60" width="20" height="38" rx="10"/>
+<rect x="-42" y="70" width="27" height="48" rx="13.5" transform="rotate(-36 -28 94)"/>`;
+    return `<g transform="rotate(-16)">
+<g fill="${INK}" stroke="${INK}" stroke-width="10" stroke-linejoin="round">${s}</g>
+<g fill="#fff">${s}</g>
+<path d="M-5 12 Q0 9 5 12" stroke="#d8cfe6" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M16 64 L16 80 M37 70 L37 84" stroke="#e2dbec" stroke-width="3" stroke-linecap="round"/>
+<rect x="-22" y="120" width="90" height="36" rx="13" fill="#b9a6ff" stroke="${INK}" stroke-width="5"/>
+</g>`;
+  },
+
+  creature(t) {
+    const W = (y1, y2) => `<path d="M-30 ${y1} L-60 ${y1 - 6} M-30 ${y2} L-60 ${y2 + 3} M30 ${y1} L60 ${y1 - 6} M30 ${y2} L60 ${y2 + 3}" stroke="${INK}" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>`;
+    const C = {
+      gato: `<path d="M-48 -12 L-41 -68 L-8 -44Z" fill="#f2a15a"/><path d="M-39 -24 L-36 -56 L-18 -42Z" fill="#ffc4c4"/>
+<path d="M48 -12 L41 -68 L8 -44Z" fill="#f2a15a"/><path d="M39 -24 L36 -56 L18 -42Z" fill="#ffc4c4"/>
+<circle r="51" fill="#f7b267"/><path d="M-11 -49 L-7 -35 M0 -51 L0 -35 M11 -49 L7 -35" stroke="#e0883a" stroke-width="5" stroke-linecap="round"/>
+<ellipse cy="21" rx="27" ry="18" fill="#fff3e2"/>${EYE(-19, -4, 8.5)}${EYE(19, -4, 8.5)}
+<path d="M-6 10 L6 10 L0 17Z" fill="#ff7f9e" stroke="#ff7f9e" stroke-width="3" stroke-linejoin="round"/>
+<path d="M0 17 Q-6 27 -13 22 M0 17 Q6 27 13 22" stroke="${INK}" stroke-width="3.2" fill="none" stroke-linecap="round"/>${W(14, 21)}${CHEEK(-33, 10)}${CHEEK(33, 10)}`,
+      conejo: `<g transform="rotate(-9)"><ellipse cx="-19" cy="-68" rx="15" ry="40" fill="#efe7f6"/><ellipse cx="-19" cy="-64" rx="7.5" ry="29" fill="#ffc0d6"/></g>
+<g transform="rotate(9)"><ellipse cx="19" cy="-68" rx="15" ry="40" fill="#efe7f6"/><ellipse cx="19" cy="-64" rx="7.5" ry="29" fill="#ffc0d6"/></g>
+<circle r="51" fill="#f3edf8"/>${EYE(-18, -6, 8.5)}${EYE(18, -6, 8.5)}
+<ellipse cy="11" rx="7.5" ry="5.5" fill="#ff8fb0"/><path d="M0 16 Q-7 25 -13 20 M0 16 Q7 25 13 20" stroke="${INK}" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+<rect x="-6.5" y="22" width="13" height="11" rx="3" fill="#fff" stroke="#d8cde4" stroke-width="2"/>${CHEEK(-32, 10)}${CHEEK(32, 10)}`,
+      oso: `<circle cx="-37" cy="-37" r="19" fill="#a6714a"/><circle cx="-37" cy="-37" r="9.5" fill="#e8b98e"/><circle cx="37" cy="-37" r="19" fill="#a6714a"/><circle cx="37" cy="-37" r="9.5" fill="#e8b98e"/>
+<circle r="52" fill="#b9825a"/><ellipse cy="19" rx="25" ry="19" fill="#f0d2ab"/>${EYE(-19, -8, 8.5)}${EYE(19, -8, 8.5)}
+<ellipse cy="10" rx="10" ry="7" fill="${INK}"/>${SMILE(19, 7, 3.5)}${CHEEK(-34, 8)}${CHEEK(34, 8)}`,
+      rana: `<circle cx="-27" cy="-33" r="21" fill="#74c75c"/><circle cx="27" cy="-33" r="21" fill="#74c75c"/>
+<ellipse cy="7" rx="60" ry="45" fill="#84d36a"/><circle cx="-27" cy="-35" r="14" fill="#fff"/><circle cx="27" cy="-35" r="14" fill="#fff"/>
+${EYE(-27, -35, 7.5)}${EYE(27, -35, 7.5)}<path d="M-30 10 Q0 40 30 10" stroke="${INK}" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+${CHEEK(-40, 14, 12)}${CHEEK(40, 14, 12)}<circle cx="-8" cy="-6" r="2.5" fill="#4e9e3b"/><circle cx="8" cy="-6" r="2.5" fill="#4e9e3b"/>`,
+      buho: `<path d="M-46 -26 L-40 -66 L-16 -44Z" fill="#8a6cc2"/><path d="M46 -26 L40 -66 L16 -44Z" fill="#8a6cc2"/>
+<ellipse rx="53" ry="55" fill="#9d81d2"/><ellipse cy="27" rx="31" ry="24" fill="#ddd1f4"/>
+<path d="M-12 22 q4 5 8 0 M4 22 q4 5 8 0 M-4 33 q4 5 8 0" stroke="#a991d8" stroke-width="3" fill="none" stroke-linecap="round"/>
+<circle cx="-20" cy="-12" r="20" fill="#fff"/><circle cx="20" cy="-12" r="20" fill="#fff"/>${EYE(-20, -12, 10)}${EYE(20, -12, 10)}
+<path d="M-8 3 L8 3 L0 15Z" fill="#ffae3b" stroke="#ffae3b" stroke-width="3" stroke-linejoin="round"/>`,
+      pollito: `<path d="M-6 -47 C-16 -68 -2 -72 0 -56 C2 -74 18 -66 6 -47Z" fill="#ffc23a"/>
+<ellipse cx="-49" cy="14" rx="12" ry="19" fill="#ffc93c" transform="rotate(22 -49 14)"/><ellipse cx="49" cy="14" rx="12" ry="19" fill="#ffc93c" transform="rotate(-22 49 14)"/>
+<circle r="51" fill="#ffd94f"/>${EYE(-18, -6, 8.5)}${EYE(18, -6, 8.5)}
+<path d="M-12 8 L12 8 L0 23Z" fill="#ff9b3d" stroke="#ff9b3d" stroke-width="4" stroke-linejoin="round"/>${CHEEK(-32, 12)}${CHEEK(32, 12)}`,
+      zorro: `<path d="M-50 -8 L-43 -68 L-9 -40Z" fill="#ee8646"/><path d="M-42 -22 L-39 -55 L-21 -38Z" fill="#6a3d2a" opacity=".75"/>
+<path d="M50 -8 L43 -68 L9 -40Z" fill="#ee8646"/><path d="M42 -22 L39 -55 L21 -38Z" fill="#6a3d2a" opacity=".75"/>
+<path d="M-54 -16 C-54 -52 54 -52 54 -16 C54 16 24 44 0 52 C-24 44 -54 16 -54 -16Z" fill="#f39250"/>
+<path d="M-54 -8 C-42 28 -14 44 0 52 C14 44 42 28 54 -8 C36 12 16 16 0 18 C-16 16 -36 12 -54 -8Z" fill="#fff5ea"/>
+${EYE(-19, -14, 8.5)}${EYE(19, -14, 8.5)}<ellipse cy="42" rx="9" ry="7" fill="${INK}"/>${CHEEK(-34, 6)}${CHEEK(34, 6)}`,
+      pinguino: `<circle r="52" fill="#3f4d6b"/><path d="M0 -26 C-14 -46 -46 -38 -42 -6 C-40 24 -18 44 0 46 C18 44 40 24 42 -6 C46 -38 14 -46 0 -26Z" fill="#fff"/>
+${EYE(-16, -6, 8.5)}${EYE(16, -6, 8.5)}<path d="M-11 8 L11 8 L0 21Z" fill="#ffab3d" stroke="#ffab3d" stroke-width="4" stroke-linejoin="round"/>${CHEEK(-29, 13)}${CHEEK(29, 13)}`,
+      raton: `<circle cx="-40" cy="-32" r="28" fill="#b4afc8"/><circle cx="-40" cy="-32" r="17" fill="#ffc4d6"/><circle cx="40" cy="-32" r="28" fill="#b4afc8"/><circle cx="40" cy="-32" r="17" fill="#ffc4d6"/>
+<circle cy="5" r="47" fill="#c8c3da"/>${EYE(-16, -3, 8.5)}${EYE(16, -3, 8.5)}<ellipse cy="15" rx="8" ry="6" fill="#ff8fb0"/>${SMILE(23, 6, 3.2)}${W(15, 22)}${CHEEK(-30, 14)}${CHEEK(30, 14)}`,
+      pulpo: `<g fill="none" stroke="#ff8cc6" stroke-width="15" stroke-linecap="round"><path d="M-36 18 C-46 42 -26 52 -36 66"/><path d="M-12 24 C-18 48 -2 54 -10 70"/><path d="M12 24 C18 48 2 54 10 70"/><path d="M36 18 C46 42 26 52 36 66"/></g>
+<path d="M-50 20 C-58 -44 58 -44 50 20 C32 36 -32 36 -50 20Z" fill="#ff9fd0"/><circle cx="-22" cy="-24" r="6" fill="#ffc4e4"/><circle cx="26" cy="-30" r="4.5" fill="#ffc4e4"/>
+${EYE(-17, -2, 8.5)}${EYE(17, -2, 8.5)}${SMILE(13, 8, 3.5)}${CHEEK(-32, 10)}${CHEEK(32, 10)}`,
+    };
+    return `<g style="--bd:${(-Math.random() * 5).toFixed(2)}s">${C[t] || C.pollito}</g>`;
+  },
+
+  avatar(p, r = 76) {
+    const c = colorOf(p.color);
+    return `<circle r="${r}" fill="${c}"/><circle r="${r * .86}" fill="${shade(c, .55)}"/><g transform="scale(${(r / 76 * .92).toFixed(3)}) translate(0 6)">${ART.creature(p.creature)}</g>`;
+  },
+
+  flowerParts(type, col, h, p) {
+    const sh = shade(col, -.2);
+    let petals = '';
+    if (type === 'daisy') for (let i = 0; i < 8; i++) petals += `<ellipse cy="-27" rx="12.5" ry="22" ${fa(col, p)} stroke="${sh}" stroke-width="2" transform="rotate(${i * 45})"/>`;
+    else if (type === 'round') for (let i = 0; i < 5; i++) petals += `<circle cy="-25" r="21" ${fa(col, p)} stroke="${sh}" stroke-width="2" transform="rotate(${i * 72})"/>`;
+    else if (type === 'star') for (let i = 0; i < 6; i++) petals += `<path d="M0 -48 C17 -33 15 -16 0 -8 C-15 -16 -17 -33 0 -48Z" ${fa(col, p)} stroke="${sh}" stroke-width="2" transform="rotate(${i * 60})"/>`;
+    const tulip = type === 'tulip';
+    if (tulip) petals = `<path d="M-30 -10 C-34 -40 -20 -50 -14 -45 L0 -28 L14 -45 C20 -50 34 -40 30 -10 C26 18 -26 18 -30 -10Z" ${fa(col, p)} stroke="${sh}" stroke-width="2.5"/><path d="M-12 -30 L0 -16 L12 -30" stroke="${sh}" stroke-width="2.5" fill="none" opacity=".5"/>`;
+    const face = `<path d="M-9 -3 q3.5 -4.5 7 0 M2 -3 q3.5 -4.5 7 0" stroke="${INK}" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M-5 4 q5 5 10 0" stroke="${INK}" stroke-width="2.6" fill="none" stroke-linecap="round"/>${CHEEK(-11, 3, 4)}${CHEEK(11, 3, 4)}`;
+    const center = tulip ? `<g transform="translate(0 -4)">${face}</g>` : `<circle r="18" ${fa('#ffd34d', p)} stroke="#f0b52a" stroke-width="2.5"/>${face}`;
+    const stem = `<path d="M0 0 C7 ${-h * .35} -7 ${-h * .65} 0 ${-h}" ${sa('#4fae4f', p)} stroke-width="9" fill="none" stroke-linecap="round"/>`;
+    const leafA = `<path d="M0 0 C12 -22 40 -22 50 -9 C36 4 14 6 0 0Z" ${fa('#6cc65a', p)}/><path d="M4 -2 C18 -10 32 -11 44 -9" stroke="#4fae4f" stroke-width="2" fill="none" opacity=".6"/>`;
+    return {
+      stem, head: petals + center,
+      leaves: [{ y: -h * .36, s: 1, svg: leafA }, { y: -h * .56, s: -1, svg: leafA }],
+    };
+  },
+  // Flor completa (estática) para mapas y adornos.
+  flower(type, col, h, p) {
+    const f = ART.flowerParts(type, col, h, p);
+    return f.stem + f.leaves.map(l => `<g transform="translate(0 ${l.y}) scale(${l.s} 1)">${l.svg}</g>`).join('') + `<g transform="translate(0 ${-h})">${f.head}</g>`;
+  },
+
+  seed(big) {
+    let sp = '';
+    for (let i = 0; i < 4; i++) { const a = i * Math.PI / 2 + .4; sp += `<path d="${SPARK}" fill="#fff6b0" transform="translate(${(Math.cos(a) * 48).toFixed(1)} ${(Math.sin(a) * 48).toFixed(1)}) scale(${i % 2 ? .7 : 1})"/>`; }
+    return `<g class="pulse"><circle r="${big ? 80 : 66}" fill="url(#gGold)"/></g>
+<g class="spin">${sp}</g>
+<g transform="translate(0 6)"><path d="M0 -27 C17 -14 19 6 0 15 C-19 6 -17 -14 0 -27Z" fill="#b97d45" stroke="#7a4f27" stroke-width="3.5" stroke-linejoin="round"/>
+<path d="M-6 -15 C-3 -20 3 -20 5 -13" stroke="#e8bd85" stroke-width="3.5" fill="none" stroke-linecap="round"/></g>`;
+  },
+
+  cloud(s = 1, p) {
+    return `<g transform="scale(${s})"><circle cx="-46" cy="4" r="32" ${fa('#ffffff', p)}/><circle cx="-4" cy="-18" r="44" ${fa('#ffffff', p)}/><circle cx="44" cy="0" r="34" ${fa('#ffffff', p)}/><rect x="-80" y="0" width="160" height="36" rx="18" ${fa('#ffffff', p)}/></g>`;
+  },
+
+  star(R = 40) {
+    return `<path d="${starPath(R, R * .48)}" fill="url(#gStar)" stroke="#e59a12" stroke-width="${R * .09}" stroke-linejoin="round"/>
+<path d="M${-R * .28} ${-R * .02} q${R * .1} ${-R * .12} ${R * .2} 0 M${R * .08} ${-R * .02} q${R * .1} ${-R * .12} ${R * .2} 0" stroke="${INK}" stroke-width="${R * .07}" fill="none" stroke-linecap="round"/>
+<path d="M${-R * .12} ${R * .14} q${R * .12} ${R * .12} ${R * .24} 0" stroke="${INK}" stroke-width="${R * .07}" fill="none" stroke-linecap="round"/>`;
+  },
+
+  butterfly(c) {
+    const w = `<path d="M0 0 C-12 -40 -52 -38 -42 -8 C-36 6 -14 6 0 0Z" fill="${c}" stroke="${shade(c, -.25)}" stroke-width="2"/><path d="M0 2 C-30 4 -40 26 -22 30 C-10 32 -2 16 0 2Z" fill="${shade(c, .25)}" stroke="${shade(c, -.25)}" stroke-width="2"/><circle cx="-26" cy="-14" r="6" fill="#fff" opacity=".6"/>`;
+    return `<g class="flap">${w}</g><g transform="scale(-1 1)"><g class="flap">${w}</g></g><ellipse rx="4.5" ry="17" fill="${INK}"/><path d="M-2 -15 q-8 -12 -12 -12 M2 -15 q8 -12 12 -12" stroke="${INK}" stroke-width="2.5" fill="none" stroke-linecap="round"/>`;
+  },
+
+  speaker(muted) {
+    return `<circle r="40" fill="#fff" fill-opacity=".82" stroke="#e3d8ef" stroke-width="3"/>
+<path d="M-20 -9 L-9 -9 L5 -21 L5 21 L-9 9 L-20 9Z" fill="${INK}" stroke="${INK}" stroke-width="3" stroke-linejoin="round"/>` +
+      (muted ? `<path d="M13 -10 L29 10 M29 -10 L13 10" stroke="#e0566a" stroke-width="5.5" stroke-linecap="round"/>`
+        : `<path d="M12 -10 q8 10 0 20 M19 -18 q15 18 0 36" stroke="${INK}" stroke-width="4.5" fill="none" stroke-linecap="round"/>`);
+  },
+};
+
+// ---- 04-engine.js
+// Motor: capas, pintura (gris -> color), efectos, manito guía, Lumi, entrada y pantallas.
+const stage = $('#stage');
+const L = { defs: $('#defs'), world: $('#world'), fx: $('#fx'), hud: $('#hud'), hudfix: $('#hudfix'), guide: $('#guide'), veil: $('#veil') };
+L.defs.innerHTML = ART.defs();
+const toSvg = (cx, cy) => { const p = new DOMPoint(cx, cy).matrixTransform(stage.getScreenCTM().inverse()); return { x: p.x, y: p.y }; };
+const toScreen = (x, y) => { const p = new DOMPoint(x, y).matrixTransform(stage.getScreenCTM()); return { x: p.x, y: p.y }; };
+
+// ---------- Pintura: cada elemento con data-p arranca gris y se colorea con ondas.
+const Paint = {
+  items: [], running: false,
+  scan(root, opt = {}) {
+    const inv = stage.getScreenCTM().inverse();
+    root.querySelectorAll('[data-p]').forEach(e => {
+      const c = hex2rgb(e.getAttribute('data-p'));
+      const it = { e, c, gr: grayOf(c), attr: e.getAttribute('data-pa') || (e.tagName === 'stop' ? 'stop-color' : 'fill'), lv: 0, to: 0, act: false, x: null, y: null, group: opt.group || null };
+      if (!opt.global && e.tagName !== 'stop' && !e.hasAttribute('data-gl')) {
+        try { const b = e.getBBox(); const p = new DOMPoint(b.x + b.width / 2, b.y + b.height / 2).matrixTransform(inv.multiply(e.getScreenCTM())); it.x = p.x; it.y = p.y; } catch (_) { }
+      }
+      e.removeAttribute('data-p');
+      this.items.push(it); this.set(it, opt.level || 0); it.to = it.lv;
+    });
+  },
+  set(it, lv) { it.lv = lv; it.e.setAttribute(it.attr, rgbStr(mixRgb(it.gr, it.c, lv))); },
+  go(it, to, delay, dur) { it.from = it.lv; it.to = to; it.t0 = performance.now() + delay; it.dur = dur; it.act = true; this.kick(); },
+  wave(x, y, R = 540, amt = .9) {
+    for (const it of this.items) {
+      if (it.x === null || it.group) continue;
+      const d = Math.hypot(it.x - x, it.y - y);
+      if (d < R) this.go(it, Math.min(1, Math.max(it.to, it.lv) + amt * (1 - d / R) + .08), d * 1.1, 650);
+    }
+  },
+  global(lv, dur = 1200) { for (const it of this.items) if (it.x === null && !it.group && lv > it.to) this.go(it, lv, 0, dur); },
+  group(name, lv, dur = 1000) { for (const it of this.items) if (it.group === name) this.go(it, lv, 0, dur); },
+  all(lv, dur, cx = 800, cy = 450) { for (const it of this.items) if (!it.group) this.go(it, lv, it.x === null ? 0 : Math.hypot(it.x - cx, it.y - cy) * .9, dur); },
+  kick() { if (!this.running) { this.running = true; requestAnimationFrame(this.tick); } },
+  tick: now => {
+    let any = false;
+    for (const it of Paint.items) {
+      if (!it.act) continue;
+      if (now < it.t0) { any = true; continue; }
+      const t = Math.min(1, (now - it.t0) / it.dur);
+      Paint.set(it, it.from + (it.to - it.from) * Ease.out(t));
+      if (t >= 1) it.act = false; else any = true;
+    }
+    if (any) requestAnimationFrame(Paint.tick); else Paint.running = false;
+  },
+  reset() { this.items = []; },
+};
+
+// ---------- Efectos de partículas.
+const FX = {
+  n: 0,
+  add(x, y, html) { const g = grp({ transform: tr(x, y) }, L.fx); const i = grp({}, g, html); return [g, i]; },
+  burst(x, y, colors, n = 12, spread = 140, shape = 'petal') {
+    for (let k = 0; k < n; k++) {
+      const c = colors[k % colors.length], a = rand(0, Math.PI * 2), d = rand(.45, 1) * spread;
+      const html = shape === 'star' ? `<path d="${SPARK}" fill="${c}" transform="scale(${rand(.8, 1.5).toFixed(2)})"/>`
+        : shape === 'dot' ? `<circle r="${rand(5, 9).toFixed(1)}" fill="${c}"/>`
+          : `<ellipse rx="${rand(6, 9).toFixed(1)}" ry="${rand(11, 15).toFixed(1)}" fill="${c}"/>`;
+      const [g, i] = this.add(x, y, html);
+      const dx = Math.cos(a) * d, dy = Math.sin(a) * d - 40, r = rand(-260, 260);
+      anim(i, [{ transform: 'translate(0px,0px) scale(.3) rotate(0deg)', opacity: 1 },
+      { transform: `translate(${dx}px,${dy}px) scale(1) rotate(${r * .6}deg)`, opacity: 1, offset: .55 },
+      { transform: `translate(${dx * 1.15}px,${dy + 70}px) scale(.7) rotate(${r}deg)`, opacity: 0 }],
+        { duration: rand(850, 1300), easing: 'cubic-bezier(.2,.7,.4,1)' }).onfinish = () => g.remove();
+    }
+  },
+  ring(x, y, color = '#fff', r = 120, w = 8, dur = 700) {
+    const [g, i] = this.add(x, y, `<circle r="${r}" fill="none" stroke="${color}" stroke-width="${w}"/>`);
+    anim(i, [{ transform: 'scale(.15)', opacity: .95 }, { transform: 'scale(1)', opacity: 0 }], { duration: dur, easing: 'cubic-bezier(.1,.6,.3,1)' }).onfinish = () => g.remove();
+  },
+  sparkle(x, y, c = '#fff6b0', s = 1, dur = 650) {
+    const [g, i] = this.add(x, y, `<path d="${SPARK}" fill="${c}"/>`);
+    anim(i, [{ transform: `scale(0) rotate(0deg)`, opacity: 1 }, { transform: `scale(${s * 1.4}) rotate(60deg)`, opacity: 1, offset: .4 }, { transform: `translate(0px,-24px) scale(0) rotate(140deg)`, opacity: 0 }], { duration: dur, easing: 'ease-out' }).onfinish = () => g.remove();
+  },
+  puff(x, y) {
+    for (let k = 0; k < 6; k++) {
+      const a = k / 6 * Math.PI * 2, [g, i] = this.add(x, y, `<circle r="${rand(7, 12)}" fill="#efe9f4"/>`);
+      anim(i, [{ transform: 'translate(0px,0px) scale(.4)', opacity: .9 }, { transform: `translate(${Math.cos(a) * 40}px,${Math.sin(a) * 30 - 14}px) scale(1)`, opacity: 0 }], { duration: 520, easing: 'ease-out' }).onfinish = () => g.remove();
+    }
+  },
+  fly(html, x1, y1, x2, y2, dur = 900, arc = 120, layer = L.fx) {
+    const g = grp({ transform: tr(x1, y1) }, layer, html);
+    const t0 = performance.now();
+    return new Promise(res => {
+      const step = now => {
+        const t = Math.min(1, (now - t0) / dur), e = Ease.inOut(t);
+        g.setAttribute('transform', tr(lerp(x1, x2, e), lerp(y1, y2, e) - Math.sin(Math.PI * t) * arc, 1 + Math.sin(Math.PI * t) * .35));
+        if (t < 1) requestAnimationFrame(step); else { g.remove(); res(); }
+      };
+      requestAnimationFrame(step);
+    });
+  },
+  trailT: 0, tx: 0, ty: 0,
+  trail(x, y) {
+    const now = performance.now();
+    if (now - this.trailT < 45 || Math.hypot(x - this.tx, y - this.ty) < 14 || L.fx.childElementCount > 120) return;
+    this.trailT = now; this.tx = x; this.ty = y;
+    const [g, i] = this.add(x + rand(-6, 6), y + rand(-6, 6), `<path d="${SPARK}" fill="${pick(['#fff3a6', '#ffe0f0', '#d9f2ff', '#ffffff'])}"/>`);
+    anim(i, [{ transform: 'scale(.7) rotate(0deg)', opacity: .95 }, { transform: 'translate(0px,16px) scale(0) rotate(90deg)', opacity: 0 }], { duration: 520, easing: 'ease-out' }).onfinish = () => g.remove();
+  },
+};
+
+// ---------- Manito guía.
+const Guide = {
+  g: null, inner: null, tk: 0, visible: false, x: 0, y: 0,
+  init() { this.g = grp({ opacity: 0 }, L.guide); this.press = grp({}, this.g, ART.hand()); },
+  place(x, y) { this.x = x; this.y = y; this.g.setAttribute('transform', tr(x, y, .95)); },
+  async moveTo(x, y, dur, tk) {
+    const x0 = this.x, y0 = this.y, t0 = performance.now();
+    await new Promise(res => {
+      const step = now => { if (tk !== this.tk) return res(); const t = Math.min(1, (now - t0) / dur), e = Ease.inOut(t); this.place(lerp(x0, x, e), lerp(y0, y, e)); t < 1 ? requestAnimationFrame(step) : res(); };
+      requestAnimationFrame(step);
+    });
+  },
+  sleep(ms) { return new Promise(r => setTimeout(r, ms)); },
+  fade(o, d = 250) { anim(this.g, [{ opacity: +getComputedStyle(this.g).opacity }, { opacity: o }], { duration: d }); },
+  async tap(x, y, reps = 3) {
+    const tk = ++this.tk; this.visible = true;
+    this.place(x + 150, y + 190); this.fade(1);
+    await this.moveTo(x, y, 650, tk);
+    for (let i = 0; i < reps && tk === this.tk; i++) {
+      anim(this.press, [{ transform: 'scale(1)' }, { transform: 'scale(.82)', offset: .4 }, { transform: 'scale(1)' }], { duration: 420, fill: 'none' });
+      await this.sleep(170); if (tk !== this.tk) break;
+      FX.ring(x, y, '#ffffff', 70, 7, 600);
+      await this.sleep(850);
+    }
+    if (tk === this.tk) { this.fade(0); this.visible = false; }
+  },
+  async drag(x1, y1, x2, y2, reps = 2) {
+    const tk = ++this.tk; this.visible = true;
+    for (let i = 0; i < reps && tk === this.tk; i++) {
+      this.place(x1 + 120, y1 + 160); this.fade(1);
+      await this.moveTo(x1, y1, 550, tk); if (tk !== this.tk) break;
+      anim(this.press, [{ transform: 'scale(1)' }, { transform: 'scale(.84)' }], { duration: 200 });
+      await this.sleep(250);
+      await this.moveTo(x2, y2, 1100, tk); if (tk !== this.tk) break;
+      anim(this.press, [{ transform: 'scale(.84)' }, { transform: 'scale(1)' }], { duration: 200 });
+      FX.ring(x2, y2, '#ffffff', 80, 7, 600);
+      await this.sleep(500); this.fade(0); await this.sleep(400);
+    }
+    if (tk === this.tk) { this.fade(0); this.visible = false; }
+  },
+  // Doble golpe: dos toques rápidos y una pausa.
+  async dtap(x, y, reps = 3) {
+    const tk = ++this.tk; this.visible = true;
+    this.place(x + 150, y + 190); this.fade(1);
+    await this.moveTo(x, y, 650, tk);
+    for (let i = 0; i < reps && tk === this.tk; i++) {
+      for (let k = 0; k < 2 && tk === this.tk; k++) {
+        anim(this.press, [{ transform: 'scale(1)' }, { transform: 'scale(.8)', offset: .45 }, { transform: 'scale(1)' }], { duration: 230, fill: 'none' });
+        await this.sleep(105); if (tk !== this.tk) break;
+        FX.ring(x, y, '#ffffff', 52 + k * 26, 7, 420);
+        await this.sleep(140);
+      }
+      await this.sleep(950);
+    }
+    if (tk === this.tk) { this.fade(0); this.visible = false; }
+  },
+  // Arrastre siguiendo un camino (lista de puntos), sin soltar.
+  async follow(pts, reps = 1) {
+    const tk = ++this.tk; this.visible = true;
+    for (let i = 0; i < reps && tk === this.tk; i++) {
+      this.place(pts[0].x + 120, pts[0].y + 160); this.fade(1);
+      await this.moveTo(pts[0].x, pts[0].y, 550, tk); if (tk !== this.tk) break;
+      anim(this.press, [{ transform: 'scale(1)' }, { transform: 'scale(.84)' }], { duration: 200 });
+      await this.sleep(250);
+      for (let k = 1; k < pts.length && tk === this.tk; k++) await this.moveTo(pts[k].x, pts[k].y, Math.max(60, Math.hypot(pts[k].x - pts[k - 1].x, pts[k].y - pts[k - 1].y) * 2.6), tk);
+      if (tk !== this.tk) break;
+      anim(this.press, [{ transform: 'scale(.84)' }, { transform: 'scale(1)' }], { duration: 200 });
+      await this.sleep(400); this.fade(0); await this.sleep(400);
+    }
+    if (tk === this.tk) { this.fade(0); this.visible = false; }
+  },
+  hide() { if (this.visible) { this.tk++; this.fade(0, 180); this.visible = false; } },
+};
+
+// ---------- Lumi.
+class Lumi {
+  constructor(parent, x, y, s = 1) {
+    this.x = x; this.y = y; this.s = s; this.mt = 0;
+    this.root = grp({ transform: tr(x, y, s) }, parent);
+    this.hop = grp({}, this.root);
+    this.hop.style.transformOrigin = '0px 60px';
+    this.body = grp({ class: 'bob' }, this.hop, ART.lumi());
+    this.pupils = [...this.root.querySelectorAll('.pupil')];
+    this.mouth = this.root.querySelector('.mouth'); this.mouthO = this.root.querySelector('.mouth-o');
+    this.arms = [...this.root.querySelectorAll('.arm')];
+  }
+  place(x, y) { this.x = x; this.y = y; this.root.setAttribute('transform', tr(x, y, this.s)); }
+  move(ctx, x, y, dur = 900, arc = 50) {
+    const my = ++this.mt, x0 = this.x, y0 = this.y;
+    return ctx.tween(dur, (e, t) => { if (my === this.mt) this.place(lerp(x0, x, e), lerp(y0, y, e) - Math.sin(Math.PI * t) * arc); });
+  }
+  look(px, py) {
+    const dx = px - this.x, dy = py - this.y, d = Math.hypot(dx, dy) || 1, k = Math.min(1, d / 180) * 4.5;
+    const t = `translate(${(dx / d * k).toFixed(1)} ${(dy / d * k).toFixed(1)})`;
+    this.pupils.forEach(p => p.setAttribute('transform', t));
+  }
+  smile(ms = 900) {
+    this.mouthO.setAttribute('opacity', 1); this.mouth.setAttribute('opacity', 0);
+    clearTimeout(this._st); this._st = setTimeout(() => { this.mouthO.setAttribute('opacity', 0); this.mouth.setAttribute('opacity', 1); }, ms);
+  }
+  happy(big) {
+    this.smile();
+    const h = big ? 90 : 50;
+    anim(this.hop, [{ transform: 'translateY(0px) scale(1,1)' }, { transform: 'translateY(4px) scale(1.14,.86)', offset: .15 }, { transform: `translateY(${-h}px) scale(.92,1.1)`, offset: .5 }, { transform: 'translateY(3px) scale(1.1,.9)', offset: .85 }, { transform: 'translateY(0px) scale(1,1)' }], { duration: big ? 850 : 650, easing: 'ease-out', fill: 'none' });
+    this.arms.forEach((a, i) => anim(a, [{ transform: 'translateY(0px)' }, { transform: 'translateY(-26px) rotate(' + (i ? 30 : -30) + 'deg)', offset: .5 }, { transform: 'translateY(0px)' }], { duration: 650, fill: 'none' }));
+  }
+  spin() {
+    this.smile(1200);
+    anim(this.hop, [{ transform: 'rotate(0deg) translateY(0px)' }, { transform: 'rotate(180deg) translateY(-30px)', offset: .5 }, { transform: 'rotate(360deg) translateY(0px)' }], { duration: 900, easing: 'ease-in-out', fill: 'none' });
+  }
+}
+
+// ---------- Botón de sonido (siempre visible, arriba a la derecha).
+const Hud = {
+  x: 1538, y: 62,
+  init() { this.g = grp({ transform: tr(this.x, this.y) }, L.hudfix); this.draw(); },
+  draw() { this.g.innerHTML = ART.speaker(Sound.muted); },
+  hit(p) { return Math.hypot(p.x - this.x, p.y - this.y) < 54; },
+  toggle() {
+    Sound.setMuted(!Sound.muted); Store.data.settings.muted = Sound.muted; Store.save(); this.draw();
+    anim(this.g.firstElementChild, [{ transform: 'scale(1)' }, { transform: 'scale(1.2)' }, { transform: 'scale(1)' }], { duration: 300, fill: 'none' });
+    Sound.tap();
+  },
+};
+
+// ---------- Aplicación, pantallas y entrada.
+const Screens = {};
+const App = {
+  name: null, ctx: null, h: {}, targets: [], busy: true, going: false, profile: null,
+  lastGood: performance.now(), pointer: { x: 800, y: 450 }, misses: 0, hints: 0,
+  // Pantalla táctil sin mouse (tablet o celular): se sabe de entrada o al primer toque.
+  touch: !!(window.matchMedia && matchMedia('(any-pointer: coarse)').matches && !matchMedia('(any-pointer: fine)').matches),
+  addTarget(t) { t.prio = t.prio || 1; this.targets.push(t); return t; },
+  removeTarget(t) { const i = this.targets.indexOf(t); if (i >= 0) this.targets.splice(i, 1); },
+  good() { this.lastGood = performance.now(); Guide.hide(); },
+  veil(o, dur) {
+    return new Promise(res => {
+      const o0 = +L.veil.getAttribute('opacity'), t0 = performance.now();
+      const step = now => { const t = Math.min(1, (now - t0) / dur); L.veil.setAttribute('opacity', lerp(o0, o, Ease.inOut(t))); t < 1 ? requestAnimationFrame(step) : res(); };
+      requestAnimationFrame(step);
+    });
+  },
+  async go(name, params = {}) {
+    if (this.going) return;
+    this.going = true; this.busy = true; Guide.hide();
+    await this.veil(1, 380);
+    if (this.ctx) this.ctx.destroy();
+    Sound.ambient(false);
+    L.world.innerHTML = ''; L.fx.innerHTML = ''; L.hud.innerHTML = '';
+    Paint.reset(); this.targets = [];
+    this.ctx = new Ctx(); this.name = name; this.misses = 0; this.hints = 0;
+    this.busy = false; this.going = false;
+    this.h = Screens[name](this.ctx, params) || {};
+    this.lastGood = performance.now();
+    await this.veil(0, 480);
+  },
+  hitTest(p) {
+    let best = null, bs = Infinity;
+    for (const t of this.targets) {
+      let d;
+      if (t.w) { const dx = Math.max(Math.abs(p.x - t.x) - t.w / 2, 0), dy = Math.max(Math.abs(p.y - t.y) - t.h / 2, 0); d = Math.hypot(dx, dy); if (d > 18) continue; }
+      else { d = Math.hypot(p.x - t.x, p.y - t.y); if (d > t.r) continue; d /= t.r; }
+      const s = -t.prio * 1000 + d;
+      if (s < bs) { bs = s; best = t; }
+    }
+    return best;
+  },
+};
+
+function fullscreen() {
+  if (!Store.data.settings.fullscreen || document.fullscreenElement) return;
+  try { const r = document.documentElement.requestFullscreen({ navigationUI: 'hide' }); if (r && r.catch) r.catch(() => { }); } catch (e) { }
+}
+
+stage.addEventListener('pointerdown', e => {
+  e.preventDefault();
+  Sound.init();
+  if (e.pointerType === 'touch' || e.pointerType === 'pen') App.touch = true;
+  if (App.busy || Panel.open) return;
+  const p = toSvg(e.clientX, e.clientY);
+  App.pointer = p;
+  FX.ring(p.x, p.y, 'rgba(255,255,255,.95)', 38, 5, 380);
+  if (Hud.hit(p)) return Hud.toggle();
+  const h = App.h;
+  if (h.onDown && h.onDown(p, e) === true) return;
+  const t = App.hitTest(p);
+  if (t) t.hit(p, t);
+  else if (h.onMiss) { App.misses++; h.onMiss(p); }
+});
+stage.addEventListener('pointermove', e => {
+  const p = toSvg(e.clientX, e.clientY);
+  App.pointer = p; FX.trail(p.x, p.y);
+  if (!App.busy && App.h.onMove) App.h.onMove(p);
+});
+window.addEventListener('pointerup', e => { if (!App.busy && App.h.onUp) App.h.onUp(toSvg(e.clientX, e.clientY)); });
+window.addEventListener('contextmenu', e => e.preventDefault());
+window.addEventListener('dragstart', e => e.preventDefault());
+window.addEventListener('selectstart', e => { if (!Panel.open) e.preventDefault(); });
+window.addEventListener('wheel', e => { if (e.ctrlKey) e.preventDefault(); }, { passive: false });
+window.addEventListener('keydown', e => {
+  if (Panel.open) return;
+  if ((e.ctrlKey || e.metaKey) && ['+', '-', '=', '0', 'p', 's', 'o', 'f', 'u'].includes(e.key.toLowerCase())) e.preventDefault();
+  if (['Backspace', 'Tab', ' ', 'F1', 'F3', 'F7', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) e.preventDefault();
+  if (!App.busy && !e.repeat && App.h.onKey) { Sound.init(); App.h.onKey(e.key, e); }
+});
+document.addEventListener('mousedown', e => { if (e.button === 1) e.preventDefault(); });
+
+// Pista automática: si pasa un rato sin aciertos, la manito muestra qué hacer.
+setInterval(() => {
+  const h = App.h;
+  if (App.busy || Panel.open || Guide.visible || !h.hint) return;
+  if (performance.now() - App.lastGood < (h.hintDelay || 6500)) return;
+  const t = h.hint();
+  App.lastGood = performance.now();
+  if (!t) return;
+  App.hints++;
+  if (t.run) t.run(); else if (t.path) Guide.follow(t.path); else if (t.dbl) Guide.dtap(t.x, t.y, 2); else if (t.x2 != null) Guide.drag(t.x, t.y, t.x2, t.y2); else Guide.tap(t.x, t.y, 2);
+}, 300);
+
+// Ganchos de prueba (Playwright): posiciones de lo tocable en píxeles de pantalla.
+window.__lumi = {
+  get screen() { return App.name; },
+  get busy() { return App.busy; },
+  get touch() { return App.touch; },
+  targets() { return App.targets.map(t => { const c = toScreen(t.x, t.y), k = stage.getScreenCTM().a; return { kind: t.kind || '', x: c.x, y: c.y, r: (t.r || Math.min(t.w, t.h) / 2) * k, w: t.w ? t.w * k : 0, h: t.h ? t.h * k : 0 }; }); },
+  toScreen,
+  auto() {
+    const h = App.h; let a = h.auto ? h.auto() : null;
+    if (!a && !h.auto) { const t = App.targets.filter(t => t.prio >= 2 && t.x > 40 && t.x < 1560 && t.y > 90 && t.y < 860).sort((p, q) => q.prio - p.prio)[0]; if (t) a = { x: t.x, y: t.y }; }
+    if (!a) return null;
+    if (a.key) return { key: a.key };
+    const s = toScreen(a.x, a.y), r = { x: s.x, y: s.y, dbl: !!a.dbl };
+    if (a.x2 != null) { const e = toScreen(a.x2, a.y2); r.x2 = e.x; r.y2 = e.y; }
+    if (a.path) r.path = a.path.map(q => toScreen(q.x, q.y));
+    return r;
+  },
+};
+
+// ---- 05-kit.js
+// Piezas que comparten las escenas: barra de progreso, fondo de exterior, sol dormido y cierre de escena.
+
+// Barra de casilleros arriba al centro (sin números). El último es más grande: el "gran final".
+function makeBar(n) {
+  const bar = grp({ transform: tr(800, 56) }, L.hud);
+  const sp = Math.min(44, 520 / (n - 1)), half = sp * (n - 1) / 2 + 36;
+  grp({}, bar, `<rect x="${-half}" y="-28" width="${half * 2}" height="56" rx="28" fill="#fff" fill-opacity=".6" stroke="#fff" stroke-width="3"/>`);
+  const slots = [];
+  for (let i = 0; i < n; i++) {
+    const last = i === n - 1, x = (i - (n - 1) / 2) * sp + (last ? 4 : 0), r = last ? 18 : 13;
+    slots.push({ g: grp({ transform: tr(x, 0) }, bar, `<circle r="${r}" fill="#efe8f3" stroke="${last ? '#ffd84a' : '#ddd2e8'}" stroke-width="3"/>`), x: 800 + x, y: 56, r });
+  }
+  let next = 0;
+  return {
+    fill(col, x, y) {
+      const s = slots[Math.min(next++, n - 1)];
+      FX.fly(`<circle r="12" fill="${col}" stroke="#fff" stroke-width="3"/>`, x, y, s.x, s.y, 800, 120, L.hud).then(() => {
+        const f = grp({}, s.g, `<circle r="${s.r}" fill="${col}"/><circle r="5" fill="#fff" opacity=".8"/>`);
+        anim(f, [{ transform: 'scale(1.8)' }, { transform: 'scale(1)' }], { duration: 400, easing: EB });
+        Sound.twinkle();
+      });
+    },
+  };
+}
+
+// Sol con cara dormida que se despierta al final.
+function sunArt(x, y) {
+  let rays = '';
+  for (let i = 0; i < 12; i++) rays += `<path d="M0 -86 L0 -108" transform="rotate(${i * 30})" data-p="#ffd34d" data-pa="stroke" stroke-width="11" stroke-linecap="round"/>`;
+  return `<g transform="translate(${x} ${y})"><circle r="150" fill="url(#gWhite)" opacity=".5"/><g class="spin-slow">${rays}</g><circle r="72" data-p="#ffd84d"/><circle r="60" data-p="#ffe680"/>
+<g class="sun-sleep"><path d="M-32 -2 q11 9 22 0 M10 -2 q11 9 22 0" stroke="#8a7240" stroke-width="5" fill="none" stroke-linecap="round"/><ellipse cy="24" rx="7" ry="5" fill="#8a7240" opacity=".6"/></g>
+<g class="sun-awake" opacity="0">${EYE(-21, -6, 8)}${EYE(21, -6, 8)}<path d="M-16 16 Q0 34 16 16" stroke="${INK}" stroke-width="5" fill="none" stroke-linecap="round"/>${CHEEK(-36, 12, 10)}${CHEEK(36, 12, 10)}</g></g>`;
+}
+function wake(root) {
+  root.querySelectorAll('.sun-sleep').forEach(e => anim(e, [{ opacity: 1 }, { opacity: 0 }], 600));
+  root.querySelectorAll('.sun-awake').forEach(e => anim(e, [{ opacity: 0 }, { opacity: 1 }], 600));
+}
+
+// Fondo de exterior: cielo, sol, nubes, mar, lomas y pasto.
+function bgLand(id, extra = '') {
+  const P = 'data-p';
+  return `<defs>
+<linearGradient id="${id}sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" ${P}="#86cff2"/><stop offset=".6" ${P}="#c6ecf8"/><stop offset="1" ${P}="#fff0d2"/></linearGradient>
+<linearGradient id="${id}sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" ${P}="#7fd0e6"/><stop offset="1" ${P}="#43aacb"/></linearGradient>
+<linearGradient id="${id}gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" ${P}="#b0e382"/><stop offset="1" ${P}="#74c05c"/></linearGradient></defs>
+<rect x="-600" y="-400" width="2800" height="1700" fill="url(#${id}sky)"/>
+${sunArt(1250, 185)}
+<g transform="translate(300 150)"><g class="drift">${ART.cloud(.9, true)}</g></g>
+<g transform="translate(760 100)"><g class="drift" style="--d:-14s">${ART.cloud(.6, true)}</g></g>
+<rect x="-600" y="420" width="2800" height="900" fill="url(#${id}sea)"/>
+<g fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="4" stroke-linecap="round"><g class="ripple"><path d="M40 448 q20 -8 40 0 M1480 452 q20 -8 40 0 M1220 440 q20 -8 40 0"/></g><g class="ripple" style="--d:-2.5s"><path d="M200 462 q20 -8 40 0 M1380 470 q20 -8 40 0"/></g></g>
+<path class="hill" d="M-600 520 C-100 440 200 425 420 470 C600 508 680 470 800 452 C950 428 1050 480 1200 470 C1400 456 1600 412 2200 470 L2200 1300 L-600 1300Z" ${P}="#97d47e" data-gl=""/>
+<path d="M-600 600 C-50 562 300 548 600 562 C900 577 1200 542 1500 556 C1700 566 1850 580 2200 600 L2200 1300 L-600 1300Z" fill="url(#${id}gr)"/>${extra}`;
+}
+
+function treeArt(x, y, s = 1, fruits = []) {
+  return `<g transform="translate(${x} ${y}) scale(${s})"><path d="M-16 60 C-12 10 -12 -30 -8 -70 L10 -70 C12 -30 14 10 18 60Z" data-p="#a8703f"/>
+<circle cx="-50" cy="-96" r="56" data-p="#5cb656"/><circle cx="44" cy="-104" r="60" data-p="#69c25e"/><circle cx="-4" cy="-160" r="58" data-p="#78cd68"/>
+${fruits.map(([fx, fy, c]) => `<circle cx="${fx}" cy="${fy}" r="13" data-p="${c}"/><circle cx="${fx - 4}" cy="${fy - 4}" r="4" fill="#fff" opacity=".55"/>`).join('')}</g>`;
+}
+
+// Cierre común: guarda, festeja unos segundos y vuelve al mapa con la estrella.
+async function finishScene(ctx, key, first, t0, lumi, colors) {
+  Store.sceneDone(App.profile, key, { ms: Math.round(performance.now() - t0), misses: App.misses, hints: App.hints });
+  Sound.fanfare();
+  for (let i = 0; i < 6; i++) ctx.after(i * 420, () => {
+    FX.burst(rand(250, 1350), rand(180, 520), colors, 16, 200, i % 2 ? 'star' : 'petal'); Sound.twinkle();
+    if (i % 2) lumi.happy(true); else lumi.spin();
+  });
+  await ctx.wait(6000);
+  App.go('map', { justDone: key, first });
+}
+
+// ---- 10-start.js
+// Pantalla de inicio: una tarjeta por chico (color + criatura + nombre).
+function bgDusk(id) {
+  let stars = '';
+  for (let i = 0; i < 26; i++) stars += `<g transform="translate(${rand(-200, 1800).toFixed(0)} ${rand(-150, 330).toFixed(0)}) scale(${rand(.35, .8).toFixed(2)})"><g class="pulse" style="animation-duration:${rand(1.8, 3.6).toFixed(1)}s;animation-delay:-${rand(0, 3).toFixed(1)}s"><path d="${SPARK}" fill="#fff"/></g></g>`;
+  return `<defs><linearGradient id="${id}sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a99be0"/><stop offset=".55" stop-color="#e7c8e6"/><stop offset="1" stop-color="#ffe3c9"/></linearGradient>
+<linearGradient id="${id}sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b8c4dc"/><stop offset="1" stop-color="#8f9dbf"/></linearGradient></defs>
+<rect x="-600" y="-400" width="2800" height="1700" fill="url(#${id}sky)"/>${stars}
+<g transform="translate(1290 150)"><circle r="56" fill="#fff4dc" opacity=".9"/><circle cx="22" cy="-14" r="50" fill="#d7c3ea"/></g>
+<rect x="-600" y="700" width="2800" height="700" fill="url(#${id}sea)"/>
+<path d="M260 712 C380 600 520 560 700 575 C860 540 1040 560 1180 610 C1260 640 1320 680 1350 712Z" fill="#a3a8b8"/>
+<path d="M560 600 C600 520 700 500 760 560 M900 560 C940 500 1030 510 1060 580" fill="none" stroke="#959aab" stroke-width="12" stroke-linecap="round"/>
+<g fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="5" stroke-linecap="round">
+<g class="ripple"><path d="M60 790 q40 -14 80 0 M1400 760 q40 -14 80 0"/></g><g class="ripple" style="--d:-2s"><path d="M300 850 q40 -14 80 0 M1120 830 q40 -14 80 0"/></g></g>`;
+}
+
+Screens.start = ctx => {
+  grp({}, L.world, bgDusk('st'));
+  const lumi = new Lumi(L.world, 800, 118, .78);
+  const named = Store.data.profiles.length > 0;
+  const list = named ? Store.data.profiles : Store.anonProfiles();
+  const n = list.length;
+  const cols = n <= 4 ? n : n <= 8 ? 4 : n <= 10 ? 5 : n <= 12 ? 4 : n <= 15 ? 5 : 6;
+  const rows = Math.ceil(n / cols), gap = 28, AW = 1440, AH = 640, top = 225;
+  const ratio = named ? 1.12 : 1;
+  let w = Math.min(300, (AW - (cols - 1) * gap) / cols), h = w * ratio;
+  if (h * rows + gap * (rows - 1) > AH) { h = (AH - gap * (rows - 1)) / rows; w = h / ratio; }
+  const cardsL = grp({}, L.world);
+  let chosen = false;
+  // Cupo de esta compu: cuando ya se eligieron tantas tarjetas como chicos, las demás se bloquean.
+  const ids = new Set(list.map(p => p.id));
+  const mine = Store.data.claimed.filter(id => ids.has(id));
+  const full = mine.length >= (Store.data.settings.seats || 1);
+  const cards = [];
+  list.forEach((p, i) => {
+    const r = Math.floor(i / cols), inRow = Math.min(cols, n - r * cols), c = i - r * cols;
+    const x = 800 + (c - (inRow - 1) / 2) * (w + gap);
+    const y = top + h / 2 + r * (h + gap) + (AH - (rows * h + (rows - 1) * gap)) / 2;
+    const col = colorOf(p.color);
+    const locked = full && !mine.includes(p.id);
+    const card = grp({ transform: tr(x, y), class: 'card' + (locked ? ' locked' : '') }, cardsL);
+    const pop = grp({}, card), lift = grp({ class: 'lift' }, pop);
+    const ar = named ? w * .34 : w * .38, ay = named ? -h * .14 : 0;
+    let html = `<rect x="${-w / 2}" y="${-h / 2 + 8}" width="${w}" height="${h}" rx="${w * .14}" fill="${shade(col, -.25)}" opacity=".35"/>
+<rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" rx="${w * .14}" fill="#fffaf3" stroke="${col}" stroke-width="${w * .045}"/>
+<g transform="translate(0 ${ay})">${ART.avatar(p, ar)}</g>`;
+    if (named) {
+      const fs = Math.min(w * .19, (w * .86) / (Math.max(3, p.name.length) * .56));
+      html += `<text x="0" y="${h * .36}" text-anchor="middle" dominant-baseline="middle" font-size="${fs.toFixed(1)}" fill="${INK}">${escapeXml(p.name)}</text>`;
+    }
+    if (locked) html += `<rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" rx="${w * .14}" fill="#8d86a3" opacity=".55"/>
+<g transform="translate(0 ${ay}) scale(${(w / 300).toFixed(3)})"><path d="M-24 -8 L-24 -26 A24 24 0 0 1 24 -26 L24 -8" fill="none" stroke="#fff" stroke-width="11"/><rect x="-38" y="-10" width="76" height="60" rx="12" fill="#fff"/><circle cy="16" r="8" fill="#8d86a3"/></g>`;
+    lift.innerHTML = html;
+    cards.push({ p, x, y, pop, locked });
+    anim(pop, [{ transform: 'scale(0)' }, { transform: 'scale(1)' }], { duration: 520, delay: 150 + i * 55, easing: EB });
+    App.addTarget({
+      x, y, w, h, kind: locked ? 'cardlock' : 'card', hit: () => {
+        if (chosen) return;
+        if (locked) {
+          Sound.miss();
+          anim(pop, [{ transform: 'translateX(0px)' }, { transform: 'translateX(-14px)' }, { transform: 'translateX(12px)' }, { transform: 'translateX(-6px)' }, { transform: 'translateX(0px)' }], { duration: 420, fill: 'none' });
+          const own = cards.find(c => !c.locked); if (own) Guide.tap(own.x, own.y, 2);
+          return;
+        }
+        chosen = true; Store.claim(p.id);
+        App.good(); Sound.chord(); fullscreen();
+        anim(pop, [{ transform: 'scale(1)' }, { transform: 'scale(1.18)' }, { transform: 'scale(1.1)' }], { duration: 450, easing: EB });
+        FX.burst(x, y, [col, '#ffffff', '#ffd84a'], 18, 220, 'star');
+        lumi.happy(true);
+        App.profile = p; Store.data.last = p.id; Store.save();
+        ctx.after(900, () => App.go('map'));
+      },
+    });
+  });
+  const own = cards.filter(c => !c.locked);
+  if (full && own.length) ctx.after(1600, () => { if (!chosen) Guide.tap(own[0].x, own[0].y, 2); });
+  return { onMove: p => lumi.look(p.x, p.y), hint: () => full && own.length && !chosen ? { x: own[0].x, y: own[0].y } : null, hintDelay: 9000 };
+};
+
+function escapeXml(s) { return String(s).replace(/[<>&"']/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&apos;' }[c])); }
+
+// ---- 11-mapa.js
+// Capítulo 2. Mapa de la segunda isla: cuatro lugares, el faro en el medio (la fiesta) y, al final, el taller.
+// Igual que en el capítulo 1: lo hecho tiene color y estrella, lo próximo brilla y lo que falta duerme bajo una nube.
+const CH_TITLE = 'capítulo 2';
+const SCENES = [
+  { key: 'flores', x: 500, y: 650, art: 'flores' },
+  { key: 'caracoles', x: 1100, y: 650, art: 'caracoles' },
+  { key: 'tambores', x: 1100, y: 290, art: 'tambores' },
+  { key: 'caminos', x: 500, y: 290, art: 'caminos' },
+];
+const FIESTA = { key: 'fiesta', x: 800, y: 470, art: 'faro' };
+const TALLER = { key: 'taller', x: 1440, y: 700, art: 'taller', r: 120 };
+const SCENE_NAMES = { flores: 'Flores que cantan', caracoles: 'Caracoles', tambores: 'Tambores', caminos: 'Caminos de luz', fiesta: 'Fiesta del faro', taller: 'Taller de dibujo' };
+const sceneReady = k => !!Screens[k];
+
+const SPOT_ART = {
+  flores: p => `<ellipse cy="48" rx="128" ry="40" ${fa('#a3dc7e', p)}/>
+<g transform="translate(-58 48) scale(.6)">${ART.flower('daisy', '#ff6f91', 120, p)}</g><g transform="translate(58 50) scale(.6)">${ART.flower('round', '#6cc6ff', 104, p)}</g>
+<g transform="translate(0 44) scale(.7)">${ART.flower('tulip', '#ffd84a', 150, p)}</g>
+<path d="M-96 -58 v-26 l18 -5 v24" ${sa('#8a6fd6', p)} stroke-width="5" fill="none" stroke-linecap="round"/><ellipse cx="-101" cy="-58" rx="8" ry="6" ${fa('#8a6fd6', p)}/><ellipse cx="-83" cy="-63" rx="8" ry="6" ${fa('#8a6fd6', p)}/>
+<path d="M92 -76 v-24" ${sa('#ff8fb1', p)} stroke-width="5" fill="none" stroke-linecap="round"/><ellipse cx="87" cy="-76" rx="8" ry="6" ${fa('#ff8fb1', p)}/>`,
+  caracoles: p => `<ellipse cy="46" rx="132" ry="42" ${fa('#ffe2a8', p)}/>
+<g transform="translate(-58 30) scale(.55)">${shellArt('#ff9fc4', p).replace('<g class="knocks">', '<g class="knocks" opacity="0">')}</g><g transform="translate(56 34) scale(.5)">${shellArt('#b9a2ff', p).replace('<g class="knocks">', '<g class="knocks" opacity="0">')}</g>
+<g transform="translate(0 -10) scale(.62)"><g transform="translate(0 -40)"><circle r="44" fill="url(#gWhite)" opacity=".8"/><circle r="19" ${fa('#fff8fc', p)} stroke="#f0d6ea" stroke-width="3"/></g>${shellArt('#ffb35c', p).replace('<g class="knocks">', '<g class="knocks" opacity="0">').replace('class="top"', 'class="top" transform="translate(0 -46) scale(1 .5)"')}</g>`,
+  tambores: p => `<ellipse cy="50" rx="128" ry="38" ${fa('#a3dc7e', p)}/>
+<g transform="translate(-48 0) scale(.62)">${drumArt('#ff8b7b', p)}</g><g transform="translate(52 10) scale(.52)">${drumArt('#6cc6ff', p)}</g>
+<path d="M-92 -60 v-26 l18 -5 v24" ${sa('#ff8b7b', p)} stroke-width="5" fill="none" stroke-linecap="round"/><ellipse cx="-97" cy="-60" rx="8" ry="6" ${fa('#ff8b7b', p)}/><ellipse cx="-79" cy="-65" rx="8" ry="6" ${fa('#ff8b7b', p)}/>
+<path d="M100 -70 v-24" ${sa('#6cc6ff', p)} stroke-width="5" fill="none" stroke-linecap="round"/><ellipse cx="95" cy="-70" rx="8" ry="6" ${fa('#6cc6ff', p)}/>`,
+  caminos: p => `<ellipse cy="48" rx="128" ry="38" ${fa('#a3dc7e', p)}/><circle cy="-46" r="90" ${fa('#46529a', p)}/>
+<path d="M-96 40 C-60 -10 -10 40 20 -10 C40 -44 70 -40 84 -70" ${sa('#fff3a0', p)} stroke-width="8" stroke-dasharray="2 18" stroke-linecap="round" fill="none"/>
+<g transform="translate(-64 -60) scale(.7)">${p ? fireflyArt(false).replace(/fill="#b9b6c6"/, 'data-p="#fff26a"').replace(/fill="#8f8aa3"/g, 'data-p="#5b4a8a"') : fireflyArt(true)}</g>
+<g transform="translate(84 -92) scale(.6)">${p ? fireflyArt(false).replace(/fill="#b9b6c6"/, 'data-p="#fff26a"').replace(/fill="#8f8aa3"/g, 'data-p="#5b4a8a"') : fireflyArt(true)}</g>`,
+  faro: p => `<ellipse cy="64" rx="150" ry="40" ${fa('#a3dc7e', p)}/><g transform="translate(0 70) scale(.62)">${faroArt(p)}</g>`,
+  taller: p => `<rect x="-58" y="-74" width="116" height="94" rx="10" ${fa('#fffaf0', p)} stroke="#d8c7a8" stroke-width="4"/>
+<path d="M-40 0 C-20 -40 0 10 20 -30 C30 -48 40 -40 44 -50" ${sa('#ff6f91', p)} stroke-width="7" fill="none" stroke-linecap="round"/>
+<circle cx="-24" cy="-44" r="12" ${fa('#ffd84a', p)}/><path d="M-36 30 L-54 74 M36 30 L54 74 M0 20 L0 74" ${sa('#a8703f', p)} stroke-width="7" stroke-linecap="round"/>
+${['#6cc6ff', '#86d36f', '#b78cff'].map((c, i) => `<rect x="${-64 + i * 46}" y="70" width="34" height="14" rx="7" ${fa(c, p)} transform="rotate(${-12 + i * 10} ${-47 + i * 46} 77)"/>`).join('')}`,
+};
+
+function bgMap2(id) {
+  let waves = '';
+  for (let i = 0; i < 14; i++) waves += `<g transform="translate(${rand(-150, 1750).toFixed(0)} ${[rand(40, 110), rand(800, 880)][i % 2].toFixed(0)})"><g class="ripple" style="--d:-${rand(0, 5).toFixed(1)}s"><path d="M-26 0 q13 -9 26 0 q13 9 26 0" stroke="#fff" stroke-opacity=".5" stroke-width="5" fill="none" stroke-linecap="round"/></g></g>`;
+  const isl = 'M250 520 C215 330 370 165 620 150 C760 118 900 150 1010 135 C1210 122 1350 230 1366 405 C1382 560 1330 720 1160 792 C990 852 770 832 610 818 C420 800 280 700 250 520Z';
+  const islet = 'M1318 712 C1330 640 1420 618 1490 636 C1560 654 1580 730 1540 772 C1500 808 1400 812 1350 786 C1324 770 1314 742 1318 712Z';
+  return `<defs><radialGradient id="${id}sea" cx=".5" cy=".5" r=".75"><stop offset="0" data-p="#8fdcf0"/><stop offset="1" data-p="#4aaed3"/></radialGradient></defs>
+<rect x="-600" y="-400" width="2800" height="1700" fill="url(#${id}sea)"/>${waves}
+<path d="${isl}" transform="translate(0 16)" data-p="#3f9cc2" opacity=".5"/><path d="${islet}" transform="translate(0 14)" data-p="#3f9cc2" opacity=".5"/>
+<path d="${isl}" data-p="#f5dfaa"/><path d="${islet}" data-p="#f5dfaa"/>
+<path d="${isl}" transform="translate(805 484) scale(.9) translate(-805 -484)" data-p="#8fd474"/>
+<path d="M500 650 C660 770 940 770 1100 650 C1260 530 1260 410 1100 290 C940 180 660 180 500 290" fill="none" data-p="#fff6dc" data-pa="stroke" stroke-width="12" stroke-dasharray="2 26" stroke-linecap="round"/>
+<path d="M1220 690 C1290 700 1330 704 1360 706" fill="none" data-p="#c79a62" data-pa="stroke" stroke-width="16" stroke-linecap="round"/>
+<path d="M1226 682 L1226 700 M1262 686 L1262 704 M1298 690 L1298 708 M1334 694 L1334 712" data-p="#a8703f" data-pa="stroke" stroke-width="5" stroke-linecap="round"/>
+${[[300, 470], [1316, 470], [800, 780], [800, 170]].map(([x, y]) => `<g transform="translate(${x} ${y})"><circle cx="-16" cy="0" r="20" data-p="#74c463"/><circle cx="14" cy="-6" r="24" data-p="#7fcd6c"/></g>`).join('')}
+<g transform="translate(220 150)"><g class="drift">${ART.cloud(.8, true)}</g></g><g transform="translate(1400 120)"><g class="drift" style="--d:-12s">${ART.cloud(.6, true)}</g></g>`;
+}
+
+// Barquito para la llegada de Lumi.
+const BOAT = `<path d="M-90 10 L90 10 L66 52 L-66 52Z" fill="#e0566a" stroke="#b8404f" stroke-width="4" stroke-linejoin="round"/><rect x="-72" y="18" width="144" height="10" fill="#fff" opacity=".8"/>
+<path d="M0 10 L0 -120" stroke="#8a5a3a" stroke-width="7"/><path d="M6 -112 L70 -10 L6 -10Z" fill="#fffaf0" stroke="#e3d8c7" stroke-width="3"/>`;
+
+Screens.map = (ctx, params) => {
+  const prof = App.profile || (App.profile = Store.guest());
+  const done = SCENES.map(s => Store.isDone(prof, s.key));
+  const nDone = done.filter(Boolean).length;
+  const fDone = Store.isDone(prof, 'fiesta');
+  const all = [...SCENES, FIESTA, TALLER];
+  const justI = all.findIndex(s => s.key === params.justDone);
+  const fresh = justI >= 0 && params.first;
+  const lvOf = k => .12 + .88 * k / 4;
+  const bg = grp({}, L.world, bgMap2('mp'));
+  Paint.scan(bg, { global: true, level: lvOf(fresh && justI < 4 ? nDone - 1 : nDone) });
+
+  const nextI = done.indexOf(false);
+  const spots = all.map((s, i) => {
+    const isF = i === 4, isT = i === 5;
+    const isDone = i < 4 ? done[i] : Store.isDone(prof, s.key);
+    const isNext = isT ? fDone && !isDone : isF ? nextI === -1 && !isDone : i === nextI;
+    const open = (isDone || isNext) && sceneReady(s.key);
+    const r = s.r || 150;
+    const g = grp({ transform: tr(s.x, s.y), class: 'spot' + (open ? ' open' : '') }, L.world);
+    const glow = grp({ transform: 'translate(0 44)', opacity: isNext && open ? 1 : 0 }, g, `<g class="glowring"><ellipse rx="${r + 10}" ry="${r * .37}" fill="none" stroke="#fff3a0" stroke-width="10"/><ellipse rx="${r}" ry="${r * .33}" fill="url(#gGold)" opacity=".7"/></g>`);
+    const pop = grp({}, g), lift = grp({ class: 'lift' }, pop);
+    const art = grp({}, lift, SPOT_ART[s.art](true));
+    const lit = isDone && !(fresh && i === justI);
+    Paint.scan(art, { group: 's' + i, level: lit ? 1 : (isNext && open ? .35 : 0) });
+    if (isF && (lit || nDone)) art.querySelectorAll('.sun-awake').forEach(e => e.setAttribute('opacity', lit ? 1 : 0));
+    if (isF && lit) art.querySelectorAll('.sun-sleep').forEach(e => e.setAttribute('opacity', 0));
+    // El faro se va encendiendo con cada lugar terminado.
+    if (isF) grp({ transform: 'translate(0 -116)', opacity: lit ? 1 : nDone / 5 }, lift, `<g class="pulse"><circle r="90" fill="url(#gGold)"/></g>`);
+    let fog = null, badge = null;
+    if (!open) fog = grp({ transform: 'translate(0 -10)' }, lift, `<g class="float" style="--d:-${i}s"><g opacity=".96">${ART.cloud(isT ? 1.05 : 1.35)}</g><path d="M-38 4 q9 8 18 0 M20 4 q9 8 18 0" stroke="#a49cb8" stroke-width="5" fill="none" stroke-linecap="round"/>${CHEEK(-48, 20, 9)}${CHEEK(48, 20, 9)}</g>`);
+    if (isDone && !isT) badge = grp({ transform: isF ? 'translate(-120 -150)' : 'translate(-100 -96)', opacity: fresh && i === justI ? 0 : 1 }, lift, ART.star(30));
+    App.addTarget({
+      x: s.x, y: isF ? s.y - 60 : s.y, r, kind: open ? (isNext ? 'next' : 'spot') : 'locked', hit: () => {
+        if (open) {
+          App.good(); Sound.chord();
+          anim(pop, [{ transform: 'scale(1)' }, { transform: 'scale(1.15)' }, { transform: 'scale(1.08)' }], { duration: 400, easing: EB });
+          FX.burst(s.x, s.y, ['#fff', '#ffd84a', '#ff9fd0'], 14, 180, 'star');
+          lumi.move(ctx, s.x + (isT ? -110 : 60), s.y - 120, 600, 60); lumi.happy();
+          App.busy = true; ctx.after(700, () => { App.busy = false; App.go(s.key); });
+        } else {
+          Sound.miss();
+          if (fog) anim(fog, [{ transform: 'translate(0px,-10px)' }, { transform: 'translate(-14px,-10px)' }, { transform: 'translate(12px,-10px)' }, { transform: 'translate(-6px,-10px)' }, { transform: 'translate(0px,-10px)' }], { duration: 450, fill: 'none' });
+          const nx = spots.find(q => q.isNext && q.open);
+          if (nx) Guide.tap(nx.s.x, nx.s.y, 2);
+        }
+      },
+    });
+    return { s, g, glow, badge, isNext, open, i, art };
+  });
+
+  // Chico/a que está jugando: abajo a la izquierda.
+  const badge = grp({ transform: tr(96, 806) }, L.world, ART.avatar(prof, 62));
+  if (prof.name) grp({}, L.world, `<text x="172" y="808" dominant-baseline="middle" font-size="46" fill="${INK}" stroke="#fff" stroke-width="10" paint-order="stroke" stroke-linejoin="round">${escapeXml(prof.name)}</text>`);
+  anim(badge, [{ opacity: 0 }, { opacity: 1 }], 600);
+
+  const nx = spots.find(q => q.isNext && q.open);
+  const homeOf = q => ({ x: q.s.x + (q.i === 5 ? -170 : 175), y: q.s.y - 70 });
+  const home = nx || spots[justI] || spots[0];
+  const lumi = new Lumi(L.world, homeOf(home).x, homeOf(home).y, .78);
+  Sound.ambient(true);
+
+  const hintNext = () => nx ? { x: nx.s.x, y: nx.s.y } : null;
+  const firstVisit = !nDone && !params.justDone && !Store.isDone(prof, 'flores');
+  if (fresh) {
+    const sp = spots[justI];
+    lumi.place(homeOf(sp).x, homeOf(sp).y);
+    App.busy = true;
+    (async () => {
+      await ctx.wait(550);
+      if (sp.badge) {
+        Sound.whoosh();
+        const b = sp.i === 4 ? { x: sp.s.x - 120, y: sp.s.y - 150 } : { x: sp.s.x - 100, y: sp.s.y - 96 };
+        await FX.fly(`<g>${ART.star(46)}</g>`, 800, 90, b.x, b.y, 1100, 150);
+        Sound.fanfare();
+        sp.badge.setAttribute('opacity', 1);
+        anim(sp.badge.firstElementChild, [{ transform: 'scale(1.8)' }, { transform: 'scale(1)' }], { duration: 500, easing: EB });
+      } else Sound.chord();
+      Paint.group('s' + justI, 1, 1300); Paint.global(lvOf(nDone), 1800);
+      if (sp.i === 4) wake(sp.art);
+      FX.burst(sp.s.x, sp.s.y, ['#ffd84a', '#fff', '#ff9fd0', '#86d36f'], 22, 230, 'star');
+      lumi.happy(true);
+      await ctx.wait(1400);
+      App.busy = false;
+      if (nx) { await lumi.move(ctx, homeOf(nx).x, homeOf(nx).y, 1100, 90); Guide.tap(nx.s.x, nx.s.y, 3); }
+      App.lastGood = performance.now();
+    })();
+  } else if (firstVisit && nx) {
+    // Llegada en barquito desde la isla del capítulo 1.
+    App.busy = true;
+    const boat = grp({}, L.world, BOAT);
+    lumi.root.remove(); L.world.appendChild(lumi.root);
+    const from = { x: -200, y: 660 }, to = { x: 150, y: 640 };
+    (async () => {
+      await ctx.tween(2600, e => { const x = lerp(from.x, to.x, e), y = lerp(from.y, to.y, e) + Math.sin(e * 12) * 6; boat.setAttribute('transform', tr(x, y)); lumi.place(x - 20, y - 52); }, Ease.out);
+      Sound.splash();
+      await lumi.move(ctx, homeOf(nx).x, homeOf(nx).y, 900, 120);
+      lumi.happy(true); Sound.chord();
+      App.busy = false; App.lastGood = performance.now();
+      Guide.tap(nx.s.x, nx.s.y, 3);
+    })();
+  } else if (nx) ctx.after(1100, () => Guide.tap(nx.s.x, nx.s.y, 3));
+
+  return { onMove: p => lumi.look(p.x, p.y), hint: hintNext, hintDelay: 7000, onMiss: () => { } };
+};
+
+// ---- 12-kit2.js
+// Capítulo 2: sonidos y dibujos que comparten las escenas (faro, caracoles, tambores, teclado, luciérnagas).
+
+// Notas de las flores que cantan (do, re, mi, sol, la).
+const SING = [523.25, 587.33, 659.25, 783.99, 880];
+Object.assign(Sound, {
+  toc(k = 0) { this.noise(.07, 1900 + k * 500, 1200, .2); this.note(640 + k * 160, { dur: .09, vol: .12, type: 'triangle' }); },
+  open() { [0, 2, 4, 7].forEach((k, i) => this.bell(PENTA[k % PENTA.length], i * .07, .12)); this.noise(.4, 3000, 8000, .03, .1); },
+  drum(i) {
+    const f = [98, 131, 175, 220][i % 4];
+    this.note(f * 2.2, { dur: .32, vol: .38, slide: f });
+    this.noise(.1, 1200, 300, .14);
+  },
+  jump() { this.note(280, { dur: .26, vol: .17, slide: 760 }); },
+  land(i) { this.bell(PENTA[(2 + i) % PENTA.length], 0, .12, .7); this.noise(.18, 700, 300, .05); },
+  splash() { this.noise(.5, 2400, 500, .1); },
+  sing(i, t = 0) { const f = SING[i % 5]; this.bell(f, t, .15, 1.2); this.note(f, { t, dur: .8, vol: .09, attack: .04 }); },
+  chime(i) { this.bell(PENTA[i % PENTA.length], 0, .09, .5); },
+  boing() { this.note(240, { dur: .22, vol: .1, slide: 150 }); },
+  crayon(y) { this.noise(.06, 1600 + (900 - y) * 3, 2600, .025); },
+  stamp() { this.note(rand(500, 700), { dur: .16, vol: .16, slide: 1200 }); this.bell(pick(PENTA.slice(5)), .04, .06, .5); },
+});
+
+// Faro con cara dormida (la cara usa las mismas clases que el sol: wake() lo despierta).
+function faroArt(p, s = 1) {
+  const hw = y => 48 - 16 * ((-20 - y) / 210);
+  const band = (y1, y2, c) => `<path d="M${-hw(y1)} ${y1} L${-hw(y2)} ${y2} L${hw(y2)} ${y2} L${hw(y1)} ${y1}Z" ${fa(c, p)}/>`;
+  return `<g transform="scale(${s})">
+<path d="M-132 4 C-120 -30 -76 -46 -34 -40 C10 -52 74 -46 116 -22 C130 -12 134 4 134 4Z" ${fa('#a3958a', p)}/>
+<path d="M-90 -10 C-70 -30 -40 -34 -10 -30" ${sa('#c2b6aa', p)} stroke-width="6" fill="none" stroke-linecap="round"/>
+<path d="M-48 -20 L-32 -230 L32 -230 L48 -20Z" ${fa('#fffaf0', p)}/>
+${band(-62, -100, '#ef6b6b')}${band(-142, -180, '#ef6b6b')}
+<path d="M-13 -20 L-13 -48 A13 13 0 0 1 13 -48 L13 -20Z" ${fa('#9a6a45', p)}/>
+<circle cy="-121" r="10" ${fa('#8fd3f4', p)} stroke="#fff" stroke-width="3"/>
+<rect x="-54" y="-242" width="108" height="14" rx="7" ${fa('#5b5a86', p)}/>
+<rect x="-30" y="-298" width="60" height="58" rx="10" ${fa('#fff3a0', p)} class="faro-glass"/>
+<path d="M-10 -298 L-10 -240 M10 -298 L10 -240" ${sa('#5b5a86', p)} stroke-width="4"/>
+<path d="M-42 -296 L0 -338 L42 -296Z" ${fa('#e0566a', p)}/><circle cy="-342" r="8" ${fa('#ffd84a', p)}/>
+<g transform="translate(0 -268)"><g class="sun-sleep"><path d="M-22 -2 q6 6 12 0 M10 -2 q6 6 12 0" stroke="#8a7240" stroke-width="4" fill="none" stroke-linecap="round"/></g>
+<g class="sun-awake" opacity="0">${EYE(-15, -4, 6)}${EYE(15, -4, 6)}<path d="M-8 10 Q0 18 8 10" stroke="${INK}" stroke-width="3.5" fill="none" stroke-linecap="round"/></g></g></g>`;
+}
+
+// Almeja: la tapa (clase "top") se levanta al abrirse y deja ver la perla.
+function shellArt(c, p) {
+  const sh = shade(c, -.22);
+  let ridges = '';
+  for (let i = -3; i <= 3; i++) ridges += `<path d="M0 6 L${i * 17} -54" stroke="${sh}" stroke-width="3" stroke-linecap="round" opacity=".45"/>`;
+  return `<ellipse cy="34" rx="70" ry="13" fill="#000" opacity=".1"/>
+<path d="M-64 2 C-64 36 64 36 64 2Z" ${fa(shade(c, -.1), p)} stroke="${sh}" stroke-width="3"/>
+<g class="pearl" opacity="0"><circle cy="-4" r="40" fill="url(#gWhite)" opacity=".9"/><circle cy="-2" r="19" fill="#fff8fc" stroke="#f0d6ea" stroke-width="3"/><circle cx="-6" cy="-8" r="6" fill="#fff"/></g>
+<g class="top"><path d="M-66 4 C-70 -40 -32 -64 0 -64 C32 -64 70 -40 66 4 C40 14 -40 14 -66 4Z" ${fa(c, p)} stroke="${sh}" stroke-width="3"/>${ridges}
+<path d="M-20 -14 q6 6 12 0 M8 -14 q6 6 12 0" stroke="${INK}" stroke-width="3.5" fill="none" stroke-linecap="round"/>${CHEEK(-30, -4, 8)}${CHEEK(30, -4, 8)}</g>
+<g class="knocks"><circle cx="-18" cy="-90" r="12" fill="#fff" opacity=".9" stroke="${sh}" stroke-width="3"/><circle cx="18" cy="-90" r="12" fill="#fff" opacity=".9" stroke="${sh}" stroke-width="3"/>
+<circle class="k1" cx="-18" cy="-90" r="10" fill="#ffc93c" opacity="0"/><circle class="k2" cx="18" cy="-90" r="10" fill="#ffc93c" opacity="0"/></g>`;
+}
+
+// Bongó con parche.
+function drumArt(c, p) {
+  const sh = shade(c, -.25);
+  let lace = '';
+  for (let i = 0; i < 6; i++) { const x = -52 + i * 21; lace += `<path d="M${x} -46 L${x + 10} 40 L${x + 21} -46" stroke="#fff" stroke-width="3" fill="none" opacity=".75"/>`; }
+  return `<ellipse cy="64" rx="70" ry="14" fill="#000" opacity=".12"/>
+<path d="M-62 -50 L-54 48 C-30 64 30 64 54 48 L62 -50Z" ${fa(c, p)} stroke="${sh}" stroke-width="4"/>${lace}
+<ellipse cy="-50" rx="62" ry="20" ${fa('#fff1d6', p)} stroke="${sh}" stroke-width="5"/>
+<ellipse cy="-52" rx="40" ry="11" fill="#fff" opacity=".45"/>`;
+}
+
+// Luciérnaga: dormida (gris) o despierta (con la colita encendida).
+function fireflyArt(awake) {
+  return `${awake ? '<g class="pulse"><circle cx="0" cy="18" r="46" fill="url(#gGold)"/></g>' : ''}
+<g class="${awake ? 'flap' : ''}"><ellipse cx="-16" cy="-16" rx="16" ry="24" fill="#e6f4ff" opacity=".8" transform="rotate(-30 -16 -16)"/></g>
+<g transform="scale(-1 1)"><g class="${awake ? 'flap' : ''}"><ellipse cx="-16" cy="-16" rx="16" ry="24" fill="#e6f4ff" opacity=".8" transform="rotate(-30 -16 -16)"/></g></g>
+<ellipse cy="18" rx="15" ry="17" fill="${awake ? '#fff26a' : '#b9b6c6'}"/>
+<circle cy="-6" r="17" fill="${awake ? '#5b4a8a' : '#8f8aa3'}"/>
+${awake ? `${EYE(-6, -8, 4)}${EYE(6, -8, 4)}` : `<path d="M-10 -7 q4 4 8 0 M2 -7 q4 4 8 0" stroke="#4d4860" stroke-width="2.6" fill="none" stroke-linecap="round"/>`}
+<path d="M-5 -22 q-6 -12 -12 -14 M5 -22 q6 -12 12 -14" stroke="${awake ? '#5b4a8a' : '#8f8aa3'}" stroke-width="3" fill="none" stroke-linecap="round"/>`;
+}
+
+// Teclado dibujado. modo 'todo' (cualquier tecla), 'espacio' o 'flechas'.
+// Devuelve el dibujo y las teclas (en coordenadas locales) para resaltarlas o tocarlas en tablet.
+function keyboardArt(mode) {
+  const keys = [];
+  let html = '';
+  const key = (x, y, w, h, k, on, label) => {
+    keys.push({ x: x + w / 2, y: y + h / 2, w, h, key: k, on });
+    const fill = on ? '#fffdf5' : '#e9e4f0', st = on ? '#ffc93c' : '#cfc6dc';
+    html += `<g class="${on ? 'kon' : ''}" data-k="${k}"><rect x="${x}" y="${y + 5}" width="${w}" height="${h}" rx="${Math.min(12, h * .25)}" fill="${on ? '#e8a92b' : '#b8aecb'}"/>
+<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${Math.min(12, h * .25)}" fill="${fill}" stroke="${st}" stroke-width="${on ? 4 : 2}"/>${label ? label(x + w / 2, y + h / 2) : ''}</g>`;
+  };
+  if (mode === 'flechas') {
+    const s = 96, g = 12;
+    html += `<rect x="${-1.5 * s - 2 * g}" y="${-s - g * 2}" width="${3 * s + 4 * g}" height="${2 * s + 3 * g}" rx="26" fill="#5b5a86" opacity=".9"/>`;
+    const lbl = rot => (cx, cy) => `<path d="M-22 0 L10 -24 L10 -10 L26 -10 L26 10 L10 10 L10 24Z" transform="translate(${cx} ${cy}) rotate(${rot})" fill="${INK}"/>`;
+    key(-s / 2, -s - g / 2, s, s - 6, 'ArrowUp', false, lbl(90));
+    key(-1.5 * s - g, g / 2, s, s - 6, 'ArrowLeft', true, lbl(0));
+    key(-s / 2, g / 2, s, s - 6, 'ArrowDown', false, lbl(-90));
+    key(s / 2 + g, g / 2, s, s - 6, 'ArrowRight', true, lbl(180));
+    return { html, keys };
+  }
+  const kw = 40, g = 7, rows = [10, 9, 7];
+  const W = 10 * kw + 9 * g + 36;
+  html += `<rect x="${-W / 2}" y="-104" width="${W}" height="${4 * kw + 3 * g + 36}" rx="22" fill="#5b5a86" opacity=".9"/>`;
+  rows.forEach((n, r) => {
+    const rw = n * kw + (n - 1) * g;
+    for (let i = 0; i < n; i++) key(-rw / 2 + i * (kw + g), -86 + r * (kw + g), kw, kw, 'abcdefghijklmnopqrstuvwxyz'[r * 10 + i] || 'z', mode === 'todo');
+  });
+  key(-130, -86 + 3 * (kw + g), 260, kw, ' ', true);
+  for (const x of [-200, -164, 140, 176]) key(x, -86 + 3 * (kw + g), 30, kw, 'x', mode === 'todo');
+  return { html, keys };
+}
+
+// Pantalla en tablet: tocar las teclas dibujadas funciona como apretarlas.
+// En la compu, tocar el dibujo solo muestra con la manito que se usa el teclado de verdad.
+function makeKeyboard(ctx, layer, x, y, s, mode, onKey) {
+  const g = grp({ transform: tr(x, y, s) }, layer);
+  const kb = keyboardArt(mode);
+  const inner = grp({}, g, kb.html);
+  anim(inner, [{ transform: 'translateY(240px)', opacity: 0 }, { transform: 'translateY(0px)', opacity: 1 }], { duration: 600, easing: EB });
+  const ons = kb.keys.filter(k => k.on);
+  ctx.every(1400, () => inner.querySelectorAll('.kon > rect:nth-child(2)').forEach(r => anim(r, [{ fill: '#fffdf5' }, { fill: '#ffe7a0' }, { fill: '#fffdf5' }], { duration: 700, fill: 'none' })));
+  const targets = [];
+  const press = (k) => {
+    const e = [...inner.querySelectorAll('[data-k]')].find(q => q.dataset.k === k.key);
+    if (e) anim(e, [{ transform: 'translateY(0px)' }, { transform: 'translateY(5px)' }, { transform: 'translateY(0px)' }], { duration: 160, fill: 'none' });
+  };
+  for (const k of kb.keys) {
+    const t = App.addTarget({ x: x + k.x * s, y: y + k.y * s, w: k.w * s + 8, h: k.h * s + 8, prio: 2, kind: 'tecla', hit: () => {
+      if (App.touch) { press(k); onKey(k.key); }
+      else { Sound.tap(); hintKey(); }
+    } });
+    targets.push(t);
+  }
+  // Todo el teclado como blanco grande (prioridad baja): en tablet, con "cualquier tecla", vale tocar en cualquier parte.
+  const xs = kb.keys.map(k => k.x), ys = kb.keys.map(k => k.y);
+  const fx = (Math.min(...xs) + Math.max(...xs)) / 2, fy = (Math.min(...ys) + Math.max(...ys)) / 2;
+  targets.push(App.addTarget({ x: x + fx * s, y: y + fy * s, w: (Math.max(...xs) - Math.min(...xs) + 90) * s, h: (Math.max(...ys) - Math.min(...ys) + 90) * s, prio: 1, kind: 'teclado', hit: () => {
+    if (App.touch && mode === 'todo') { const k = pick(kb.keys); press(k); onKey(k.key); } else { Sound.tap(); hintKey(); }
+  } }));
+  const center = ons.length ? ons[Math.floor(ons.length / 2)] : kb.keys[0];
+  function hintKey(k = center) { Guide.tap(x + k.x * s, y + k.y * s, 2); }
+  return {
+    g, press: key => { const k = kb.keys.find(q => q.key === key) || (mode === 'todo' ? pick(kb.keys) : null); if (k) press(k); },
+    hint: hintKey, keyAt: key => kb.keys.find(q => q.key === key),
+    pos: key => { const k = kb.keys.find(q => q.key === key) || center; return { x: x + k.x * s, y: y + k.y * s }; },
+    remove() { targets.forEach(t => App.removeTarget(t)); anim(inner, [{ transform: 'translateY(0px)', opacity: 1 }, { transform: 'translateY(240px)', opacity: 0 }], { duration: 450 }).onfinish = () => g.remove(); },
+  };
+}
+
+// Fondo de playa: cielo, sol, mar arriba y arena abajo.
+function bgBeach(id, extra = '') {
+  const P = 'data-p';
+  return `<defs>
+<linearGradient id="${id}sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" ${P}="#7fcdf5"/><stop offset=".7" ${P}="#c9eefa"/><stop offset="1" ${P}="#fff3d6"/></linearGradient>
+<linearGradient id="${id}sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" ${P}="#5cc2df"/><stop offset="1" ${P}="#3aa0c8"/></linearGradient>
+<linearGradient id="${id}sand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" ${P}="#ffe2a8"/><stop offset="1" ${P}="#f4c77e"/></linearGradient></defs>
+<rect x="-600" y="-400" width="2800" height="1700" fill="url(#${id}sky)"/>
+${sunArt(1280, 170)}
+<g transform="translate(330 140)"><g class="drift">${ART.cloud(.85, true)}</g></g><g transform="translate(820 90)"><g class="drift" style="--d:-16s">${ART.cloud(.55, true)}</g></g>
+<rect x="-600" y="360" width="2800" height="300" fill="url(#${id}sea)"/>
+<g fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="4" stroke-linecap="round"><g class="ripple"><path d="M80 400 q20 -8 40 0 M1460 410 q20 -8 40 0 M700 392 q20 -8 40 0"/></g><g class="ripple" style="--d:-2.5s"><path d="M300 430 q20 -8 40 0 M1100 440 q20 -8 40 0"/></g></g>
+<path d="M-600 500 C-200 470 200 480 500 470 C800 460 1100 486 1400 474 C1700 462 1900 470 2200 480 L2200 1300 L-600 1300Z" fill="url(#${id}sand)"/>
+<path d="M-600 500 C-200 470 200 480 500 470 C800 460 1100 486 1400 474 C1700 462 1900 470 2200 480" fill="none" ${P}="#ffffff" data-pa="stroke" data-gl="" stroke-width="10" opacity=".75"/>
+${[[160, 760], [420, 840], [1240, 830], [1480, 740], [980, 880], [640, 760]].map(([x, y], i) => `<path d="M${x - 10} ${y} q10 -10 20 0" ${P}="#e0ad62" data-pa="stroke" stroke-width="4" fill="none" stroke-linecap="round"/>`).join('')}${extra}`;
+}
+
+// Palmera.
+function palmArt(x, y, s = 1, coconuts = true) {
+  let leaves = '';
+  for (const [a, c] of [[-150, '#4fae4f'], [-115, '#5cbd58'], [-65, '#5cbd58'], [-30, '#4fae4f'], [-90, '#6cc65a']]) leaves += `<path d="M0 0 C40 -30 110 -20 150 30 C100 0 50 0 0 8Z" data-p="${c}" transform="rotate(${a + 90})"/>`;
+  return `<g transform="translate(${x} ${y}) scale(${s})"><path d="M-14 0 C-6 -100 6 -200 30 -300 L50 -296 C28 -200 18 -100 16 0Z" data-p="#b98a55"/>
+<path d="M-6 -60 h24 M-2 -130 h26 M8 -200 h26" data-p="#9a6e40" data-pa="stroke" stroke-width="5" stroke-linecap="round"/>
+<g transform="translate(40 -298)">${leaves}${coconuts ? '<circle cx="-12" cy="16" r="15" data-p="#8a5a3a"/><circle cx="12" cy="20" r="15" data-p="#7a4d30"/>' : ''}</g></g>`;
+}
+
+// ---- 30-flores.js
+// Escena 1: Flores que cantan. Verbo: memoria de luces (clic).
+// Lumi toca una secuencia de flores (cada una brilla y canta su nota) y el chico la repite.
+// Tres rondas: 3 flores (1, 2 y 3 notas), 4 flores (2, 3 y 4) y 5 flores (3, 4 y 5).
+// No se pierde: si se equivoca, la flor correcta late y Lumi vuelve a mostrar; a la segunda, la que sigue queda brillando.
+const FLOWER_SET = [['daisy', '#ff6f91'], ['round', '#ffb347'], ['tulip', '#ffd84a'], ['star', '#5fc7ff'], ['daisy', '#b78cff']];
+
+Screens.flores = ctx => {
+  const bg = grp({}, L.world, bgLand('fl', `<g transform="translate(130 640)">${ART.flower('round', '#ff9fd0', 120, true)}</g><g transform="translate(1480 650) scale(.9)">${ART.flower('daisy', '#ffd84a', 130, true)}</g>`));
+  Paint.scan(bg);
+  const deco = grp({}, L.world), flL = grp({}, L.world), lumiL = grp({}, L.world);
+  const lumi = new Lumi(lumiL, 800, 1100, .8);
+  const ROUNDS = [{ n: 3, lens: [1, 2, 3], step: 900 }, { n: 4, lens: [2, 3, 4], step: 800 }, { n: 5, lens: [3, 4, 5], step: 700 }];
+  const total = ROUNDS.reduce((a, r) => a + r.lens.length, 0);
+  const bar = makeBar(total + 1);
+  const t0 = performance.now(), first = !Store.isDone(App.profile, 'flores');
+  let flowers = [], mode = 'wait', seq = [], pos = 0, errs = 0, finished = false, solved = 0, onSolved = null;
+
+  function makeFlowers(n) {
+    const gap = Math.min(270, 1260 / n), out = [];
+    for (let i = 0; i < n; i++) {
+      const [type, col] = FLOWER_SET[i], x = 800 + (i - (n - 1) / 2) * gap, base = 830, h = 150, s = 1.2;
+      const f = { i, x, y: base - h * s, col };
+      f.g = grp({ transform: tr(x, base, s) }, flL);
+      f.sway = grp({ class: 'sway', style: `--d:-${i * .7}s` }, f.g);
+      const parts = ART.flowerParts(type, col, h);
+      grp({}, f.sway, parts.stem + parts.leaves.map(l => `<g transform="translate(0 ${l.y}) scale(${l.s} 1)">${l.svg}</g>`).join(''));
+      f.head = grp({ transform: `translate(0 ${-h})` }, f.sway);
+      f.halo = grp({ opacity: 0 }, f.head, `<circle r="92" fill="url(#gGold)"/><circle r="70" fill="${col}" opacity=".35"/>`);
+      f.pop = grp({}, f.head, parts.head);
+      f.mouth = grp({ opacity: 0 }, f.head, `<ellipse cy="6" rx="6" ry="7" fill="#8a3550" stroke="${INK}" stroke-width="2"/>`);
+      anim(f.g, [{ transform: `translate(${x}px,${base + 260}px) scale(${s})` }, { transform: `translate(${x}px,${base}px) scale(${s})` }], { duration: 700, delay: i * 120, easing: EB });
+      f.t = App.addTarget({ x, y: f.y, r: 100, prio: 3, kind: 'flor', hit: () => tapFlower(f) });
+      out.push(f);
+    }
+    return out;
+  }
+  function clearFlowers() {
+    for (const f of flowers) {
+      App.removeTarget(f.t);
+      anim(f.g, [{ opacity: 1 }, { opacity: 0 }], { duration: 400 }).onfinish = () => f.g.remove();
+    }
+    flowers = [];
+  }
+  // Una flor brilla y canta.
+  function shine(f, ms = 600) {
+    Sound.sing(f.i);
+    f.halo.setAttribute('opacity', 1); f.mouth.setAttribute('opacity', 1);
+    anim(f.pop, [{ transform: 'scale(1)' }, { transform: 'scale(1.35)', offset: .3 }, { transform: 'scale(1.15)' }], { duration: ms, easing: EB, fill: 'none' });
+    anim(f.halo, [{ transform: 'scale(.6)', opacity: 0 }, { transform: 'scale(1.1)', opacity: 1, offset: .3 }, { transform: 'scale(1)', opacity: 0 }], { duration: ms + 250 });
+    FX.burst(f.x, f.y - 30, [f.col, '#fff'], 6, 110, 'dot');
+    note(f);
+    ctx.after(ms, () => f.mouth.setAttribute('opacity', 0));
+  }
+  // Notita musical que sube desde la flor.
+  function note(f) {
+    const [g, i] = FX.add(f.x + rand(-30, 30), f.y - 70, `<g fill="${shade(f.col, -.25)}"><ellipse rx="11" ry="8" transform="rotate(-20)"/><rect x="8" y="-38" width="5" height="38" rx="2"/><path d="M13 -38 q16 6 10 22 q-2 -12 -10 -12Z"/></g>`);
+    anim(i, [{ transform: 'translate(0px,0px) scale(.4)', opacity: 0 }, { transform: 'translate(10px,-50px) scale(1)', opacity: 1, offset: .3 }, { transform: 'translate(-10px,-140px) scale(.8)', opacity: 0 }], { duration: 1300, easing: 'ease-out' }).onfinish = () => g.remove();
+  }
+  function pulse(f) {
+    FX.ring(f.x, f.y, '#fff3a0', 120, 9, 650);
+    anim(f.pop, [{ transform: 'scale(1)' }, { transform: 'scale(1.22)' }, { transform: 'scale(1)' }], { duration: 500, fill: 'none' });
+  }
+  // Lumi muestra la secuencia: vuela sobre cada flor y la hace cantar.
+  async function show(step) {
+    mode = 'show'; Guide.hide();
+    await ctx.wait(500);
+    for (const k of seq) {
+      const f = flowers[k];
+      await lumi.move(ctx, f.x, f.y - 175, Math.min(380, step * .45), 40);
+      lumi.happy(); shine(f, step * .7);
+      await ctx.wait(step * .6);
+    }
+    await lumi.move(ctx, 800, 300, 500, 40);
+    lumi.look(800, 700);
+    mode = 'play'; pos = 0; App.lastGood = performance.now();
+    if (errs >= 2) pulse(flowers[seq[0]]);
+  }
+  function tapFlower(f) {
+    if (mode !== 'play') { if (mode === 'free') { shine(f, 500); App.good(); } return; }
+    if (f.i === seq[pos]) {
+      App.good(); shine(f, 520); lumi.look(f.x, f.y);
+      Paint.wave(f.x, f.y, 400, .25);
+      pos++;
+      if (pos === seq.length) { mode = 'wait'; ctx.after(500, () => solvedSeq(f)); }
+      else if (errs >= 2) ctx.after(450, () => pulse(flowers[seq[pos]]));
+    } else {
+      App.misses++; errs++;
+      Sound.miss();
+      anim(f.pop, [{ transform: 'rotate(0deg)' }, { transform: 'rotate(-14deg)' }, { transform: 'rotate(12deg)' }, { transform: 'rotate(0deg)' }], { duration: 400, fill: 'none' });
+      pulse(flowers[seq[pos]]);
+      // Vuelve a mostrar desde el principio, cada vez con más ayuda.
+      mode = 'wait';
+      ctx.after(900, () => show(cur.step * (errs >= 2 ? 1.15 : 1)));
+    }
+  }
+  function solvedSeq(f) {
+    solved++; errs = 0;
+    lumi.happy(true); Sound.chord();
+    bar.fill(f.col, f.x, f.y);
+    FX.burst(f.x, f.y, [f.col, '#fff', '#ffd84a'], 16, 190, 'star');
+    Paint.global(.12 + .7 * solved / total);
+    // Una florcita nueva nace en el jardín de atrás.
+    const [type, col] = pick(FLOWER_SET), x = rand(160, 1440), y = rand(560, 640);
+    const d = grp({ transform: tr(x, y, .45) }, deco, `<g class="sway" style="--d:-${rand(0, 3).toFixed(1)}s">${ART.flower(type, col, rand(100, 160))}</g>`);
+    anim(d, [{ transform: `translate(${x}px,${y}px) scale(0)` }, { transform: `translate(${x}px,${y}px) scale(.45)` }], { duration: 600, easing: EB });
+    if (onSolved) { const r = onSolved; onSolved = null; ctx.after(900, r); }
+  }
+  let cur = ROUNDS[0];
+  async function round(r, ri) {
+    cur = r;
+    flowers = makeFlowers(r.n);
+    await ctx.wait(900 + r.n * 120);
+    // Al empezar: cada flor se presenta cantando su nota.
+    for (const f of flowers) { shine(f, 450); await ctx.wait(330); }
+    await ctx.wait(500);
+    seq = [];
+    for (const len of r.lens) {
+      while (seq.length < len) { let k; do k = Math.floor(Math.random() * r.n); while (seq.length && k === seq[seq.length - 1]); seq.push(k); }
+      errs = 0;
+      const done = new Promise(res => { onSolved = res; });
+      await show(r.step);
+      if (ri === 0 && len === 1 && first) Guide.tap(flowers[seq[0]].x, flowers[seq[0]].y, 99);
+      await done;
+    }
+    await ctx.wait(400);
+    // Fin de ronda: todas cantan juntas.
+    flowers.forEach((f, i) => ctx.after(i * 140, () => shine(f, 600)));
+    lumi.spin();
+    await ctx.wait(1400);
+    clearFlowers();
+    await ctx.wait(500);
+  }
+
+  (async () => {
+    await ctx.wait(300);
+    Sound.whoosh();
+    await lumi.move(ctx, 800, 300, 1200, -40);
+    for (let i = 0; i < ROUNDS.length; i++) await round(ROUNDS[i], i);
+    // Final: las cinco flores cantan la melodía y el jardín se llena de color.
+    finished = true;
+    flowers = makeFlowers(5);
+    await ctx.wait(1300);
+    mode = 'free';
+    for (const k of [0, 1, 2, 3, 4, 3, 2, 4]) { shine(flowers[k], 420); await ctx.wait(300); }
+    bar.fill('#ffd84a', 800, 400);
+    Paint.all(1, 1600, 800, 600);
+    wake(bg);
+    await finishScene(ctx, 'flores', first, t0, lumi, ['#ff6f91', '#ffd84a', '#5fc7ff', '#b78cff', '#86d36f']);
+  })();
+  Sound.ambient(true);
+
+  return {
+    hint: () => mode === 'play' && !finished ? { x: flowers[seq[pos]].x, y: flowers[seq[pos]].y } : null,
+    hintDelay: 7000,
+    onMiss: p => { if (mode === 'play') { App.misses--; FX.puff(p.x, p.y); } },
+    onMove: p => { if (mode === 'play') lumi.look(p.x, p.y); },
+    auto: () => mode === 'play' ? { x: flowers[seq[pos]].x, y: flowers[seq[pos]].y } : null,
+  };
+};
+
+// ---- 31-caracoles.js
+// Escena 2: Caracoles. Verbo: doble clic.
+// Cada almeja dormida se abre si se la golpea dos veces seguidas y deja salir una perla.
+// El primer golpe enciende un puntito arriba; el segundo, si llega a tiempo, la abre.
+// El tiempo entre golpes se achica de a poco: 1,6 s, 1,2 s, 0,9 s y 0,75 s (como un doble clic de verdad).
+// Cuarta ronda: además, cangrejitos ermitaños que caminan con su caracol. Final: la almeja gigante.
+const SHELL_COLS = ['#ff9fc4', '#b9a2ff', '#ffb35c', '#7fd6c2', '#ff8b7b', '#8fc8ff', '#ffd84a'];
+
+Screens.caracoles = ctx => {
+  const bg = grp({}, L.world, bgBeach('cr', `${palmArt(120, 560, .95)}${palmArt(1490, 540, .8)}`));
+  Paint.scan(bg);
+  const shL = grp({}, L.world), lumiL = grp({}, L.world);
+  const lumi = new Lumi(lumiL, 800, 1100, .75);
+  const bar = makeBar(22);
+  const t0 = performance.now(), first = !Store.isDone(App.profile, 'caracoles');
+  const shells = new Set();
+  let win = 1600, finished = false, opened = 0, roundDone = null, slow = 0, shown = false;
+
+  function addShell(x, y, s, col, crab = null) {
+    const sh = { x, y, s, col, knockT: -1e9, open: false, crab };
+    sh.g = grp({ transform: tr(x, y) }, shL);
+    sh.body = grp({ transform: `scale(${s})` }, sh.g);
+    if (crab) grp({}, sh.body, `<g class="legs"><path d="M-40 20 l-22 26 M-20 26 l-12 28 M20 26 l12 28 M40 20 l22 26" stroke="#e8734e" stroke-width="9" stroke-linecap="round"/></g>
+<path d="M-64 6 C-90 -6 -100 20 -84 30 C-74 36 -64 26 -64 18" fill="#ff8b6a" stroke="#d65a3e" stroke-width="3"/>
+<g transform="translate(-58 -8)"><path d="M0 0 L-6 -30 M0 0 L8 -32" stroke="#e8734e" stroke-width="5"/>${EYE(-6, -34, 7)}${EYE(8, -36, 7)}</g>`);
+    sh.inner = grp({}, sh.body, shellArt(col));
+    sh.top = sh.inner.querySelector('.top'); sh.pearl = sh.inner.querySelector('.pearl');
+    sh.k1 = sh.inner.querySelector('.k1'); sh.k2 = sh.inner.querySelector('.k2');
+    anim(sh.body, [{ transform: `scale(0)` }, { transform: `scale(${s})` }], { duration: 550, easing: EB, delay: rand(0, 250) });
+    sh.t = App.addTarget({ x, y: y - 10 * s, r: 92 * s + 18, prio: 3, kind: crab ? 'crab' : 'shell', hit: () => knock(sh) });
+    shells.add(sh);
+    return sh;
+  }
+  function squash(sh, k = .86) {
+    anim(sh.inner, [{ transform: 'scale(1,1)' }, { transform: `scale(${2 - k},${k})`, offset: .35 }, { transform: 'scale(1,1)' }], { duration: 260, fill: 'none' });
+  }
+  function knock(sh) {
+    if (sh.open || finished && !sh.giant) return;
+    const now = performance.now();
+    if (now - sh.knockT <= win) return openShell(sh);
+    sh.knockT = now;
+    Sound.toc(0); squash(sh);
+    sh.k1.setAttribute('opacity', 1);
+    anim(sh.k1, [{ transform: 'scale(0)' }, { transform: 'scale(1.3)' }, { transform: 'scale(1)' }], { duration: 250, fill: 'none' });
+    const my = now;
+    ctx.after(win, () => {
+      if (sh.open || sh.knockT !== my) return;
+      anim(sh.k1, [{ opacity: 1 }, { opacity: 0 }], { duration: 300 }).onfinish = () => sh.k1.setAttribute('opacity', 0);
+      // Golpes muy separados: la manito muestra el doble golpe.
+      if (++slow >= 3) { slow = 0; Guide.dtap(sh.x, sh.y - 10 * sh.s, 2); App.hints++; }
+    });
+  }
+  function openShell(sh) {
+    sh.open = true; shells.delete(sh); App.removeTarget(sh.t); App.good(); slow = 0;
+    Sound.toc(1);
+    sh.k2.setAttribute('opacity', 1);
+    anim(sh.k2, [{ transform: 'scale(0)' }, { transform: 'scale(1.3)' }, { transform: 'scale(1)' }], { duration: 250, fill: 'none' });
+    squash(sh, .78);
+    ctx.after(160, () => {
+      Sound.open();
+      anim(sh.top, [{ transform: 'translateY(0px) scaleY(1)' }, { transform: 'translateY(-58px) scaleY(.5)' }], { duration: 450, easing: EB });
+      sh.pearl.setAttribute('opacity', 1);
+      anim(sh.pearl, [{ transform: 'scale(0)' }, { transform: 'scale(1.2)' }, { transform: 'scale(1)' }], { duration: 500, easing: EB });
+      anim(sh.inner.querySelector('.knocks'), [{ opacity: 1 }, { opacity: 0 }], { duration: 500, delay: 300 });
+      FX.ring(sh.x, sh.y, '#fff', 160 * sh.s, 9, 700);
+      FX.burst(sh.x, sh.y - 20, [sh.col, '#fff', '#ffd84a'], 14, 170, 'star');
+      Paint.wave(sh.x, sh.y, 520, .45); Paint.global(.12 + .7 * (opened + 1) / 22);
+      lumi.happy(); lumi.look(sh.x, sh.y);
+      opened++;
+      ctx.after(650, () => {
+        bar.fill('#fff4fb', sh.x, sh.y - 10);
+        anim(sh.pearl, [{ opacity: 1 }, { opacity: 0 }], { duration: 300 });
+        if (sh.crab) { sh.crab.happy = true; }
+      });
+      if (!shells.size && roundDone) { const r = roundDone; roundDone = null; ctx.after(1100, r); }
+    });
+  }
+
+  // Cangrejitos que caminan de un lado a otro, despacio.
+  function walkers() {
+    ctx.loop((dt, now) => {
+      for (const sh of [...shells, ...[]]) {
+        if (!sh.crab) continue;
+        const c = sh.crab;
+        c.x += c.v * dt / 1000;
+        if (c.x < c.a || c.x > c.b) { c.v = -c.v; c.x = clamp(c.x, c.a, c.b); }
+        sh.x = c.x;
+        sh.g.setAttribute('transform', tr(c.x.toFixed(1), (sh.y + Math.abs(Math.sin(now * .008)) * -4).toFixed(1)) + (c.v > 0 ? ' scale(-1 1)' : ''));
+        sh.t.x = c.x;
+      }
+    });
+  }
+
+  async function round(list, w, s) {
+    win = w;
+    const made = list.map(([x, y, crab], i) => addShell(x, y, s, SHELL_COLS[(i + opened) % SHELL_COLS.length], crab));
+    await new Promise(r => { roundDone = r; if (!shown && first) { shown = true; ctx.after(1100, () => { const sh = made[0]; if (!sh.open) Guide.dtap(sh.x, sh.y - 10 * s, 99); }); } });
+    lumi.happy(true); Sound.chord();
+    await ctx.wait(700);
+    // Las almejas abiertas se van al mar para dejar lugar.
+    for (const sh of made) anim(sh.g, [{ opacity: 1 }, { opacity: 0 }], { duration: 600, delay: rand(0, 300) }).onfinish = () => sh.g.remove();
+    await ctx.wait(900);
+  }
+
+  (async () => {
+    await ctx.wait(300);
+    Sound.whoosh();
+    await lumi.move(ctx, 800, 420, 1200, -40);
+    await round([[430, 690], [800, 640], [1170, 690]], 1600, 1.25);
+    await round([[300, 640], [620, 780], [800, 600], [980, 780], [1300, 640]], 1200, 1.05);
+    await round([[260, 700], [480, 580], [700, 800], [900, 620], [1120, 800], [1340, 640]], 900, .95);
+    walkers();
+    await round([[330, 620], [1270, 620], [560, 800], [1040, 800],
+      [700, 700, { x: 700, a: 260, b: 760, v: 60 }], [900, 860, { x: 900, a: 480, b: 1100, v: -50 }], [1100, 700, { x: 1100, a: 840, b: 1340, v: 55 }]], 750, .9);
+    // Final: la almeja gigante.
+    const g = addShell(800, 700, 1.9, '#ffc93c');
+    g.giant = true;
+    await new Promise(r => { roundDone = r; });
+    finished = true;
+    for (let k = 0; k < 6; k++) ctx.after(k * 160, () => FX.burst(800 + rand(-120, 120), 600 + rand(-60, 40), ['#fff4fb', '#ffd84a', '#ff9fc4', '#8fc8ff'], 14, 230, 'star'));
+    Paint.all(1, 1600, 800, 600);
+    wake(bg);
+    await ctx.wait(1200);
+    await finishScene(ctx, 'caracoles', first, t0, lumi, ['#ff9fc4', '#ffd84a', '#8fc8ff', '#7fd6c2', '#fff4fb']);
+  })();
+  Sound.ambient(true);
+
+  const nearest = () => { let best = null, bd = Infinity; for (const sh of shells) { const d = (sh.crab ? 300 : 0) + Math.hypot(sh.x - App.pointer.x, sh.y - App.pointer.y); if (d < bd) { bd = d; best = sh; } } return best; };
+  return {
+    hint: () => { const sh = nearest(); return sh ? { x: sh.x, y: sh.y - 10 * sh.s, dbl: true } : null; },
+    hintDelay: 6500,
+    auto: () => { const sh = [...shells].sort((a, b) => !!a.crab - !!b.crab)[0]; return sh ? { x: sh.x, y: sh.y - 10 * sh.s, dbl: true } : null; },
+    onMiss: p => { Sound.miss(); FX.puff(p.x, p.y); const sh = nearest(); if (sh) FX.ring(sh.x, sh.y, '#fff', 120, 8, 600); },
+    onMove: p => lumi.look(p.x, p.y),
+  };
+};
+
+// ---- 32-tambores.js
+// Escena 3: Tambores. Verbo: teclado. Abajo hay un teclado dibujado con las teclas que sirven brillando.
+// Ronda 1: cualquier tecla toca un tambor y despierta a las ranas (12 golpes).
+// Ronda 2: la barra espaciadora hace saltar a Lumi de piedra en piedra para cruzar la laguna.
+// Ronda 3: las flechas mueven el bote de Lumi hasta la estrella que espera arriba.
+// En tablet o celular las teclas dibujadas se tocan. En la compu, tocar el dibujo muestra con la manito qué tecla apretar.
+Screens.tambores = ctx => {
+  const P = 'data-p';
+  const bg = grp({}, L.world, `<defs><linearGradient id="tbsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" ${P}="#8fd0f5"/><stop offset="1" ${P}="#e4f6fb"/></linearGradient>
+<linearGradient id="tblag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" ${P}="#69c6dd"/><stop offset="1" ${P}="#3c9fc4"/></linearGradient></defs>
+<rect x="-600" y="-400" width="2800" height="1700" fill="url(#tbsky)"/>${sunArt(1300, 160)}
+<g transform="translate(360 140)"><g class="drift">${ART.cloud(.8, true)}</g></g>
+<path d="M-600 420 C-200 330 200 360 520 380 C800 400 1000 330 1300 350 C1600 370 1900 400 2200 390 L2200 1300 L-600 1300Z" ${P}="#9fd987" data-gl=""/>
+<path d="M-600 470 C-100 440 300 450 800 452 C1300 454 1700 440 2200 470 L2200 1300 L-600 1300Z" ${P}="#86cf6f" data-gl=""/>
+<path d="M-600 500 C-200 480 200 486 800 484 C1400 482 1800 490 2200 500 L2200 740 L-600 740Z" fill="url(#tblag)"/>
+<g fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="4" stroke-linecap="round"><g class="ripple"><path d="M200 560 q20 -8 40 0 M900 600 q20 -8 40 0 M1350 560 q20 -8 40 0"/></g><g class="ripple" style="--d:-2s"><path d="M560 660 q20 -8 40 0 M1150 690 q20 -8 40 0"/></g></g>
+<path d="M-600 720 C-200 700 300 712 800 706 C1300 700 1800 712 2200 720 L2200 1300 L-600 1300Z" ${P}="#ffe2a8"/>
+<path d="M-600 560 C-400 540 -200 530 -40 540 C80 548 160 580 200 740 L-600 740Z" ${P}="#8fd474"/>
+<path d="M2200 560 C2000 540 1800 530 1640 540 C1520 548 1440 580 1400 740 L2200 740Z" ${P}="#8fd474"/>`);
+  Paint.scan(bg);
+  const midL = grp({}, L.world), lumiL = grp({}, L.world), topL = grp({}, L.world), kbL = grp({}, L.world);
+  const lumi = new Lumi(lumiL, 800, 1100, .7);
+  const bar = makeBar(21);
+  const t0 = performance.now(), first = !Store.isDone(App.profile, 'tambores');
+  let mode = 'wait', kb = null, finished = false, onDone = null, hits = 0, busy = false;
+  const COLS = ['#ff8b7b', '#ffd84a', '#6cc6ff'];
+
+  // ---------- Ronda 1: tambores sobre una balsa, ranas dormidas en hojas de nenúfar.
+  const raft = grp({ transform: tr(800, 640) }, midL, `<rect x="-300" y="-30" width="600" height="60" rx="20" fill="#c99760" stroke="#9a6e40" stroke-width="4"/>
+${[-240, -160, -80, 0, 80, 160, 240].map(x => `<path d="M${x} -26 L${x} 26" stroke="#9a6e40" stroke-width="3" opacity=".6"/>`).join('')}`);
+  const drums = COLS.map((c, i) => {
+    const x = 800 + (i - 1) * 190, y = 560 + (i === 1 ? -10 : 0);
+    const g = grp({ transform: tr(x, y, i === 1 ? 1.05 : .9) }, midL), inner = grp({}, g, drumArt(c));
+    return { x, y, c, g, inner };
+  });
+  const frogs = [[170, 600], [370, 690], [1230, 690], [1430, 600], [1300, 520], [330, 520]].map(([x, y], i) => {
+    const g = grp({ transform: tr(x, y, .7) }, midL);
+    grp({}, g, `<ellipse cy="30" rx="80" ry="22" fill="#5cbd58"/><path d="M0 30 L60 22" stroke="#3c9fc4" stroke-width="6"/>`);
+    const hop = grp({}, g), face = `<ellipse cy="0" rx="46" ry="32" fill="#7fd36a"/><circle cx="-22" cy="-30" r="17" fill="#7fd36a"/><circle cx="22" cy="-30" r="17" fill="#7fd36a"/>`;
+    const sleep = grp({}, hop, `<g opacity=".6">${face}</g><path d="M-30 -30 q8 6 16 0 M14 -30 q8 6 16 0" stroke="#3e6b3a" stroke-width="4" fill="none" stroke-linecap="round"/>`);
+    const awake = grp({ opacity: 0 }, hop, `${face}${EYE(-22, -32, 9)}${EYE(22, -32, 9)}<path d="M-18 6 Q0 20 18 6" stroke="${INK}" stroke-width="4" fill="none" stroke-linecap="round"/>${CHEEK(-32, 4, 8)}${CHEEK(32, 4, 8)}`);
+    return { x, y, g, hop, sleep, awake, on: false };
+  });
+  function note(x, y, c) {
+    const [g, i] = FX.add(x + rand(-40, 40), y - 70, `<g fill="${shade(c, -.25)}"><ellipse rx="12" ry="9" transform="rotate(-20)"/><rect x="9" y="-40" width="5" height="40" rx="2"/><path d="M14 -40 q16 6 10 22 q-2 -12 -10 -12Z"/></g>`);
+    anim(i, [{ transform: 'translate(0px,0px) scale(.4)', opacity: 0 }, { transform: `translate(${rand(-30, 30)}px,-60px) scale(1)`, opacity: 1, offset: .3 }, { transform: `translate(${rand(-60, 60)}px,-170px) scale(.8)`, opacity: 0 }], { duration: 1300, easing: 'ease-out' }).onfinish = () => g.remove();
+  }
+  function drumHit(k) {
+    // La tecla elige el tambor: las de la izquierda, el de la izquierda; las de la derecha, el de la derecha.
+    const row = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm'];
+    let i = hits % 3;
+    for (const r of row) { const c = r.indexOf(String(k).toLowerCase()); if (c >= 0) i = Math.min(2, Math.floor(c / r.length * 3)); }
+    if (k === ' ') i = 1;
+    const d = drums[i];
+    App.good(); Sound.drum(i);
+    if (kb) kb.press(k);
+    anim(d.inner, [{ transform: 'scale(1,1)' }, { transform: 'scale(1.12,.84)', offset: .25 }, { transform: 'scale(.96,1.06)', offset: .6 }, { transform: 'scale(1,1)' }], { duration: 380, fill: 'none' });
+    FX.ring(d.x, d.y - 50, d.c, 110, 8, 500);
+    note(d.x, d.y, d.c);
+    lumi.happy(); lumi.look(d.x, d.y);
+    Paint.wave(d.x, d.y, 420, .2);
+    hits++;
+    if (hits % 2 === 0) {
+      bar.fill(d.c, d.x, d.y);
+      const f = frogs[hits / 2 - 1];
+      if (f && !f.on) {
+        f.on = true;
+        anim(f.sleep, [{ opacity: 1 }, { opacity: 0 }], 300); anim(f.awake, [{ opacity: 0 }, { opacity: 1 }], 300);
+        Paint.wave(f.x, f.y, 380, .6);
+        FX.burst(f.x, f.y - 30, ['#7fd36a', '#fff', '#ffd84a'], 10, 120, 'star');
+      }
+    }
+    // Las ranas despiertas saltan al ritmo.
+    frogs.forEach((f, j) => { if (f.on) anim(f.hop, [{ transform: 'translateY(0px)' }, { transform: 'translateY(-40px)' }, { transform: 'translateY(0px)' }], { duration: 380, delay: j * 40, fill: 'none', easing: 'ease-out' }); });
+    if (hits >= 12 && onDone) { const r = onDone; onDone = null; mode = 'wait'; ctx.after(500, r); }
+  }
+
+  // ---------- Ronda 2: piedras para cruzar la laguna.
+  const stones = [];
+  function makeStones() {
+    for (let i = 0; i < 8; i++) {
+      const x = 260 + i * 145, y = 610 + (i % 2 ? -26 : 14);
+      const g = grp({ transform: tr(x, y) }, midL, `<ellipse cy="10" rx="66" ry="22" fill="#2f86ab" opacity=".5"/><ellipse rx="62" ry="24" fill="#b7b2c2"/><ellipse cy="-6" rx="50" ry="15" fill="#d2cede"/>`);
+      anim(g, [{ transform: `translate(${x}px,${y + 50}px) scale(.3)`, opacity: 0 }, { transform: `translate(${x}px,${y}px) scale(1)`, opacity: 1 }], { duration: 500, delay: i * 90, easing: EB });
+      stones.push({ x, y, g });
+    }
+  }
+  let at = -1;
+  function jump() {
+    if (busy) return;
+    busy = true; App.good();
+    if (kb) kb.press(' ');
+    at++;
+    const s = stones[at], to = s ? { x: s.x, y: s.y - 62 } : { x: 1500, y: 560 };
+    Sound.jump(); lumi.happy();
+    lumi.move(ctx, to.x, to.y, 480, 150).then(() => {
+      busy = false;
+      if (s) {
+        Sound.land(at);
+        const c = pick(['#ff9fc4', '#ffd84a', '#ffb25b', '#b78cff', '#fff']);
+        grp({ transform: tr(s.x + 40, s.y - 4, .5) }, s.g.parentNode, `<g class="pulse"><circle r="40" fill="url(#gGold)"/></g>${[0, 1, 2, 3, 4, 5].map(k => `<ellipse cy="-20" rx="10" ry="22" fill="${c}" transform="rotate(${k * 60})"/>`).join('')}<circle r="12" fill="#ffd84a"/>`);
+        FX.ring(s.x, s.y, '#fff', 90, 7, 500);
+        Paint.wave(s.x, s.y, 360, .35);
+        bar.fill(c, s.x, s.y);
+        if (at === stones.length - 1 && onDone) { const r = onDone; onDone = null; mode = 'wait'; ctx.after(400, async () => { await lumi.move(ctx, 1500, 560, 600, 120); Sound.splash(); r(); }); }
+      }
+    });
+  }
+
+  // ---------- Ronda 3: el bote y las estrellas.
+  const LANES = [480, 800, 1120];
+  let lane = 1, star = null, caught = 0, arrow = null;
+  const boat = grp({ transform: tr(800, 1000) }, lumiL, `<path d="M-90 10 L90 10 L66 50 L-66 50Z" fill="#e0566a" stroke="#b8404f" stroke-width="4" stroke-linejoin="round"/><rect x="-72" y="18" width="144" height="9" fill="#fff" opacity=".8"/>`);
+  function placeBoat(x) { boat.setAttribute('transform', tr(x, 630)); lumi.place(x, 590); }
+  let bx = 800;
+  function moveBoat(dir) {
+    const nl = lane + dir;
+    if (kb) kb.press(dir < 0 ? 'ArrowLeft' : 'ArrowRight');
+    if (nl < 0 || nl > 2) { Sound.boing(); anim(boat, [{ transform: `translate(${bx}px,630px)` }, { transform: `translate(${bx + dir * 24}px,630px)` }, { transform: `translate(${bx}px,630px)` }], { duration: 300, fill: 'none' }); return; }
+    lane = nl; App.good(); busy = true; Sound.whoosh();
+    const x0 = bx, x1 = LANES[lane];
+    ctx.tween(420, e => { bx = lerp(x0, x1, e); placeBoat(bx); }).then(() => { busy = false; check(); });
+  }
+  function showArrow() {
+    if (arrow) arrow.remove();
+    if (!star || star.lane === lane) return;
+    const dir = star.lane > lane ? 1 : -1;
+    arrow = grp({ transform: tr(bx + dir * 150, 600, dir) }, topL, `<g class="pulse"><path d="M-40 -22 L10 -22 L10 -46 L52 0 L10 46 L10 22 L-40 22Z" fill="#fff3a0" stroke="#ffc93c" stroke-width="5" stroke-linejoin="round" opacity=".9"/></g>`);
+  }
+  function newStar() {
+    let l; do l = Math.floor(Math.random() * 3); while (l === lane);
+    if (caught === 0) l = 2;
+    const x = LANES[l];
+    const g = grp({ transform: tr(x, -80) }, topL), inner = grp({}, g, `<g class="pulse"><circle r="80" fill="url(#gGold)"/></g>${ART.star(40)}`);
+    star = { lane: l, x, g, inner };
+    ctx.tween(900, e => g.setAttribute('transform', tr(x, lerp(-80, 420, e))), Ease.out).then(() => { showArrow(); check(); });
+  }
+  function check() {
+    showArrow();
+    if (!star || star.lane !== lane || star.taken) return;
+    star.taken = true;
+    const s = star; star = null;
+    if (arrow) { arrow.remove(); arrow = null; }
+    lumi.happy(true); Sound.star(caught);
+    ctx.tween(400, e => s.g.setAttribute('transform', tr(s.x, lerp(420, 540, e), lerp(1, .5, e)))).then(() => {
+      s.g.remove();
+      FX.burst(s.x, 540, ['#fff3a0', '#ffd84a', '#fff'], 14, 160, 'star');
+      bar.fill('#ffd84a', s.x, 540);
+      Paint.wave(s.x, 560, 500, .4);
+      caught++;
+      if (caught >= 6) { if (onDone) { const r = onDone; onDone = null; mode = 'wait'; ctx.after(500, r); } }
+      else ctx.after(500, newStar);
+    });
+  }
+
+  function wrongKey() {
+    App.misses++; Sound.boing();
+    lumi.look(800, 800);
+    if (kb) kb.hint();
+  }
+  function onKey(k) {
+    if (k === 'Spacebar') k = ' ';
+    fullscreen();
+    if (mode === 'todo') return drumHit(k);
+    if (mode === 'espacio') return k === ' ' ? jump() : (busy ? null : wrongKey());
+    if (mode === 'flechas') {
+      if (busy) return;
+      if (k === 'ArrowLeft') return moveBoat(-1);
+      if (k === 'ArrowRight') return moveBoat(1);
+      if (k === 'ArrowUp' || k === 'ArrowDown') { Sound.tap(); lumi.happy(); return; }
+      return wrongKey();
+    }
+  }
+  const setKb = m => { if (kb) kb.remove(); kb = makeKeyboard(ctx, kbL, 800, m === 'flechas' ? 800 : 790, m === 'flechas' ? .72 : .82, m, onKey); };
+  const round = (m, setup) => new Promise(res => { onDone = res; mode = m; setKb(m); setup && setup(); App.lastGood = performance.now(); if (first) ctx.after(1200, () => { if (mode === m) kb.hint(m === 'flechas' ? kb.keyAt('ArrowRight') : undefined); }); });
+
+  (async () => {
+    await ctx.wait(300);
+    Sound.whoosh();
+    await lumi.move(ctx, 800, 430, 1200, -40);
+    await round('todo');
+    // Fin de la ronda 1: redoble y la balsa se va.
+    for (let i = 0; i < 6; i++) ctx.after(i * 110, () => { Sound.drum(i % 3); FX.ring(drums[i % 3].x, drums[i % 3].y - 50, drums[i % 3].c, 120, 8, 500); });
+    lumi.spin();
+    await ctx.wait(1200);
+    await lumi.move(ctx, 130, 520, 900, 140);
+    for (const o of [raft, ...drums.map(d => d.g)]) anim(o, [{ opacity: 1 }, { opacity: 0 }], { duration: 600 }).onfinish = () => o.remove();
+    makeStones();
+    await ctx.wait(900);
+    await round('espacio');
+    lumi.happy(true); Sound.chord();
+    await ctx.wait(800);
+    // Ronda 3: Lumi sube al bote.
+    for (const s of stones) anim(s.g, [{ opacity: 1 }, { opacity: 0 }], { duration: 500 }).onfinish = () => s.g.remove();
+    await ctx.tween(1000, e => { bx = 800; boat.setAttribute('transform', tr(800, lerp(1000, 630, e))); });
+    await lumi.move(ctx, 800, 590, 700, 140);
+    Sound.splash();
+    await round('flechas', () => ctx.after(300, newStar));
+    finished = true;
+    if (kb) { kb.remove(); kb = null; }
+    lumi.spin(); Sound.fanfare();
+    for (let i = 0; i < 8; i++) ctx.after(i * 120, () => Sound.drum(i % 4));
+    frogs.forEach((f, j) => ctx.every(700 + j * 60, () => anim(f.hop, [{ transform: 'translateY(0px)' }, { transform: 'translateY(-50px)' }, { transform: 'translateY(0px)' }], { duration: 420, fill: 'none' })));
+    Paint.all(1, 1600, 800, 500);
+    wake(bg);
+    await ctx.wait(600);
+    await finishScene(ctx, 'tambores', first, t0, lumi, ['#ff8b7b', '#ffd84a', '#6cc6ff', '#7fd36a', '#fff3a0']);
+  })();
+  Sound.ambient(true);
+
+  const needKey = () => mode === 'todo' ? 'a' : mode === 'espacio' ? ' ' : mode === 'flechas' && star && !busy && star.lane !== lane ? (star.lane > lane ? 'ArrowRight' : 'ArrowLeft') : null;
+  return {
+    onKey,
+    hint: () => { const k = needKey(); if (!k || !kb) return null; const q = kb.keyAt(k); return { run: () => kb.hint(q) }; },
+    hintDelay: 5500,
+    auto: () => { const k = needKey(); if (!k || busy) return null; if (App.touch && kb) { const p = kb.pos(k); return { x: p.x, y: p.y }; } return { key: k }; },
+    onMiss: p => { if (finished || !kb) return; App.misses--; Sound.tap(); kb.hint(); },
+    onMove: p => lumi.look(p.x, p.y),
+  };
+};
+
+// ---- 33-caminos.js
+// Escena 4: Caminos de luz. Verbo: arrastrar siguiendo un camino, sin soltar.
+// Se aprieta sobre Lumi y se la lleva por el caminito brillante hasta la luciérnaga dormida, que se despierta.
+// Si se suelta, Lumi se queda donde estaba (no se pierde lo avanzado). Si el mouse se sale del camino, Lumi espera.
+// Tres rondas de tres caminos: anchos y suaves, con curvas, y finitos con vueltas.
+const PATHS = [
+  { tol: 125, d: ['M220 560 C500 520 1100 600 1380 540', 'M240 700 C500 700 700 380 1000 380 C1200 380 1300 460 1380 460', 'M260 420 C500 300 700 640 900 560 C1100 480 1200 360 1380 380'] },
+  { tol: 100, d: ['M230 300 C1000 260 1250 360 1100 480 C950 600 400 520 380 640 C360 760 900 780 1370 720', 'M260 760 C260 400 600 230 800 230 C1000 230 1340 400 1340 760', 'M220 560 C320 380 420 380 520 560 C620 740 720 740 820 560 C920 380 1020 380 1120 560 C1220 740 1320 740 1400 600'] },
+  { tol: 82, d: ['M220 300 L520 700 L820 300 L1120 700 L1380 360', 'M220 660 C500 660 700 660 800 520 C900 380 780 250 640 300 C500 350 560 560 760 560 C1000 560 1150 400 1380 300', 'M240 380 C400 170 560 570 700 370 C840 170 980 570 1120 370 C1220 230 1380 300 1380 580'] },
+];
+
+Screens.caminos = ctx => {
+  const P = 'data-p';
+  let dots = '';
+  for (let i = 0; i < 46; i++) dots += `<circle cx="${rand(-300, 1900).toFixed(0)}" cy="${rand(-200, 560).toFixed(0)}" r="${rand(1.5, 3).toFixed(1)}" ${P}="#fff6c8" data-gl="" opacity="${rand(.35, .85).toFixed(2)}"/>`;
+  const bg = grp({}, L.world, `<defs><linearGradient id="cms" x1="0" y1="0" x2="0" y2="1"><stop offset="0" ${P}="#202a66"/><stop offset=".6" ${P}="#3f3d8f"/><stop offset="1" ${P}="#7a5aa6"/></linearGradient></defs>
+<rect x="-600" y="-400" width="2800" height="1700" fill="url(#cms)"/>${dots}
+<g transform="translate(1420 150)"><circle r="110" fill="url(#gWhite)" opacity=".22"/><circle r="60" ${P}="#fff2b0" data-gl=""/><circle cx="-18" cy="-14" r="10" ${P}="#f1df92" data-gl=""/>
+<g class="sun-sleep"><path d="M-28 0 q9 7 18 0 M10 0 q9 7 18 0" stroke="#8a7a4a" stroke-width="5" fill="none" stroke-linecap="round"/></g>
+<g class="sun-awake" opacity="0">${EYE(-18, -4, 7)}${EYE(18, -4, 7)}<path d="M-12 14 Q0 27 12 14" stroke="${INK}" stroke-width="4.5" fill="none" stroke-linecap="round"/>${CHEEK(-30, 10, 8)}${CHEEK(30, 10, 8)}</g></g>
+<path d="M-600 800 C-200 740 300 780 800 770 C1300 760 1700 790 2200 780 L2200 1300 L-600 1300Z" ${P}="#2e6b5e" data-gl=""/>
+${[[90, 820, 1.1], [1520, 810, 1], [1380, 840, .7], [260, 850, .6]].map(([x, y, s]) => `<g transform="translate(${x} ${y}) scale(${s})"><path d="M0 -150 L-50 -10 L50 -10Z" ${P}="#2f5a50" data-gl=""/><path d="M0 -190 L-38 -80 L38 -80Z" ${P}="#36685c" data-gl=""/></g>`).join('')}`);
+  Paint.scan(bg);
+  const skyL = grp({}, L.world), pathL = grp({}, L.world), endL = grp({}, L.world), lumiL = grp({}, L.world);
+  const lumi = new Lumi(lumiL, 800, 1100, .55);
+  const bar = makeBar(10);
+  const t0 = performance.now(), first = !Store.isDone(App.profile, 'caminos');
+  let pts = [], idx = 0, tol = 120, dragging = false, off = false, mode = 'wait', sparks = [], done = null, nDone = 0, band = null, walk = null, len = 0, fly = null, finished = false, shownHint = false;
+  const LOOK = 44;
+
+  function setup(d, t) {
+    pathL.innerHTML = ''; endL.innerHTML = '';
+    tol = t;
+    const meas = el('path', { d, fill: 'none' }, pathL);
+    len = meas.getTotalLength();
+    pts = [];
+    for (let s = 0; s <= len; s += 6) { const q = meas.getPointAtLength(s); pts.push({ x: q.x, y: q.y }); }
+    const last = meas.getPointAtLength(len); pts.push({ x: last.x, y: last.y });
+    meas.remove();
+    band = el('path', { d, fill: 'none', stroke: '#fff3a0', 'stroke-width': tol * 1.4, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', opacity: .16 }, pathL);
+    el('path', { d, fill: 'none', stroke: '#fff3a0', 'stroke-width': tol * .7, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', opacity: .14 }, pathL);
+    el('path', { d, fill: 'none', stroke: '#fffbe0', 'stroke-width': 8, 'stroke-dasharray': '2 22', 'stroke-linecap': 'round', opacity: .8 }, pathL);
+    walk = el('path', { d, fill: 'none', stroke: '#ffd84a', 'stroke-width': 16, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-dasharray': `0 ${len + 20}` }, pathL);
+    anim(pathL, [{ opacity: 0 }, { opacity: 1 }], { duration: 600 });
+    sparks = [];
+    for (let s = 130; s < len - 80; s += 130) {
+      const i = Math.round(s / 6), q = pts[i];
+      sparks.push({ i, g: grp({ transform: tr(q.x, q.y) }, pathL, `<g class="pulse" style="animation-duration:1.8s"><path d="${SPARK}" fill="#fffbe0" transform="scale(1.4)"/></g>`) });
+    }
+    const e = pts[pts.length - 1];
+    fly = { x: e.x, y: e.y, g: grp({ transform: tr(e.x, e.y - 10, .95) }, endL) };
+    fly.inner = grp({}, fly.g, fireflyArt(false) + `<g class="float"><text x="30" y="-40" font-size="30" fill="#c9c4e0">z</text><text x="48" y="-66" font-size="22" fill="#c9c4e0">z</text></g>`);
+    anim(fly.inner, [{ transform: 'scale(0)' }, { transform: 'scale(1)' }], { duration: 500, easing: EB });
+    idx = 0; dragging = false; off = false;
+    lumi.place(pts[0].x, pts[0].y);
+    FX.ring(pts[0].x, pts[0].y, '#fff3a0', 140, 8, 700);
+  }
+  function hintPts(from = idx, n = 70) {
+    const out = [];
+    for (let j = from; j < Math.min(pts.length, from + n); j += 6) out.push(pts[j]);
+    out.push(pts[Math.min(pts.length - 1, from + n)]);
+    return out;
+  }
+  function advance(j) {
+    idx = j;
+    const q = pts[idx];
+    lumi.place(q.x, q.y);
+    walk.setAttribute('stroke-dasharray', `${idx * 6} ${len + 20}`);
+    for (const s of sparks) if (!s.got && s.i <= idx) {
+      s.got = true; Sound.chime(sparks.indexOf(s) + 2);
+      FX.burst(pts[s.i].x, pts[s.i].y, ['#fffbe0', '#ffd84a'], 8, 90, 'star');
+      anim(s.g, [{ opacity: 1 }, { opacity: 0 }], { duration: 300 });
+    }
+    if (idx >= pts.length - 2) arrive();
+  }
+  function arrive() {
+    if (mode !== 'path') return;
+    mode = 'wait'; dragging = false; App.good();
+    walk.setAttribute('stroke-dasharray', `${len + 20} 0`);
+    Sound.fanfare(); lumi.happy(true);
+    // La luciérnaga se despierta y sube al cielo, donde queda brillando.
+    fly.inner.innerHTML = fireflyArt(true);
+    FX.ring(fly.x, fly.y, '#fff3a0', 220, 10, 800);
+    FX.burst(fly.x, fly.y, ['#fff3a0', '#ffd84a', '#fff'], 16, 200, 'star');
+    nDone++;
+    Paint.global(.12 + .7 * nDone / 9);
+    const x0 = fly.x, y0 = fly.y, x1 = 180 + (nDone - 1) * 135, y1 = 150 + (nDone % 2) * 60, g = fly.g;
+    bar.fill('#fff26a', fly.x, fly.y);
+    ctx.after(700, () => {
+      g.remove(); skyL.appendChild(g);
+      ctx.tween(1300, e => g.setAttribute('transform', tr(lerp(x0, x1, e), lerp(y0, y1, e) - Math.sin(Math.PI * e) * 120, lerp(.95, .6, e)))).then(() => { if (done) { const r = done; done = null; r(); } });
+    });
+  }
+
+  async function round(r, ri) {
+    for (let k = 0; k < r.d.length; k++) {
+      setup(r.d[k], r.tol);
+      await ctx.wait(700);
+      mode = 'path'; App.lastGood = performance.now();
+      if (!shownHint && first) { shownHint = true; ctx.after(600, () => { if (!dragging && idx === 0) Guide.follow(hintPts(0, 90), 2); }); }
+      await new Promise(res => { done = res; });
+      await ctx.wait(400);
+      anim(pathL, [{ opacity: 1 }, { opacity: 0 }], { duration: 400 });
+      await ctx.wait(450);
+    }
+    lumi.spin(); Sound.chord();
+    await ctx.wait(900);
+  }
+
+  (async () => {
+    await ctx.wait(300);
+    Sound.whoosh();
+    for (let i = 0; i < PATHS.length; i++) await round(PATHS[i], i);
+    finished = true;
+    pathL.innerHTML = '';
+    lumi.move(ctx, 800, 520, 900, 80);
+    bar.fill('#ffd84a', 800, 450);
+    // Las luciérnagas bailan en ronda alrededor de la luna.
+    [...skyL.children].forEach((g, i) => anim(g, [{ transform: g.getAttribute('transform').replace(/translate\(([^ ]+) ([^)]+)\)/, 'translate($1px,$2px)') }, { transform: `translate(${800 + Math.cos(i / 9 * Math.PI * 2) * 300}px,${420 + Math.sin(i / 9 * Math.PI * 2) * 180}px) scale(.7)` }], { duration: 1500, delay: i * 60, easing: 'ease-in-out' }));
+    Paint.all(1, 1600, 800, 400);
+    wake(bg);
+    await ctx.wait(1500);
+    await finishScene(ctx, 'caminos', first, t0, lumi, ['#fff26a', '#ffd84a', '#ff9fd0', '#7fd1ff', '#b78cff']);
+  })();
+  Sound.ambient(true);
+
+  return {
+    onDown: p => {
+      if (mode !== 'path') return false;
+      const q = pts[idx];
+      if (Math.hypot(p.x - q.x, p.y - q.y) < Math.max(115, tol + 15)) {
+        dragging = true; off = false; App.good(); Sound.tap(); lumi.smile();
+        return true;
+      }
+      return false;
+    },
+    onMove: p => {
+      if (!dragging || mode !== 'path') { lumi.look(p.x, p.y); return; }
+      let best = -1, bd = Infinity;
+      for (let j = idx; j <= Math.min(pts.length - 1, idx + LOOK); j++) { const d = Math.hypot(p.x - pts[j].x, p.y - pts[j].y); if (d < bd) { bd = d; best = j; } }
+      if (bd <= tol) {
+        if (off) { off = false; }
+        if (best > idx) { App.good(); advance(best); }
+      } else if (!off) {
+        off = true; Sound.boing();
+        anim(band, [{ opacity: .16 }, { opacity: .5 }, { opacity: .16 }], { duration: 500, fill: 'none' });
+        anim(lumi.hop, [{ transform: 'translateX(0px)' }, { transform: 'translateX(-10px)' }, { transform: 'translateX(10px)' }, { transform: 'translateX(0px)' }], { duration: 350, fill: 'none' });
+      }
+    },
+    onUp: () => { dragging = false; },
+    onMiss: p => {
+      if (mode !== 'path') return;
+      Sound.miss(); FX.puff(p.x, p.y);
+      const q = pts[idx]; FX.ring(q.x, q.y, '#fff3a0', 120, 8, 600);
+    },
+    hint: () => mode === 'path' && !dragging ? { path: hintPts() } : null,
+    hintDelay: 6000,
+    auto: () => mode === 'path' && !dragging ? { x: pts[idx].x, y: pts[idx].y, path: hintPts(idx, pts.length).filter((_, i) => i % 2 === 0).concat([pts[pts.length - 1]]) } : null,
+  };
+};
+
+// ---- 34-fiesta.js
+// Fiesta del faro: el faro se despierta y alumbra el mar; están todos los amigos del capítulo y el nombre del chico.
+// Cualquier clic suma fuegos de colores; cualquier tecla también. Los farolitos que suben se pueden explotar.
+Screens.fiesta = ctx => {
+  const prof = App.profile || (App.profile = Store.guest());
+  const first = !Store.isDone(prof, 'fiesta');
+  Store.sceneDone(prof, 'fiesta', {});
+  const COLS = ['#ff8fb1', '#ffd84a', '#6cc6ff', '#86d36f', '#b78cff', '#ffb25b', '#ff7b7b', '#5fd6bd'];
+  let stars = '';
+  for (let i = 0; i < 40; i++) stars += `<g transform="translate(${rand(-200, 1800).toFixed(0)} ${rand(-100, 380).toFixed(0)}) scale(${rand(.3, .7).toFixed(2)})"><g class="pulse" style="animation-duration:${rand(1.6, 3.4).toFixed(1)}s;animation-delay:-${rand(0, 3).toFixed(1)}s"><path d="${SPARK}" fill="#fff"/></g></g>`;
+  const bg = grp({}, L.world, `<defs><linearGradient id="fsk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b2f7a"/><stop offset=".6" stop-color="#7a5ab0"/><stop offset="1" stop-color="#ffb3a0"/></linearGradient>
+<linearGradient id="fbeam" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#fff6b0" stop-opacity=".75"/><stop offset="1" stop-color="#fff6b0" stop-opacity="0"/></linearGradient>
+<linearGradient id="fsea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4f7fc0"/><stop offset="1" stop-color="#2d4f8f"/></linearGradient></defs>
+<rect x="-600" y="-400" width="2800" height="1700" fill="url(#fsk)"/>${stars}
+<rect x="-600" y="520" width="2800" height="900" fill="url(#fsea)"/>
+<g fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="4" stroke-linecap="round"><g class="ripple"><path d="M80 600 q30 -10 60 0 M700 640 q30 -10 60 0 M1000 580 q30 -10 60 0"/></g><g class="ripple" style="--d:-2s"><path d="M300 700 q30 -10 60 0 M900 720 q30 -10 60 0"/></g></g>
+<path d="M-600 770 C-200 730 300 760 800 750 C1300 740 1700 760 2200 770 L2200 1300 L-600 1300Z" fill="#ffe2a8"/>`);
+  const beamL = grp({}, L.world), midL = grp({}, L.world), topL = grp({}, L.world), lanL = grp({}, L.world);
+
+  // Faro despierto con su haz de luz que barre el cielo.
+  const faro = grp({ transform: tr(1330, 760, 1.15) }, midL, faroArt(false));
+  faro.querySelectorAll('.sun-sleep').forEach(e => e.setAttribute('opacity', 0));
+  faro.querySelectorAll('.sun-awake').forEach(e => e.setAttribute('opacity', 1));
+  const lamp = { x: 1330, y: 760 - 268 * 1.15 };
+  grp({ transform: tr(lamp.x, lamp.y) }, beamL, `<g class="pulse"><circle r="150" fill="url(#gGold)"/></g>`);
+  const beam = grp({ transform: tr(lamp.x, lamp.y) }, beamL);
+  const beamIn = grp({}, beam, `<path d="M0 -14 L-1500 -190 L-1500 190 L0 14Z" fill="url(#fbeam)"/>`);
+  ctx.loop((dt, now) => beamIn.setAttribute('transform', `rotate(${(Math.sin(now * .0007) * 22 - 4).toFixed(2)})`));
+
+  // Los amigos: flores que cantan, caracoles abiertos, ranas y luciérnagas.
+  const flowers = FLOWER_SET.map(([t, c], i) => {
+    const g = grp({ transform: tr(90 + i * 105, 860, .7) }, midL);
+    const s = grp({ class: 'sway', style: `--d:-${i * .6}s` }, g, ART.flower(t, c, 150 + (i % 2) * 30));
+    return { g, s, i, x: 90 + i * 105, y: 860 - (150 + (i % 2) * 30) * .7 };
+  });
+  [[700, 820, '#ff9fc4'], [1000, 840, '#b9a2ff']].forEach(([x, y, c]) => {
+    const g = grp({ transform: tr(x, y, .6) }, midL, shellArt(c));
+    g.querySelector('.top').setAttribute('transform', 'translate(0 -58) scale(1 .5)');
+    g.querySelector('.pearl').setAttribute('opacity', 1);
+    g.querySelector('.knocks').setAttribute('opacity', 0);
+  });
+  const frogs = [[560, 790], [1150, 800]].map(([x, y], i) => {
+    const o = grp({ transform: tr(x, y, .6) }, midL), hop = grp({}, o, `<ellipse cy="0" rx="46" ry="32" fill="#7fd36a"/><circle cx="-22" cy="-30" r="17" fill="#7fd36a"/><circle cx="22" cy="-30" r="17" fill="#7fd36a"/>${EYE(-22, -32, 9)}${EYE(22, -32, 9)}<path d="M-18 6 Q0 20 18 6" stroke="${INK}" stroke-width="4" fill="none" stroke-linecap="round"/>`);
+    ctx.every(900 + i * 200, () => anim(hop, [{ transform: 'translateY(0px)' }, { transform: 'translateY(-50px)' }, { transform: 'translateY(0px)' }], { duration: 450, fill: 'none', easing: 'ease-out' }));
+    return hop;
+  });
+  for (let i = 0; i < 9; i++) {
+    const g = grp({ transform: tr(rand(150, 1100), rand(380, 540), .5) }, midL, `<g class="float" style="--d:-${rand(0, 4).toFixed(1)}s">${fireflyArt(true)}</g>`);
+    anim(g, [{ opacity: 0 }, { opacity: 1 }], { duration: 600, delay: i * 120 });
+  }
+  // Barquitos con farol.
+  [[300, 640, 1], [880, 690, -1]].forEach(([x, y, d], i) => {
+    const b = grp({ transform: tr(x, y, .55) }, midL, `<g class="float" style="--d:-${i * 2}s">${BOAT}<g transform="translate(0 -130)"><g class="pulse"><circle r="40" fill="url(#gGold)"/></g><circle r="9" fill="#fff3a0"/></g></g>`);
+    ctx.loop((dt, now) => b.setAttribute('transform', tr(x + Math.sin(now * .0004 + i) * 60 * d, y, .55)));
+  });
+
+  const lumi = new Lumi(topL, 760, 470, 1.15);
+  const kid = grp({ transform: tr(760, 650) }, topL);
+  const kidIn = grp({}, kid, ART.avatar(prof, 82));
+  ctx.every(1600, () => { pick([() => lumi.happy(true), () => lumi.spin()])(); anim(kidIn, [{ transform: 'translateY(0px)' }, { transform: 'translateY(-36px)' }, { transform: 'translateY(0px)' }], { duration: 600, fill: 'none', delay: 300 }); });
+  if (prof.name) {
+    const col = colorOf(prof.color), fs = 84, w = Math.max(360, prof.name.length * fs * .58 + 120);
+    const b = grp({ transform: tr(760, 230) }, topL), bi = grp({}, b, `
+<path d="M${-w / 2 - 66} -20 L${-w / 2 + 10} -20 L${-w / 2 + 10} 58 L${-w / 2 - 66} 58 L${-w / 2 - 38} 19Z" fill="${shade(col, -.15)}"/>
+<path d="M${w / 2 + 66} -20 L${w / 2 - 10} -20 L${w / 2 - 10} 58 L${w / 2 + 66} 58 L${w / 2 + 38} 19Z" fill="${shade(col, -.15)}"/>
+<rect x="${-w / 2}" y="-60" width="${w}" height="120" rx="34" fill="#fffaf3" stroke="${col}" stroke-width="10"/>
+<text y="6" text-anchor="middle" dominant-baseline="middle" font-size="${fs}" fill="${INK}">${escapeXml(prof.name)}</text>`);
+    anim(bi, [{ transform: 'scale(0) rotate(-8deg)' }, { transform: 'scale(1) rotate(0deg)' }], { duration: 800, delay: 600, easing: EB });
+  }
+
+  function firework(x, y) {
+    const c = pick(COLS);
+    FX.ring(x, y, c, 150, 8, 650);
+    FX.burst(x, y, [c, pick(COLS), '#fff'], 22, 230, Math.random() < .5 ? 'star' : 'dot');
+    Sound.boom(); lumi.look(x, y);
+  }
+  // Farolitos que suben.
+  const lanterns = new Set();
+  function lantern() {
+    if (lanterns.size >= 6) return;
+    const c = pick(COLS), b = { x: rand(160, 1200), y: 980, sp: rand(70, 100), ph: rand(0, 6) };
+    b.g = grp({}, lanL, `<g class="pulse"><circle r="70" fill="url(#gGold)"/></g><path d="M-34 -40 C-46 0 -40 36 -26 48 L26 48 C40 36 46 0 34 -40Z" fill="${c}"/><rect x="-30" y="-48" width="60" height="12" rx="6" fill="${shade(c, -.2)}"/><rect x="-22" y="46" width="44" height="10" rx="5" fill="${shade(c, -.2)}"/><ellipse cx="0" cy="8" rx="14" ry="20" fill="#fff6b0" opacity=".8"/>`);
+    b.t = App.addTarget({ x: b.x, y: b.y, r: 80, prio: 2, kind: 'balloon', hit: () => {
+      lanterns.delete(b); App.removeTarget(b.t); b.g.remove(); App.good();
+      firework(b.t.x, b.t.y);
+    } });
+    lanterns.add(b);
+  }
+  ctx.every(1200, lantern);
+  ctx.loop((dt, now) => {
+    for (const b of lanterns) {
+      b.y -= b.sp * dt / 1000;
+      const x = b.x + Math.sin(now * .0013 + b.ph) * 24;
+      b.g.setAttribute('transform', tr(x.toFixed(1), b.y.toFixed(1)));
+      b.t.x = x; b.t.y = b.y;
+      if (b.y < -150) { lanterns.delete(b); App.removeTarget(b.t); b.g.remove(); }
+    }
+  });
+  // Las flores cantan una melodía de vez en cuando.
+  ctx.every(4200, () => [0, 2, 4, 3, 1].forEach((k, j) => ctx.after(j * 260, () => { Sound.sing(k); anim(flowers[k].s, [{ transform: 'scale(1)' }, { transform: 'scale(1.12)' }, { transform: 'scale(1)' }], { duration: 300, fill: 'none' }); })));
+  Sound.fanfare();
+  ctx.after(400, () => { for (let i = 0; i < 6; i++) ctx.after(i * 280, () => firework(rand(200, 1300), rand(150, 420))); });
+  ctx.after(3500, () => { const b = [...lanterns].find(q => q.y < 760 && q.y > 300); if (b) Guide.tap(b.t.x, b.t.y, 2); });
+  ctx.after(55000, () => App.go('map', { justDone: 'fiesta', first }));
+  Sound.ambient(true);
+
+  return {
+    onMove: p => lumi.look(p.x, p.y),
+    onKey: () => { App.good(); firework(rand(200, 1300), rand(130, 450)); Sound.drum(Math.floor(rand(0, 4))); },
+    onMiss: p => { App.misses--; firework(p.x, p.y); },
+  };
+};
+
+// ---- 35-taller.js
+// Taller de dibujo (se abre después de la fiesta): dibujo libre, sin fin, para el que termina antes.
+// Crayones gordos de colores, uno arcoíris, sellos (estrella, corazón, flor y Lumi) y una hoja nueva.
+// La hoja terminada se cuelga en la soga de arriba. Los dibujos quedan mientras la página esté abierta (no se guardan).
+const Taller = { sheet: '', hung: [] };
+
+Screens.taller = ctx => {
+  const prof = App.profile || (App.profile = Store.guest());
+  Store.sceneDone(prof, 'taller', {});
+  grp({}, L.world, `<rect x="-600" y="-400" width="2800" height="1700" fill="#f6e7cf"/>
+<g opacity=".5">${[...Array(18)].map((_, i) => `<path d="M${-300 + i * 130} -200 L${-500 + i * 130} 1200" stroke="#efdcbd" stroke-width="40"/>`).join('')}</g>
+<path d="M150 64 Q800 104 1450 64" stroke="#a8703f" stroke-width="5" fill="none"/>`);
+  const PAPER = { x: 150, y: 128, w: 1300, h: 600 };
+  grp({}, L.world, `<rect x="${PAPER.x + 6}" y="${PAPER.y + 10}" width="${PAPER.w}" height="${PAPER.h}" rx="18" fill="#000" opacity=".1"/>
+<rect x="${PAPER.x}" y="${PAPER.y}" width="${PAPER.w}" height="${PAPER.h}" rx="18" fill="#fffdf8"/>
+<rect x="${PAPER.x + 560}" y="${PAPER.y - 16}" width="180" height="36" rx="6" fill="#ffe7a0" opacity=".85" transform="rotate(-2 800 ${PAPER.y})"/>`);
+  const clip = el('clipPath', { id: 'tpaper' }, L.world); el('rect', { x: PAPER.x, y: PAPER.y, width: PAPER.w, height: PAPER.h, rx: 18 }, clip);
+  const art = grp({ 'clip-path': 'url(#tpaper)' }, L.world);
+  art.innerHTML = Taller.sheet;
+  const lineL = grp({}, L.world), uiL = grp({}, L.world);
+
+  // Soga con los dibujos colgados (los más nuevos a la derecha, hasta 6).
+  function drawLine() {
+    lineL.innerHTML = '';
+    Taller.hung.slice(-6).forEach((h, i) => {
+      const x = 260 + i * 200, y = 76 + Math.sin((x - 150) / 1300 * Math.PI) * 14;
+      grp({ transform: tr(x, y) }, lineL, `<rect x="-62" y="0" width="124" height="60" rx="5" fill="#fffdf8" stroke="#e7d6b8" stroke-width="2"/>
+<g transform="translate(-62 0) scale(${124 / PAPER.w}) translate(${-PAPER.x} ${-PAPER.y})">${h}</g><rect x="-6" y="-8" width="12" height="20" rx="3" fill="#ff8fb1"/>`);
+    });
+  }
+  drawLine();
+
+  const COLS = ['#2d2240', '#ff5d6c', '#ff9a3c', '#ffd23f', '#5cc95c', '#3fb6ff', '#8a6cff', '#ff8fd0'];
+  const tools = [];
+  let tool = { kind: 'crayon', c: COLS[1] }, stroke = null, last = null, hue = 0, sel = null, drawn = !!Taller.sheet, lastSnd = 0;
+  function button(x, y, html, t, r = 44) {
+    const g = grp({ transform: tr(x, y) }, uiL), pop = grp({}, g, `<circle r="${r + 4}" fill="#fff" opacity=".9"/>${html}`);
+    const ring = grp({ opacity: 0 }, g, `<circle r="${r + 10}" fill="none" stroke="${INK}" stroke-width="5"/>`);
+    const b = { x, y, g, pop, ring, t };
+    b.tg = App.addTarget({ x, y, r: r + 10, prio: 3, kind: 'tool', hit: () => choose(b) });
+    tools.push(b);
+    return b;
+  }
+  function choose(b) {
+    App.good();
+    anim(b.pop, [{ transform: 'scale(1)' }, { transform: 'scale(1.2)' }, { transform: 'scale(1)' }], { duration: 300, easing: EB, fill: 'none' });
+    if (b.t.kind === 'map') { Sound.chord(); save(); App.go('map'); return; }
+    if (b.t.kind === 'new') return newSheet();
+    Sound.tap(); Sound.chime(tools.indexOf(b));
+    tool = b.t;
+    if (sel) sel.ring.setAttribute('opacity', 0);
+    sel = b; b.ring.setAttribute('opacity', 1);
+  }
+  const crayon = c => `<circle r="40" fill="${c}"/><circle cx="-12" cy="-12" r="10" fill="#fff" opacity=".35"/>`;
+  COLS.forEach((c, i) => button(290 + i * 92, 818, crayon(c), { kind: 'crayon', c }));
+  button(290 + 8 * 92, 818, `<circle r="40" fill="url(#gRain)"/><circle cx="-12" cy="-12" r="10" fill="#fff" opacity=".35"/>`, { kind: 'rainbow' });
+  const STAMPS = {
+    star: () => ART.star(46),
+    heart: c => `<path d="M0 34 C-60 -6 -40 -52 0 -26 C40 -52 60 -6 0 34Z" fill="${c}" stroke="${shade(c, -.25)}" stroke-width="4"/>`,
+    flower: c => `<g transform="scale(.9)">${ART.flowerParts('daisy', c, 0).head}</g>`,
+    lumi: () => `<g transform="scale(.42)">${ART.lumi().replace(/class="(pulse|blink)"/g, '')}</g>`,
+  };
+  const stampBtn = (k, x) => button(x, 818, `<g transform="scale(.62)">${STAMPS[k]('#ff8fb1')}</g>`, { kind: 'stamp', s: k });
+  stampBtn('star', 1200); stampBtn('heart', 1292); stampBtn('lumi', 1384);
+  button(1500, 818, `<rect x="-26" y="-32" width="52" height="64" rx="6" fill="#fffdf8" stroke="${INK}" stroke-width="4"/><path d="M-12 -8 h24 M-12 6 h24" stroke="#d9cfe6" stroke-width="4" stroke-linecap="round"/><circle cx="20" cy="-26" r="14" fill="#86d36f"/><path d="M14 -26 h12 M20 -32 v12" stroke="#fff" stroke-width="4" stroke-linecap="round"/>`, { kind: 'new' });
+  button(110, 818, `<g transform="scale(.075) translate(-805 -480)"><path d="M250 520 C215 330 370 165 620 150 C760 118 900 150 1010 135 C1210 122 1350 230 1366 405 C1382 560 1330 720 1160 792 C990 852 770 832 610 818 C420 800 280 700 250 520Z" fill="#8fd474" stroke="#f5dfaa" stroke-width="30"/></g><g transform="translate(0 28) scale(.17)">${faroArt(false)}</g>`, { kind: 'map' });
+  if (!$('#gRain')) L.defs.insertAdjacentHTML('beforeend', `<linearGradient id="gRain" x1="0" y1="0" x2="1" y2="1">${['#ff5d6c', '#ff9a3c', '#ffd23f', '#5cc95c', '#3fb6ff', '#8a6cff'].map((c, i) => `<stop offset="${i / 5}" stop-color="${c}"/>`).join('')}</linearGradient>`);
+  choose(tools[1]);
+
+  const inPaper = p => p.x > PAPER.x + 4 && p.x < PAPER.x + PAPER.w - 4 && p.y > PAPER.y + 4 && p.y < PAPER.y + PAPER.h - 4;
+  const colorNow = () => tool.kind === 'rainbow' ? `hsl(${hue % 360} 90% 60%)` : tool.c;
+  function save() { Taller.sheet = art.innerHTML; }
+  function newStroke(p) {
+    stroke = el('path', { d: `M${p.x.toFixed(1)} ${p.y.toFixed(1)} l0.1 0`, fill: 'none', stroke: colorNow(), 'stroke-width': 26, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, art);
+    last = p;
+  }
+  function stamp(p) {
+    const c = pick(COLS.slice(1)), s = grp({ transform: tr(p.x, p.y) }, art), inner = grp({}, s, STAMPS[tool.s](c));
+    anim(inner, [{ transform: 'scale(0) rotate(-30deg)' }, { transform: 'scale(1) rotate(0deg)' }], { duration: 380, easing: EB });
+    Sound.stamp(); FX.burst(p.x, p.y, [c, '#fff'], 8, 90, 'star');
+  }
+  function newSheet() {
+    if (!art.childElementCount) { Sound.tap(); return; }
+    save(); Taller.hung.push(Taller.sheet); Taller.sheet = '';
+    Sound.whoosh();
+    const slot = Math.min(Taller.hung.length, 6) - 1, x = 260 + slot * 200;
+    anim(art, [{ transform: 'translate(0px,0px) scale(1)', opacity: 1 }, { transform: `translate(${x - 62 - PAPER.x * .095}px,${76 - PAPER.y * .095}px) scale(.095)`, opacity: .3 }], { duration: 700, easing: 'ease-in' }).onfinish = () => {
+      art.innerHTML = ''; art.getAnimations && art.getAnimations().forEach(a => a.cancel());
+      drawLine(); Sound.fanfare();
+      FX.burst(x, 110, COLS.slice(1), 16, 160, 'star');
+    };
+  }
+
+  if (!drawn) ctx.after(1500, () => Guide.drag(500, 400, 1000, 460));
+  return {
+    onDown: p => {
+      if (!inPaper(p)) return false;
+      App.good(); drawn = true;
+      if (tool.kind === 'stamp') { stamp(p); return true; }
+      newStroke(p); Sound.crayon(p.y);
+      return true;
+    },
+    onMove: p => {
+      if (!stroke) return;
+      if (!inPaper(p)) { stroke = null; save(); return; }
+      if (Math.hypot(p.x - last.x, p.y - last.y) < 5) return;
+      App.lastGood = performance.now();
+      if (tool.kind === 'rainbow') { hue += 14; newStroke(last); }
+      stroke.setAttribute('d', stroke.getAttribute('d') + ` L${p.x.toFixed(1)} ${p.y.toFixed(1)}`);
+      last = p;
+      const now = performance.now(); if (now - lastSnd > 90) { lastSnd = now; Sound.crayon(p.y); }
+    },
+    onUp: () => { if (stroke) { stroke = null; save(); } },
+    onMiss: () => { App.misses--; },
+    hint: () => !drawn ? { x: 500, y: 400, x2: 1000, y2: 460 } : null,
+    hintDelay: 9000,
+    auto: () => null,
+  };
+};
+
+// ---- 90-teacher.js
+// Panel docente: triple clic en la esquina superior izquierda.
+const Panel = {
+  open: false,
+  init() {
+    let clicks = [];
+    $('#corner').addEventListener('pointerdown', e => {
+      e.preventDefault(); e.stopPropagation();
+      const now = performance.now();
+      clicks = clicks.filter(t => now - t < 1000); clicks.push(now);
+      if (clicks.length >= 3) { clicks = []; this.show(); }
+    });
+    $('#pClose').onclick = () => { this.hide(); if (App.name === 'start') App.go('start'); };
+    $('#pSave').onclick = () => {
+      Store.setNames($('#pNames').value.split(/\r?\n/));
+      this.render();
+      if (App.name === 'start') App.go('start');
+    };
+    $('#pClearNames').onclick = () => {
+      if (!confirm('¿Borrar todos los nombres de esta compu? También se borra su progreso.')) return;
+      Store.clearNames(); App.profile = null; this.render();
+    };
+    $('#pResetAll').onclick = () => {
+      if (!confirm('¿Reiniciar el progreso de todos en esta compu?')) return;
+      Store.resetAll(); this.render();
+    };
+    $('#pMute').onchange = e => { Sound.setMuted(e.target.checked); Store.data.settings.muted = e.target.checked; Store.save(); Hud.draw(); };
+    $('#pSeats').onchange = e => { Store.data.settings.seats = +e.target.value; Store.save(); this.render(); };
+    $('#pRelease').onclick = () => { Store.release(); this.render(); if (App.name === 'start') App.go('start'); };
+    $('#pFull').onchange = e => { Store.data.settings.fullscreen = e.target.checked; Store.save(); };
+    $('#pList').onclick = e => {
+      const b = e.target.closest('button'); if (!b) return;
+      const id = b.dataset.id, act = b.dataset.act;
+      if (act === 'reset') { const p = Store.data.profiles.find(q => q.id === id); if (!confirm(`¿Reiniciar el progreso de ${p ? p.name : 'este chico'}?`)) return; Store.resetOne(id); }
+      else Store.cycle(id, act);
+      this.render();
+    };
+    $('#pJump').onclick = e => {
+      const b = e.target.closest('button'); if (!b || b.disabled) return;
+      const who = $('#pWho').value;
+      const pool = [...Store.data.profiles, ...Store.anonProfiles(), Store.guest()];
+      if (b.dataset.go !== 'start') App.profile = pool.find(p => p.id === who) || Store.guest();
+      this.hide();
+      App.go(b.dataset.go);
+    };
+    $('#pFoot').textContent = document.title + ' · ' + CH_TITLE + ' · ' + BUILD;
+  },
+  show() {
+    this.open = true; Guide.hide();
+    $('#pNames').value = Store.data.profiles.map(p => p.name).join('\n');
+    this.render();
+    $('#panel').hidden = false;
+  },
+  hide() { this.open = false; $('#panel').hidden = true; App.lastGood = performance.now(); },
+  render() {
+    const d = Store.data, keys = SCENES.map(s => s.key);
+    const av = p => `<svg viewBox="-80 -80 160 160" width="46" height="46">${ART.avatar(p, 76)}</svg>`;
+    const dots = p => keys.map(k => `<i class="${Store.isDone(p, k) ? 'ok' : ''}" title="${SCENE_NAMES[k]}"></i>`).join('');
+    $('#pList').innerHTML = d.profiles.length ? d.profiles.map(p => `<div class="kid">${av(p)}<span class="nm">${escapeXml(p.name)}</span><span class="pr">${dots(p)}</span>
+<button data-id="${escapeXml(p.id)}" data-act="creature">Otra criatura</button><button data-id="${escapeXml(p.id)}" data-act="color">Otro color</button><button data-id="${escapeXml(p.id)}" data-act="reset" class="warn">Reiniciar</button></div>`).join('')
+      : '<p class="hint">No hay nombres cargados: los chicos eligen una tarjeta de color y criatura.</p>';
+    const cur = App.profile ? App.profile.id : (d.profiles[0] || {}).id;
+    const opts = d.profiles.length ? d.profiles.map(p => [p.id, p.name]) : Store.anonProfiles().map(p => [p.id, p.creature + ' ' + p.color]);
+    opts.push(['invitado', 'Invitado (prueba)']);
+    $('#pWho').innerHTML = opts.map(([id, n]) => `<option value="${escapeXml(id)}"${id === cur ? ' selected' : ''}>${escapeXml(n)}</option>`).join('');
+    const jumps = [['start', 'Tarjetas'], ['map', 'Mapa'], ...Object.entries(SCENE_NAMES)];
+    $('#pJump').innerHTML = jumps.map(([k, n]) => { const ok = k === 'start' || k === 'map' || sceneReady(k); return `<button data-go="${k}"${ok ? '' : ' disabled title="Todavía no está"'}>${n}</button>`; }).join('');
+    $('#pMute').checked = d.settings.muted;
+    $('#pFull').checked = d.settings.fullscreen;
+    $('#pSeats').value = String(d.settings.seats || 1);
+    const pool = [...d.profiles, ...Store.anonProfiles()];
+    const mine = d.claimed.map(id => pool.find(p => p.id === id)).filter(Boolean).map(p => p.name || (p.creature + ' ' + p.color));
+    $('#pClaimed').textContent = mine.length ? 'Asignadas: ' + mine.join(', ') + '.' : 'Todavía no hay tarjetas asignadas en esta compu.';
+  },
+};
+
+// ---- 99-main.js
+// Arranque.
+Store.load();
+Sound.muted = !!Store.data.settings.muted;
+Guide.init(); Hud.init(); Panel.init();
+const startNow = () => App.go('start');
+if (document.fonts && document.fonts.ready) Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 800))]).then(startNow);
+else startNow();
+
+})();
+</script>
+<script src="/volver.js" data-pos="tl" data-x="66"></script>
+</body>
+</html>

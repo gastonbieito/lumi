@@ -1,5 +1,4 @@
 // Panel docente: triple clic en la esquina superior izquierda.
-const SCENE_NAMES = { semillas: 'Semillas', hambre: 'Hambre', burbujas: 'Burbujas', noche: 'Noche', fiesta: 'Fiesta final' };
 const Panel = {
   open: false,
   init() {
@@ -43,7 +42,7 @@ const Panel = {
       this.hide();
       App.go(b.dataset.go);
     };
-    $('#pFoot').textContent = 'Lumi y la isla dormida · capítulo 1 · ' + BUILD;
+    $('#pFoot').textContent = document.title + ' · ' + CH_TITLE + ' · ' + BUILD;
   },
   show() {
     this.open = true; Guide.hide();
@@ -53,7 +52,7 @@ const Panel = {
   },
   hide() { this.open = false; $('#panel').hidden = true; App.lastGood = performance.now(); },
   render() {
-    const d = Store.data, keys = ['semillas', 'hambre', 'burbujas', 'noche'];
+    const d = Store.data, keys = SCENES.map(s => s.key);
     const av = p => `<svg viewBox="-80 -80 160 160" width="46" height="46">${ART.avatar(p, 76)}</svg>`;
     const dots = p => keys.map(k => `<i class="${Store.isDone(p, k) ? 'ok' : ''}" title="${SCENE_NAMES[k]}"></i>`).join('');
     $('#pList').innerHTML = d.profiles.length ? d.profiles.map(p => `<div class="kid">${av(p)}<span class="nm">${escapeXml(p.name)}</span><span class="pr">${dots(p)}</span>
@@ -63,7 +62,7 @@ const Panel = {
     const opts = d.profiles.length ? d.profiles.map(p => [p.id, p.name]) : Store.anonProfiles().map(p => [p.id, p.creature + ' ' + p.color]);
     opts.push(['invitado', 'Invitado (prueba)']);
     $('#pWho').innerHTML = opts.map(([id, n]) => `<option value="${escapeXml(id)}"${id === cur ? ' selected' : ''}>${escapeXml(n)}</option>`).join('');
-    const jumps = [['start', 'Tarjetas'], ['map', 'Mapa'], ...keys.map(k => [k, SCENE_NAMES[k]]), ['fiesta', SCENE_NAMES.fiesta]];
+    const jumps = [['start', 'Tarjetas'], ['map', 'Mapa'], ...Object.entries(SCENE_NAMES)];
     $('#pJump').innerHTML = jumps.map(([k, n]) => { const ok = k === 'start' || k === 'map' || sceneReady(k); return `<button data-go="${k}"${ok ? '' : ' disabled title="Todavía no está"'}>${n}</button>`; }).join('');
     $('#pMute').checked = d.settings.muted;
     $('#pFull').checked = d.settings.fullscreen;

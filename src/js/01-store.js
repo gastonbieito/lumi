@@ -1,4 +1,4 @@
-// Guardado local. Clave estable 'lumiIsla' (la lee también el capítulo 2).
+// Guardado local. Clave estable 'lumiIsla', compartida por los dos capítulos (CAP = 'cap1' o 'cap2', lo pone el armado).
 // Estructura:
 // { schema:1, profiles:[{id,name,creature,color}], progress:{ [id]:{ who:{creature,color}, cap1:{ [escena]:{done,plays,last,ms,misses,hints} } } },
 //   settings:{muted,fullscreen,seats}, claimed:[id] (tarjetas asignadas a esta compu), last:id }
@@ -29,9 +29,9 @@ const Store = {
     const all = this.data.progress;
     const e = all[p.id] || (all[p.id] = {});
     e.who = { creature: p.creature, color: p.color };
-    return e.cap1 || (e.cap1 = {});
+    return e[CAP] || (e[CAP] = {});
   },
-  isDone(p, key) { const e = this.data.progress[p.id]; return !!(e && e.cap1 && e.cap1[key] && e.cap1[key].done); },
+  isDone(p, key) { const e = this.data.progress[p.id]; return !!(e && e[CAP] && e[CAP][key] && e[CAP][key].done); },
   sceneDone(p, key, stats) {
     const c = this.prog(p);
     const s = c[key] || { plays: 0 };
@@ -71,8 +71,9 @@ const Store = {
   // Tarjetas asignadas a esta compu: cuando se llena el cupo, las demás se bloquean.
   claim(id) { if (!this.data.claimed.includes(id)) { this.data.claimed.push(id); this.save(); } },
   release() { this.data.claimed = []; this.save(); },
-  resetOne(id) { delete this.data.progress[id]; this.save(); },
-  resetAll() { this.data.progress = {}; this.save(); },
+  // Reiniciar borra solo el capítulo que se está jugando.
+  resetOne(id) { const e = this.data.progress[id]; if (e) delete e[CAP]; this.save(); },
+  resetAll() { for (const id in this.data.progress) delete this.data.progress[id][CAP]; this.save(); },
   clearNames() {
     for (const p of this.data.profiles) delete this.data.progress[p.id];
     this.data.profiles = []; this.data.last = null; this.data.claimed = []; this.save();

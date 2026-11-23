@@ -9,6 +9,11 @@ body{
 #stage{position:fixed;inset:0;width:100%;height:100%;display:block}
 #fx,#guide,#hud,#hudfix,#veil{pointer-events:none}
 #corner{position:fixed;left:0;top:0;width:56px;height:56px;z-index:5}
+/* Celular o tablet en vertical: dibujo de girar la pantalla (sin texto). */
+#rotate{display:none;position:fixed;inset:0;z-index:8;background:#fbf3e4;place-items:center}
+@media (orientation:portrait) and (pointer:coarse){#rotate{display:grid}}
+#rotate .rot{animation:rot 2.4s ease-in-out infinite}
+@keyframes rot{0%,30%{transform:rotate(0)}60%,100%{transform:rotate(-90deg)}}
 svg text{font-family:Nunito,'Segoe UI',system-ui,sans-serif;font-weight:800}
 
 /* Animaciones base. Todas giran o escalan sobre el (0,0) local de su grupo. */

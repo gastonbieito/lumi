@@ -1,1 +1,1 @@
-{"name":"lumi-isla","private":true,"type":"module","scripts":{"build":"node build.mjs","test":"node build.mjs && node tests/check.mjs"},"devDependencies":{"@fontsource/nunito":"^5.3.0","playwright-core":"^1.65.1"}}
+{"name":"lumi-isla","private":true,"type":"module","scripts":{"build":"node build.mjs","test":"node build.mjs && node tests/check.mjs","test2":"node build.mjs && node tests/check2.mjs"},"devDependencies":{"@fontsource/nunito":"^5.3.0","playwright-core":"^1.65.1"}}
