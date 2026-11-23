@@ -1,0 +1,66 @@
+/*FONT*/
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fbf3e4}
+body{
+  -webkit-user-select:none;user-select:none;touch-action:none;overscroll-behavior:none;
+  font-family:Nunito,'Segoe UI',system-ui,sans-serif;
+  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cpath d='M5 3 L5 34 L13 27 L18.5 40 L25.5 37 L20 24.5 L31 24.5 Z' fill='%23fff' stroke='%232d2240' stroke-width='3.2' stroke-linejoin='round'/%3E%3C/svg%3E") 5 3,auto;
+}
+#stage{position:fixed;inset:0;width:100%;height:100%;display:block}
+#fx,#guide,#hud,#hudfix,#veil{pointer-events:none}
+#corner{position:fixed;left:0;top:0;width:56px;height:56px;z-index:5}
+svg text{font-family:Nunito,'Segoe UI',system-ui,sans-serif;font-weight:800}
+
+/* Animaciones base. Todas giran o escalan sobre el (0,0) local de su grupo. */
+.bob{animation:bob 2.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+.pulse{animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(.88);opacity:.65}50%{transform:scale(1.12);opacity:1}}
+.spin{animation:spin 7s linear infinite}
+.spin-slow{animation:spin 50s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sway{animation:sway 3.4s ease-in-out infinite;animation-delay:var(--d,0s)}
+@keyframes sway{0%,100%{transform:rotate(-2.6deg)}50%{transform:rotate(2.6deg)}}
+.blink{animation:blink 5s infinite;animation-delay:var(--bd,0s)}
+@keyframes blink{0%,93%,100%{transform:scaleY(1)}96%{transform:scaleY(.08)}}
+.drift{animation:drift 38s ease-in-out infinite alternate;animation-delay:var(--d,0s)}
+@keyframes drift{from{transform:translateX(-70px)}to{transform:translateX(70px)}}
+.flap{animation:flap .2s ease-in-out infinite alternate}
+@keyframes flap{from{transform:scaleX(1)}to{transform:scaleX(.18)}}
+.ripple{animation:ripple 5s ease-in-out infinite alternate;animation-delay:var(--d,0s)}
+@keyframes ripple{from{transform:translateX(-18px)}to{transform:translateX(18px)}}
+.float{animation:float 4.5s ease-in-out infinite;animation-delay:var(--d,0s)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.glowring{animation:glowring 1.6s ease-in-out infinite}
+@keyframes glowring{0%,100%{transform:scale(.94);opacity:.45}50%{transform:scale(1.06);opacity:.95}}
+.card .lift{transition:transform .18s ease-out}
+.card:hover .lift{transform:scale(1.06)}
+.spot .lift{transition:transform .2s ease-out}
+.spot.open:hover .lift{transform:scale(1.05)}
+
+/* Panel docente (solo para la maestra/el maestro) */
+#panel{position:fixed;inset:0;z-index:10;background:rgba(36,26,58,.6);display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:16px;cursor:auto;-webkit-user-select:text;user-select:text;touch-action:auto}
+#panel[hidden]{display:none}
+.pbox{background:#fffdf8;border-radius:18px;max-width:880px;width:100%;padding:16px 22px 12px;color:#2d2240;font:15px/1.45 'Segoe UI',system-ui,sans-serif;box-shadow:0 12px 40px rgba(0,0,0,.35)}
+.pbox header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.pbox h1{font-size:22px;margin:0}
+.pbox h2{font-size:16px;margin:16px 0 6px;color:#6a4fb3}
+.pbox section{border-top:1px solid #eee3d3;padding-bottom:6px}
+.pbox .hint{margin:0 0 8px;color:#6b6478;font-size:13.5px}
+.pbox textarea{width:100%;font:16px/1.4 'Segoe UI',system-ui,sans-serif;padding:8px 10px;border:2px solid #ddd0ee;border-radius:10px;resize:vertical}
+.pbox .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
+.pbox button,.pbox select{font:600 14px 'Segoe UI',system-ui,sans-serif;padding:8px 14px;border-radius:10px;border:2px solid #d9cdee;background:#fff;color:#2d2240;cursor:pointer}
+.pbox button:hover{background:#f4effc}
+.pbox button.primary{background:#7b5cd6;border-color:#7b5cd6;color:#fff}
+.pbox button.primary:hover{background:#6847c9}
+.pbox button.warn{border-color:#f0b9b9;color:#a33a3a}
+.pbox button:disabled{opacity:.45;cursor:default}
+.pbox label{display:block;margin:6px 0}
+.pbox footer{margin-top:10px;font-size:12px;color:#9a93a6;text-align:right}
+.kid{display:flex;align-items:center;gap:10px;padding:6px 4px;border-bottom:1px dashed #eee3d3;flex-wrap:wrap}
+.kid svg{flex:none}
+.kid .nm{font-weight:700;min-width:120px}
+.kid .pr{display:flex;gap:4px;min-width:96px}
+.kid .pr i{width:16px;height:16px;border-radius:50%;background:#e9e3f1;display:inline-block}
+.kid .pr i.ok{background:#ffc93c}
+.kid button{padding:5px 10px;font-size:13px}

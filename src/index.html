@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta name="robots" content="noindex">
+<title>Lumi y la isla dormida</title>
+<!--CSS-->
+</head>
+<body>
+<svg id="stage" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" aria-label="Lumi y la isla dormida">
+  <defs id="defs"></defs>
+  <g id="world"></g>
+  <g id="fx"></g>
+  <g id="hud"></g>
+  <g id="hudfix"></g>
+  <g id="guide"></g>
+  <rect id="veil" x="-3000" y="-3000" width="7600" height="6900" fill="#fff6e3" opacity="1"/>
+</svg>
+<div id="corner" aria-hidden="true"></div>
+<div id="panel" hidden>
+  <div class="pbox">
+    <header>
+      <h1>Panel docente</h1>
+      <button id="pClose" class="primary">Volver al juego</button>
+    </header>
+    <section>
+      <h2>Nombres en esta compu</h2>
+      <p class="hint">Uno por renglón. Se guardan solo en esta compu, nunca en internet. Si cargás la misma lista, en el mismo orden, en todas las compus, cada chico tiene el mismo color y la misma criatura en todas.</p>
+      <textarea id="pNames" rows="6" spellcheck="false" placeholder="Ana&#10;Bruno&#10;Carla"></textarea>
+      <div class="row">
+        <button id="pSave" class="primary">Guardar nombres</button>
+        <button id="pClearNames" class="warn">Borrar todos los nombres</button>
+      </div>
+      <div id="pList"></div>
+    </section>
+    <section>
+      <h2>Ir a</h2>
+      <div class="row"><span>Juega:</span> <select id="pWho"></select></div>
+      <div id="pJump" class="row"></div>
+    </section>
+    <section>
+      <h2>Progreso y opciones</h2>
+      <div class="row">
+        <button id="pResetAll" class="warn">Reiniciar el progreso de todos</button>
+      </div>
+      <label><input type="checkbox" id="pMute"> Sonido apagado</label>
+      <label><input type="checkbox" id="pFull"> Pantalla completa al tocar una tarjeta</label>
+    </section>
+    <footer id="pFoot"></footer>
+  </div>
+</div>
+<!--JS-->
+</body>
+</html>
